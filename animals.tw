@@ -696,7 +696,7 @@ Now, off we go. Let’s head through Cullum Street.
 
 
 :: AC-16 {"position":"800,1300","size":"100,100"}
-<<set $passage to "11">><<set $myMap7 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
+<<set $passage to "AC-16">><<set $myMap7 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
 <<include "header">>
 <main>
 Hang about here for a moment, will you?
@@ -710,7 +710,7 @@ Right, now we have to find our final animal. We’re looking for Faith the Cat �
 
 
 :: AC-17 {"position":"1000,1300","size":"100,100"}
-<<set $passage to "12">>
+<<set $passage to "AC-17">>
 <<include "header">>
 <main>
 Okay. Ready? Go.
@@ -772,7 +772,7 @@ Come on, you lot. Head onto Eastcheap, and then Great Tower Street.
 
 
 :: AC-20 {"position":"600,1700","size":"100,100"}
-<<set $passage to "13">><<set $myMap9 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
+<<set $passage to "AC-20">><<set $myMap9 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
 <<include "header">>
 <main>
 Oh, blast. I thought we’d lost them. It’s the pigs. They’re closer to the surface than ever, can you hear? I think they’re getting hungry...We’ve tried running and hiding. We need to be brave. We need to stand up to them. I think we need to scare them. How do you think we should do it?
@@ -785,7 +785,7 @@ Oh, blast. I thought we’d lost them. It’s the pigs. They’re closer to the 
 
 
 :: AC-21 {"position":"800,1700","size":"100,100"}
-<<set $passage to "13">><<set $myMap10 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>><<include "header">>
+<<set $passage to "AC-21">><<set $myMap10 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>><<include "header">>
 <main>
 Okay! That sounds good. We need to do it as hard as we possibly can to make sure they run back into the sewers. Our end point is St Dunstan in the East. Just down the road. Do it as hard as you can. We need to scare them off. You can even yell if you want to as you’re doing it. Something like “Go away!” or “Leave us alone!” Okay? Ready? Let’s go!
 /* TODO NEEDS TO CONTINUE AFTER THE TEXT */
@@ -844,7 +844,7 @@ Thank you for your help, my friends.
 
 
 :: end {"position":"100,700","size":"100,100"}
-<<set $passage to "19">><<set $endMap = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>><<include "header">>
+<<set $passage to "end">><<set $endMap = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>><<include "header">>
 <main>
 
 End location
