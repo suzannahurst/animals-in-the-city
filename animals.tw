@@ -433,6 +433,7 @@ word += alphabet[Math.round((alphabet.length-1)*Math.random())];
 <<include "header">>
 <main>
 landing page
+
 <<button "begin">><<set $prevpass to $passage>><<goto "AC-05">><</button>>
 </main>
 <<include "footer">>
