@@ -1,0 +1,841 @@
+:: StoryTitle
+Animals of the City
+
+
+:: StoryData
+{
+	"ifid": "F9E39354-F641-4070-8B45-C310A3FDC8C1",
+	"format": "SugarCube",
+	"format-version": "2.36.1",
+	"start": "AC-21",
+	"zoom": 0.6
+}
+
+
+:: Story Stylesheet [stylesheet]
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
+
+/* GENERICS */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* Mostly equivalates to 10px but allows users accessibility zoom settings to work*/
+  /* font-size: 10px; */
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  font-size: 10px;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Try to keep your margins going in one direction to avoid margin collapase or grounding. I switch all the top margins off to avoid this issue. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+blockquote,
+address,
+article,
+aside,
+details,
+dialogue,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+header,
+hr,
+main,
+nav,
+pre,
+section,
+table,
+p {
+  margin-top: 0;
+  margin-block-start: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  /* You MUST make sure that links stand out from nomal text though...*/
+}
+
+
+img {
+  /* This means that it can be less than 100% of the width of its parent IF the image is INTRINSICALLY smaller */
+  max-width: 100%;
+
+  height: auto;
+  /* 'auto' is the initial value for height BUT for images (and other elements which have an intrinic height) that is not the case. To make an image responsive you set one dimension (usually width) to [max-]width: 100%; and the other to 'auto' to ensure it keeps aspect ratio. 'auto' basically tells the browser to decide. */
+  vertical-align: middle;
+  /* minor vertical centering. Works for images IF there is a baseline (i.e. they are displayed inline or inline-block) */
+}
+
+/* Because we us <ul>s for lists that we don't always want bulletted. */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* To make actual bulletted lists */
+ul.typographic {
+  list-style: initial;
+  padding-inline-start: 20px;
+}
+
+/* stops icons being the target of JS click events */
+a.btn *,
+button * {
+  pointer-events: null;
+}
+
+/* For 'accessibility text'. If your button only has an image inside it that isn't good for accessibility. Put a span inside there and give it this class and put some descriptive text for what the button does into the span. */
+
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+  -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  clip-path: auto;
+  -webkit-clip-path: auto;
+  white-space: normal;
+}
+
+/* GET RID OF TWINE STYLES */
+#story{
+  margin:0
+}
+
+#passages {
+	max-width: 100%;
+
+}
+
+#story a.link-external:after {
+	content: "";
+}
+
+button{
+    background-color: transparent;
+    border: #fff 1px solid;
+    border-radius: 3px;
+}
+
+button:hover{
+	background-color:#cf1b98;
+	border: #fff 1px solid;
+	color: #fff;
+}
+
+a {
+  color: #f2647d;
+}
+
+a:active {
+  background-color: #f2647d;
+}
+
+a:hover {
+  color: #fff;
+}
+
+#story a.link-external:after {
+	content: "";
+}
+
+#story {
+	margin: 0
+}
+
+/* GENERAL STYLES */
+body{
+  font-size: 1.6rem;
+  font-family: "Space Grotesk";
+  overflow:scroll;
+  background:#000;
+  /* padding: 1.5rem */
+  display:flex;
+  flex-direction: column
+}
+
+header{
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+    padding: 2rem
+}
+
+main{
+   padding: 2rem;
+   margin-block-end: 4rem
+}
+
+footer{
+   display:flex;
+  justify-content: space-between;
+  align-items: flex-end; 
+  position:fixed;
+  bottom: 0;
+  padding: 2rem;
+  width: 100%;
+  background-color: #000
+}
+
+nav{
+  display:flex;
+    justify-content: space-between;
+}
+
+.nav-wrapper{
+display:flex;
+  flex-direction:column;
+align-items: flex-start
+}
+
+.nav-wrapper:last-child{
+align-items: flex-end
+}
+
+.nav-item{
+  margin-block-end: 1.5rem
+}
+
+.nav-item:last-child{
+  margin-block-end: 0
+}
+
+
+.nav-wrapper:last-child{
+display:flex;
+align-items: flex-end
+}
+
+.menu-wrapper{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu-wrapper > button{
+margin-inline-end: 10px;
+margin-block-end: 10px
+}
+
+.door-container{
+  display:flex;
+  flex-direction: row;
+justify-content: space-around;
+  align-items:center;
+  text-align: right;
+}
+
+.door-item{
+  display:flex;
+  flex-direction:column
+}
+
+.door-item > button > img {
+  max-width: 7rem
+}
+
+.door-item > span {
+  text-align: center
+}
+
+textarea{
+  min-width: 60vw
+}
+
+.wordcontainer{
+  display:flex;
+  flex-direction: row;
+}
+
+.letter-item > input[type=text]{
+    min-width: 2em;
+  	max-width: 2em;
+  	margin-inline-end:10px;
+}
+
+.letter-item > .correct-letter{
+  min-width: 2em;
+  	max-width: 2em;
+  	margin-inline-end:10px;
+}
+
+/* MAP */
+	.map{
+width: 100%;
+    height: 60vh;
+    border: 0;
+    margin: auto;
+    }
+
+
+.directions-card {
+    display: none!important
+}
+
+@media screen and (min-width: 450px) {
+.map{
+	max-width:60vw;
+	height:50vh;
+	border:0
+}
+}
+
+
+:: Story JavaScript [script]
+$('#ui-bar').remove();
+$(document.head).find('#style-ui-bar').remove();
+// TYPEWRITER FN
+!function() {
+    postrender.typewriter = function (b) {
+        if (this.tags) {
+            var r = new RegExp("t8n.typewriter.([0-9]+)(?:[^0-9]|$)","g");
+            var t = r.exec(this.tags.toString());
+            if (t) {
+                typeout(b, t[1]+0);
+            }
+        }
+        return b;
+    };
+    var typeout = function(c,t) {
+        var Furl = function(current) {
+            this.n = current;
+            this.out = false;
+            this.data = current.nodeValue;
+            current.nodeValue = "";
+            this.kids = [];
+            var cn = current.childNodes;
+            if (current.style && current.style.display=="none") {
+                return;
+            }
+            while (cn.length>0) {
+                var f = new Furl(cn[0]);
+                current.removeChild(cn[0]);
+                f.out = true;this.kids.push(f);
+            }
+        };
+        var nodes = new Furl(c);
+        var unfurl = function(furled,d) {
+            var n = furled.n;
+            if (furled.out) {
+                d.appendChild(n);
+                furled.out = false;
+            }
+            if (furled.data) {
+                n.nodeValue += furled.data[0];
+                furled.data = furled.data.slice(1);
+                return true;
+            }
+            for (var j=0; j<furled.kids.length; j++) {
+                var ret = unfurl(furled.kids[j],n);
+                if (ret) {
+                    return true;
+                }
+            }
+            return false;
+        };
+        var title = passage();
+        var intr = setInterval (
+            function() {
+                if (passage() == title && unfurl(nodes,null)) {
+                    return;
+                }
+                clearInterval(intr);
+            }
+        ,t);
+    };
+}();
+
+// MAKE MAP FUNCTION
+
+setup.generateDirectionsMap = function (latorg, longorg, latdest, longdest){
+const iFrame = document.createElement("iframe")
+iFrame.classList.add("map")
+iFrame.setAttribute("loading", "lazy")
+iFrame.setAttribute("referrerpolicy", "no-referrer-when-downgrade")
+// iFrame.setAttribute("allowfullscreen")
+iFrame.setAttribute("src", `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBDRwRTMpSybNcmgkYVX1yZ0YmBbNhs9qU&center=${latorg},${longorg}&zoom=17&origin=${latorg},${longorg}&destination=${latdest},${longdest}&mode=walking`)
+const mount = document.getElementById("mapMount")
+console.log(iFrame)
+return iFrame
+// this.mapMount.appendChild(iFrame)
+}
+
+//Get random 5 letter word
+
+setup.generate5LetterCode = () => {
+const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+let word = ""
+for (let i =0 ; i < 5 ; i++){
+word += alphabet[Math.round((alphabet.length-1)*Math.random())];
+}
+  return word;
+}
+
+
+:: StoryInit {"position":"100,100","size":"100,100"}
+<<cacheaudio "badjoke" "https://youhavefoundconey.net/CG/what/assets/audio/badjoke.mp3">>
+<<waitforaudio>>
+
+
+:: header {"position":"100,225","size":"100,100"}
+<header>Animals in The City</header>
+
+
+:: footer {"position":"100,350","size":"100,100"}
+<footer><div class="nav-wrapper "><div class="nav-item"><<button "Replay">><<goto $passage>><</button>> </div><div class="nav-item"><<button "Back">><<goto $prevpass>><</button>></div></div><div class="nav-wrapper"><div class="nav-item"><<button "I'm lost">><<goto "lost">><</button>></div></div></footer>
+
+
+:: landing {"position":"450,125","size":"100,100"}
+<<set $passage to "landing">><<set $nextpass to "">>
+<<include "header">>
+<main>
+landing page
+<<button "begin">><<set $prevpass to $passage>><<goto "AC-05">><</button>>
+</main>
+<<include "footer">>
+
+:: lost {"position":"450,125","size":"100,100"}
+<<set $passage to "lost">><<set $nextpass to "">>
+<<include "header">>
+<main>
+Sorry to hear that you're lost! 
+You have two options:
+
+<<button "Begin the adventure again">><<goto "landing">><</button>>
+
+<<button "Take me straight to the end location!">><<goto "end">><</button>>
+</main>
+<<include "footer">>
+
+
+
+:: AC-05 {"position":"450,1875","size":"100,100"}
+<<set $passage to "AC-05">><<set $nextpass to "">><<set $myMap = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
+<<include "header">>
+<main>
+  <div id="captions"><<type 70ms >>Hello? Is someone there?
+Oh! Thank goodness. You’re from 2022, aren’t you? I can tell by your clothes. Interesting dress sense in
+2022. <</type>></div>
+<<timed 12s>><<replace "#captions">>
+<<type 70ms >>Don’t worry, you’ll grow out of it. Gets much better in the 30s. Can you head towards Sise Lane? I
+need to talk to you somewhere a bit calmer.<</type>>
+<</replace>><</timed>><<timed 15s>>$myMap<</timed>>
+<<timed 20s>><<button "We're here">><<set $prevpass to $passage>><<goto "AC-06">><</button>><</timed>>
+</main>
+<<include "footer">>
+
+:: AC-06 {"position":"450,1875","size":"100,100"}
+<<set $passage to "AC-06">><<set $nextpass to "">>
+<<include "header">>
+<main>
+
+ Everyone okay? Thanks for coming here. I’m Max. Nice to meet you. Sorry about the faff. I’m in a bit of a state, clearly. But listen, I’m going to cut to the chase. I need your help. You might have heard about this thing...dragon time? Felix and I go way back, he’s always coming up with mischief like this. 
+
+Anyway, my job is to be the Animal Custodian of the City. Basically, I take care of all the animals you see around the City of London, across space and time. That’s right, I can time travel. Yes, it’s cool. Yes, you can get a bit seasick. Don’t make a big thing of it.
+
+The problem is, Felix implementing dragon time across the City has meant that...well...I’ve kinda, sorta,
+lost track of all the animals I was meant to be taking care of. I promise this doesn’t usually happen. Well, there was one time in the 1300s involving a very angry cow and a pair of shears...but that’s not important right now.
+
+So...I really need your help. I hate to ask. I know you’re probably very busy, very important people.
+Especially you. But I don’t think I can do it on my own. Do you think you could help me? In return, I’ll show you some interesting parts of the City that I’ll bet you’ve not seen before. Say yes, very loudly, if you think you can help me.
+
+
+/* TODO NEEDS TO CONTINUE AFTER THE TEXT */
+<<timed 10s>><<set $prevpass to $passage>><<goto "AC-07">><</timed>>
+</main>
+<<include "footer">>
+
+
+
+
+
+:: AC-07 {"position":"450,1875","size":"100,100"}
+<<set $passage to "AC-07">><<set $nextpass to "">>
+<<include "header">>
+<main>
+Well, that was a good start. Let’s keep up the enthusiasm, okay? Enthusiasm is a really big part of being the City’s Animal Custodian. 
+
+What we’re going to do is we’re going to go on a hunt. An animal hunt. We’re not going to hurt the animals, mind you, we’re just going to return them to my care. Right now, they’re running havoc, and we can’t have that. We won’t be catching all of them, exactly, but we’ll be taking inventory of them. Making sure we know where they are, so I can swoop round and pick them up once you’re all gone.
+
+First off, I need you to introduce yourselves to each other. Follow my lead. Take your first name, and follow it up with your favourite animal, and the word “whisperer” or “wrangler.” For example, I’d be “Max the Fox Whisperer.” Yes, foxes are my favourite animal. Not country foxes, mind. City foxes.
+
+London foxes. They’re one of a kind! Have you ever seen them running around at night? I saw one the other day and thought it might actually shake my hand, it came up so close. Bold as brass, London foxes. 
+Curious, adaptable, and agile — all the traits that make up a true Londoner!
+Take a minute and think about it, then introduce yourself to those around you.
+
+/* TODO NEEDS TO SHOW AFTER THE TEXT */
+<<timed 10s>><<button "We've all introduced ourselves">><<set $prevpass to $passage>><<goto "AC-08">><</button>><</timed>>
+</main>
+<<include "footer">>
+
+:: AC-08 {"position":"450,1875","size":"100,100"}
+<<set $passage to "AC-08">><<set $nextpass to "">><<set $myMap2 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
+<<include "header">>
+<main>
+Very good. Off we go. Let’s head up Queen Victoria Street — I believe towards Bank Station, in 2022 times.
+
+So, one of the first animals we need to look out for are dragons. I know you’ve already met a dragon in
+the shape of Felix — and maybe you’ll meet more before our time together ends, who can say — but what you might not know is that dragons, due to the funny way time works around these parts, can
+sometimes be found in the shape of pigeons.
+
+Yes. Pigeons. Not every pigeon, mind. But what I need you to do is to keep a tally of the dragon pigeons you see flying about the City. Now, how can you tell the difference between a dragon pigeon and a pigeon pigeon? Simply put, dragon pigeons are the pigeons you see that have something...slightly strange
+about them. Maybe they’re missing a foot. Maybe they’re a bit bigger than a normal pigeon. Maybe you can see the green shimmering feathers a bit clearer on them. That kind of thing. Every time you see a pigeon that looks different, that looks somewhat special, note it down. Be sure to tell the people you’re with why that particular pigeon is special, too. We’ll keep a count and tally them up at the end of our journey. Make sure you don’t forget!
+
+Now, as we get to Bank Station, we’re going to want to turn right, down Lombard Street. Off we go! This is going mighty well already, I can tell. I’m feeling good. You lot have sharp eyes. You might even put me out of a job. Keep counting those dragon pigeons!
+
+/* TODO NEEDS TO SHOW AFTER THE TEXT */
+<<timed 10s>>$myMap2<</timed>>
+<<timed 15s>><<set $prevpass to $passage>><<goto "AC-09">><</timed>>
+</main>
+<<include "footer">>
+
+:: AC-09 {"position":"450,1875","size":"100,100"}
+<<set $passage to "AC-09">><<set $nextpass to "">>
+<<include "header">>
+<main>
+/* The sound of thunderous hooves rises. */
+Wait!! Stop where you are! Stand absolutely still on the pavement!
+/* The sound of hooves slows a little to a rumble. */
+Everyone be quiet. Stop what you’re doing. This is very, very important.
+/* Their voice lowers to a whisper. */
+The pigs. The pigs have escaped.
+You don’t know what that means, do you? Oh goodness me.
+/* The sound of pigs snuffling, trying to sniff out the audience. */
+Shhhhh. Absolute silence.
+/* The sound of the pigs comes very close. Then, after a few seconds, it recedes. Max sighs in relief. */
+Thank goodness.
+Listen. I didn’t tell you this before. I’m sorry. I was...truth be told, I didn’t think they’d be an issue today, and I didn’t want to worry you. I’ll never lie to you again, I promise. The fact of the matter is that there is a herd of feral pigs living underneath the City. Don’t look so shocked! That’s the least shocking thing that you’ve learned today, surely.
+
+It happened sometime in the 1700s — there was a pig being kept in Hampstead Heath by a butcher. One day, as the butcher was carefully sharpening his biggest knife, the pig got wind of what was happening. She made a run for it. And she escaped! The butcher chased after her, as quick as he could — she was a month’s worth of bacon, at least — but she ran into the sewers underneath London and lost him. Now, the sewers...that’s almost a whole other city unto itself. Tunnels that spider out under the city — more than you could ever know. It’s no surprise then that the pig got lost. Couldn’t find her way out. And you know what? She was pregnant, too. One day, she had lots of little baby piglets. And now, they roam the sewers together, little hooves clip clopping away. But this is where it gets a bit scary. With nothing to eat down there, it’s said that they’ve developed a taste for human flesh...All of which is to say that, if you hear the sound of hooves and grunting...it’s the pigs. I can’t control them — no-one can. But I can help you avoid them.
+
+/* TODO NEEDS TO SHOW AFTER THE TEXT */
+<<timed 10s>>$myMap2<</timed>>
+<<timed 15s>><<set $prevpass to $passage>><<goto "AC-10">><</timed>>
+</main>
+<<include "footer">>
+
+:: AC-10 {"position":"450,1875","size":"100,100"}
+<<set $passage to "AC-10">><<set $nextpass to "">>
+<<include "header">>
+<main>
+/* The sound of snuffling returns. */
+It sounds like they’re back. Now, there’s no need to be scared, as long as you listen to your good friend Max. What I need you to do is to be very careful with how you walk down Lombard Street. You need to avoid every crack or line in the pavement if you’re not going to alert the pigs to your position. Hop or skip over the cracks on the ground until you get to Birchin Lane. It should be on your left, just a little further. Ready? And...let’s go.
+/* The audience make it to Birchin Lane. Once everyone is there, they let Max know. */
+
+/* TODO NEEDS TO SHOW AFTER THE TEXT */
+<<timed 10s>>$myMap2<</timed>>
+<<timed 15s>><<set $prevpass to $passage>><<button "We made it!">><<goto "AC-11">><</button>><</timed>>
+</main>
+<<include "footer">>
+
+
+:: AC-11 {"position":"450,1875","size":"100,100"}
+<<set $passage to "AC-11">><<set $nextpass to "">>
+<<include "header">>
+<main>
+Alright. Hang on for a moment. Everyone still here? We haven’t lost anyone to the pigs? Good stuff. I reckon they’re gone for now, so we should be alright to walk normally. But keep an eye out! They still might come back, so be careful. I’ll give you a heads up.
+
+Now then, our next task is to catch Polly the Parrot. She’s a cheeky one, I have to admit. This might be tricky. Always nips my fingers if I don’t feed her brussel sprouts quickly enough.
+Polly’s an African Grey parrot, which means she’s particularly adept at mimicking noises...something that’s got her into heaps of trouble in the past. Polly and I first met in the early 20th Century when she’d sit in Ye Olde Cheshire Cheese, that lovely old pub on Fleet Street, and chat away to customers. Once, she ordered a bottle of champagne on my tab! Naughty girl. She’s a bit of a rascal, truth be told. Always goes missing, so this is nothing new. Once, in 1905, someone left her cage door open and she disappeared! Ended up sparking a City-wide manhunt! They found her in the end, though. Always do.
+
+I’ve found that the best way to track Polly down when she’s missing is to say one of her catchphrases.
+
+What I need you to do, then, is to say, as loud and as clear as you can, “pudding and two veg!” as we head down Birchin Lane. You could even add a “rats!” in there if you’re feeling it. We’ll do it for 30 seconds, okay? 
+
+/* TODO NEEDS TO SHOW AFTER THE TEXT */
+
+<<timed 5s>><<button "Here we go">><<set $prevpass to $passage>><<goto "countdown">><</button>><</timed>>
+</main>
+<<include "footer">>
+
+:: countdown {"position":"450,1875","size":"100,100"}
+<<set $passage to "countdown">><<set $nextpass to "">>
+<<include "header">>
+<main>
+<<set $seconds to 30>>
+Countdown: <span id="countdown">$seconds seconds remaining</span>!\
+<<silently>>
+	<<repeat 1s>>
+		<<set $seconds to $seconds - 1>>
+		<<if $seconds gt 0>>
+			<<replace "#countdown">>$seconds seconds remaining<</replace>>
+		<<else>>
+			<<replace "#countdown">>Times up!<</replace>>
+			<<set $prevpass to $passage>><<goto "AC-12">>
+			<<stop>>
+		<</if>>
+	<</repeat>>
+<</silently>>
+</main>
+<<include "footer">>
+
+
+:: AC-12 {"position":"450,1875","size":"100,100"}
+<<set $passage to "AC-12">><<set $nextpass to "">><<set $myMap3 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
+<<include "header">>
+<main>
+There she is! Can you hear her? I can’t see her, but I reckon she should be just behind that building. She has grey feathers, you know, so she blends in easily. Oh, Polly, it’s so good to hear from you, even if your squawks are a bit loud. Stay right there, won’t you? Thank you for your help, friends, that’s another one in the bag.
+
+Let’s head right on Cornhill and walk down. When you’re walking down Cornhill, let me know.
+
+
+/* TODO NEEDS TO SHOW AFTER THE TEXT */
+<<timed 5s>>$myMap3<</timed>>
+<<timed 15s>><<button "We're at Cornhill">><<set $prevpass to $passage>><<goto "AC-13">><</button>><</timed>>
+</main>
+<<include "footer">>
+
+:: AC-13 {"position":"450,1875","size":"100,100"}
+<<set $passage to "AC-13">><<set $nextpass to "">><<set $myMap4 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
+<<include "header">>
+<main>
+Stop! Do you hear that?
+
+/* The sound of hooves rumbling and snuffling returns. */
+
+The pigs! They’ve doubled back. Now, if you can, balance yourself on one foot, and hold your breath. If you can’t balance, just hold your breath for as long as possible. That way, the pigs won’t hear the vibrations of your feet. Do it for as long as you can! Start now.
+/* After 10-15 seconds, Max’s voice comes back in. */
+
+Okay, I think they’re gone. That was a close one. They’re getting smarter. Quick, let’s head right onto Gracechurch Street. Let me know when you’re outside Leadenhall Market. And don’t forget to keep looking out for the dragon pigeons.
+
+/* When the audience get outside Leadenhall Market, they let Max know. */
+
+/* TODO NEEDS TO SHOW AFTER THE TEXT */
+<<timed 5s>>$myMap4<</timed>>
+<<timed 15s>><<button "We're at the market">><<set $prevpass to $passage>><<goto "AC-14">><</button>><</timed>>
+
+</main>
+<<include "footer">>
+
+:: AC-14 {"position":"450,1875","size":"100,100"}
+<<set $passage to "AC-14">><<set $nextpass to "">><<set $myMap5 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
+<<include "header">>
+<main>
+Ooh. Can you hear that?
+
+/* The sound of a bustling 19th Century market hall — people shouting, haggling, hauling produce onto crates, etc. */
+
+Seems like we’re heading into the 19th century here. That’s good. We can find Old Tom the Goose. Now, I’m not saying that I have favourites. All the animals of the City are my favourites, obviously. But if you forced me to decide? Well, Old Tom would probably be up there. I can’t lie! Do you know Old Tom? He was a right troublemaker, you know. He and I are birds of a feather. Heh. Get it? Anyway, he got shipped over from Belgium, and was meant to make a lovely tasty roast dinner for some lord and lady — but he escaped! Just as he was about to be slaughtered! Crafty fellow. He slipped out from between the butcher’s hands and fled into the depths of Leadenhall Market, right where you’re standing now. Everyone was enlisted to catch him, but no-one could — he was too slippery, too clever. After a few days, the butcher thought, well, he’s proved his worth. We’ll leave him be. So throughout the 1830s, Old Tom would just wander around the market hall, doing as he pleased, often getting fed bits of cabbage or carrot. Lucky old thing. Now — Tom wouldn’t hang around inside Leadenhall Market — he’s far too crafty for that. I think he might be on one of those little side streets. Can you find the corner of Leadenhall Street and Lime Street for me?
+
+/* TODO NEEDS TO SHOW AFTER THE TEXT */
+<<timed 5s>>$myMap5<</timed>>
+<<timed 15s>><<button "We're here">><<set $prevpass to $passage>><<goto "AC-15">><</button>><</timed>>
+
+</main>
+<<include "footer">>
+
+:: AC-15 {"position":"450,1875","size":"100,100"}
+<<set $passage to "11">><<set $nextpass to "">><<set $myMap6 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
+<<include "header">>
+<main>
+This looks right. Head down Lime Street for me, would you.
+/* After about 40 seconds, the sound of a goose honking. */
+There you are! Tom, you old rascal. Don’t move a muscle. Yes it’s me! Don’t honk. We’re friends, remember?
+/* Tom keeps honking. */
+If you keep making that terrible noise, I’m going to feed you to the pigs!
+/* Tom stops honking. */
+That’s better. I was only joking. You know that, right?
+Thank you, my friends. That’s another one ticked off the list. Don’t get too close to him — he’ll think your fingers are delicious carrots and give you a nip. Stay there, Tom. I’ll come and get you in a minute.
+Now, off we go. Let’s head through Cullum Street.
+
+/* TODO NEEDS TO SHOW AFTER THE TEXT */
+<<timed 5s>>$myMap6<</timed>>
+<<timed 15s>><<button "We're Cullum Street">><<set $prevpass to $passage>><<goto "AC-16">><</button>><</timed>>
+
+</main>
+<<include "footer">>
+
+:: AC-16 {"position":"450,1875","size":"100,100"}
+<<set $passage to "11">><<set $nextpass to "">><<set $myMap7 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
+<<include "header">>
+<main>
+Hang about here for a moment, will you?
+Right, now we have to find our final animal. We’re looking for Faith the Cat — a very, very lucky old cat. Oh, she’s a darling. Faith always seems to know when I’m having a bad day. Loves to sit on my lap and purr the house down. Helps if I’ve got a tin of tuna in my pocket, but hey. Hopefully some of her famous luck will rub off on us! Now Faith is a lovely cat — you can’t say that for every cat, let’s be honest, but Faith is a special case. You see, Faith actually survived the Blitz. She was a church cat — I first found her in the late 1930s in a church called St Augustine’s with her little black and white kitten, Panda. Now, when London was being bombed in World War II, lots of important landmarks got hit. One night, on the 9th September 1940, Faith and Panda took shelter in the basement of St Augustine’s, where it was warmest. But that very same night, a German bomber bombed the church, as well as 7 other churches. The priest of the church was told that there couldn’t possibly be any survivors — Faith and Panda were most likely dead. But the priest, Ross, couldn’t bring himself to believe it. The cat was called Faith, after all. So he bent down and crawled under the smouldering rubble, and made his way to the basement. And what did he find? Faith and Panda, unharmed, and meowing their little hearts out. Isn’t that amazing? Faith was actually awarded a medal for bravery, for protecting her son. So you’ll understand if she can get a little nervous, won’t you? What we need to do is when we get onto Fenchurch Street, we’re going to whisper “pspspsps” for about 20 seconds. Hopefully that’ll be enough to pique her interest.
+
+/* TODO NEEDS TO SHOW AFTER THE TEXT */
+<<timed 5s>>$myMap7<</timed>>
+<<timed 15s>><<button "We're here and ready!">><<set $prevpass to $passage>><<goto "AC-17">><</button>><</timed>>
+</main>
+<<include "footer">>
+
+:: AC-17 {"position":"450,1875","size":"100,100"}
+<<set $passage to "12">><<set $nextpass to "">>
+<<include "header">>
+<main>
+Okay. Ready? Go.
+/* The audience call for Faith. After about twenty seconds: */
+Nothing? Hmm. Maybe this will prove trickier than expected. I suppose we have to think about what kinds of things cats like. What kind of food do cats like? Milk, fish...anything else? Have a look at your devices. Pick one of those foods and make them sound as delightful and delectable as possible. Tell her what kind of delicious flaky fish we have, or what lovely filling milk we can give her, or what gorgeous creamy cheese we have if she comes out.
+/* The options are fish, milk, and cheese. Each audience member picks one. */
+Shall we give it a go? Pick one, and call it out for 20 seconds.
+/* The audience call out for Faith, tempting her with treats. After twenty seconds, we hear soft meowing. */
+<<timed 10s>><<set $seconds to 20>>
+Countdown: <span id="countdown">$seconds seconds remaining</span>!\
+<<silently>>
+	<<repeat 1s>>
+		<<set $seconds to $seconds - 1>>
+		<<if $seconds gt 0>>
+			<<replace "#countdown">>$seconds seconds remaining<</replace>>
+		<<else>>
+			<<replace "#countdown">>Times up!<</replace>>
+			<<set $prevpass to $passage>><<goto "AC-18">>
+			<<stop>>
+		<</if>>
+	<</repeat>>
+<</silently>><</timed>>
+/* TODO NEEDS TO CONTINUE AFTER THE TEXT */
+
+</main>
+<<include "footer">>
+
+:: AC-18 {"position":"450,1875","size":"100,100"}
+<<set $passage to "AC-18">><<set $nextpass to "">><<set $myMap8 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
+<<include "header">>
+<main>
+That did the trick! Can you hear her? She must be down Rood Lane. Come on, quick!
+
+/* The audience go to Rood Lane. The meowing gets louder. */
+/* TODO NEEDS TO CONTINUE AFTER THE TEXT */
+<<timed 5s>>$myMap8<</timed>>
+<<timed 15s>><<button "We're here!">><<set $prevpass to $passage>><<goto "AC-19">><</button>><</timed>>
+</main>
+<<include "footer">>
+
+:: AC-19 {"position":"450,1875","size":"100,100"}
+<<set $passage to "AC-19">><<set $nextpass to "">><<set $myMap9 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
+<<include "header">>
+<main>
+Faith! There you are. Come here, girl. That’s it! Very good.
+That did the trick, didn’t it? Excellent stuff, everyone.
+/* The meowing turns to purring. */
+I’ll have some lovely tuna for you when I get back. Faith. You just sit tight. Don’t cause any trouble.
+Come on, you lot. Head onto Eastcheap, and then Great Tower Street.
+
+/* Once on Great Tower Street...the sound of rumbling, one more time. Louder than both previous times. */
+/* TODO NEEDS TO CONTINUE AFTER THE TEXT */
+<<timed 5s>>$myMap9<</timed>>
+<<timed 15s>><<button "We're on Great Tower Street!">><<set $prevpass to $passage>><<goto "AC-20">><</button>><</timed>>
+</main>
+<<include "footer">>
+
+:: AC-20 {"position":"450,1875","size":"100,100"}
+<<set $passage to "13">><<set $nextpass to "">><<set $myMap9 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
+<<include "header">>
+<main>
+Oh, blast. I thought we’d lost them. It’s the pigs. They’re closer to the surface than ever, can you hear? I think they’re getting hungry...We’ve tried running and hiding. We need to be brave. We need to stand up to them. I think we need to scare them. How do you think we should do it?
+/* TODO NEEDS TO CONTINUE AFTER THE TEXT */
+<<timed 5s>><<button "Stamp on the cracks in the pavement">><<set $prevpass to $passage>><<goto "AC-21">><</button>><</timed>>
+<<timed 6s>><<button "Jump on the middle of each paving stone">><<set $prevpass to $passage>><<goto "AC-21">><</button>><</timed>>
+  
+</main>
+<<include "footer">>
+
+:: AC-21 {"position":"450,1875","size":"100,100"}
+<<set $passage to "13">><<set $nextpass to "">><<set $myMap10 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>><<include "header">>
+<main>
+Okay! That sounds good. We need to do it as hard as we possibly can to make sure they run back into the sewers. Our end point is St Dunstan in the East. Just down the road. Do it as hard as you can. We need to scare them off. You can even yell if you want to as you’re doing it. Something like “Go away!” or “Leave us alone!” Okay? Ready? Let’s go!
+/* TODO NEEDS TO CONTINUE AFTER THE TEXT */
+<<timed 5s>>$myMap10<</timed>>
+/* The audience stamp their way towards St Dunstan in the East. */
+<<timed 10s>>That’s great! That’s working!<</timed>>
+/* The sound of pigs squealing, and the sound of their rumbling moving away. */
+<<timed 15s>>That’s it! They’re retreating! Keep stamping.<</timed>>
+/* TODO NEEDS TO CONTINUE AFTER THE TEXT */
+<<timed 15s>><<button "We're here!">><<set $prevpass to $passage>><<goto "AC-22">><</button>><</timed>>
+  
+</main>
+<<include "footer">>
+
+:: AC-22 {"position":"450,1875","size":"100,100"}
+<<set $passage to "AC-22">><<set $nextpass to "">><<include "header">>
+<main>
+You did it! That was brilliant. It sounds like they’ve retreated back down into the bottom of the sewers.
+
+They shouldn’t be a problem from now on. Well done, everyone. And look where we are now. St Dunstan in the East! Isn’t it beautiful?
+
+There might be more dragon pigeons around here. Have a look, and then tell someone around you how many dragons you’ve found. Tell me when you’re done.
+
+/* TODO NEEDS TO CONTINUE AFTER THE TEXT */
+<<timed 5s>><<button "We're done">><<set $prevpass to $passage>><<goto "AC-23">><</button>><</timed>>
+  
+</main>
+<<include "footer">>
+
+:: AC-23 {"position":"450,1875","size":"100,100"}
+<<set $passage to "AC-23">><<set $nextpass to "">><<include "header">>
+<main>
+Wow. Look at us, huh? Me, the grand expert in animal wrangling, and you lot...my excellent helpers.
+
+Tell you what, I’m going to do something I don’t normally do.
+
+Ahem.
+
+I now pronounce each of you...Junior City Animal Wranglers! That’s right, that is an official title. You should be very honoured, you know. Not everyone has the knack for this job, but you lot have shown the kind of moxie a junior wrangler needs. Congratulations!
+
+You know, I’ll let you in on a secret — this is my favourite place in the City. Somewhere where nature meets man. It’s stood here since the 1100s. It’s survived fires, bombings...and it’s still standing. Well, some of it is. But look at how the plants are growing. There’s life here. I feel like it’s a very potent place for dragon time. In fact...I feel something coming over me.
+/* There is a shimmering sound. */
+I’m shapeshifting! What, did you think I was human? Felix isn’t the only dragon around these parts, you know.
+/* Max lets out a dragon roar. */
+Oof, I needed to let that out. Listen, I need to stretch my wings a bit. You lot stay as long as you need to.
+Thank you for your help, my friends.
+/* Max takes off. */
+
+/* TODO NEEDS TO CONTINUE AFTER THE TEXT */
+<<timed 5s>><<button "End">><<set $prevpass to $passage>><<goto "end">><</button>><</timed>>
+  
+</main>
+<<include "footer">>
+
+
+:: end {"position":"450,1875","size":"100,100"}
+<<set $passage to "19">><<set $nextpass to "">><<set $endMap = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>><<include "header">>
+<main>
+
+End location
+
+$endMap
+  
+</main>
+<<include "footer">>
