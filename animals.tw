@@ -8,7 +8,7 @@ Animals of the City
 	"format": "SugarCube",
 	"format-version": "2.36.1",
 	"start": "landing",
-	"zoom": 0.6
+	"zoom": 0.3
 }
 
 
@@ -428,7 +428,7 @@ word += alphabet[Math.round((alphabet.length-1)*Math.random())];
 <footer><div class="nav-wrapper "><div class="nav-item"><<button "Replay">><<goto $passage>><</button>> </div><div class="nav-item"><<button "Back">><<goto $prevpass>><</button>></div></div><div class="nav-wrapper"><div class="nav-item"><<button "I'm lost">><<goto "lost">><</button>></div></div></footer>
 
 
-:: landing {"position":"450,125","size":"100,100"}
+:: landing {"position":"375,150","size":"100,100"}
 <<set $passage to "landing">><<set $nextpass to "">>
 <<include "header">>
 <main>
@@ -438,7 +438,8 @@ landing page
 </main>
 <<include "footer">>
 
-:: lost {"position":"450,125","size":"100,100"}
+
+:: lost {"position":"100,500","size":"100,100"}
 <<set $passage to "lost">><<set $nextpass to "">>
 <<include "header">>
 <main>
@@ -452,8 +453,7 @@ You have two options:
 <<include "footer">>
 
 
-
-:: AC-05 {"position":"450,1875","size":"100,100"}
+:: AC-05 {"position":"600,400","size":"100,100"}
 <<set $passage to "AC-05">><<set $nextpass to "">><<set $myMap = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
 <<include "header">>
 <main>
@@ -468,7 +468,8 @@ need to talk to you somewhere a bit calmer.<</type>>
 </main>
 <<include "footer">>
 
-:: AC-06 {"position":"450,1875","size":"100,100"}
+
+:: AC-06 {"position":"800,400","size":"100,100"}
 <<set $passage to "AC-06">><<set $nextpass to "">>
 <<include "header">>
 <main>
@@ -490,10 +491,7 @@ Especially you. But I don’t think I can do it on my own. Do you think you coul
 <<include "footer">>
 
 
-
-
-
-:: AC-07 {"position":"450,1875","size":"100,100"}
+:: AC-07 {"position":"1000,400","size":"100,100"}
 <<set $passage to "AC-07">><<set $nextpass to "">>
 <<include "header">>
 <main>
@@ -512,7 +510,8 @@ Take a minute and think about it, then introduce yourself to those around you.
 </main>
 <<include "footer">>
 
-:: AC-08 {"position":"450,1875","size":"100,100"}
+
+:: AC-08 {"position":"1200,400","size":"100,100"}
 <<set $passage to "AC-08">><<set $nextpass to "">><<set $myMap2 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
 <<include "header">>
 <main>
@@ -533,7 +532,8 @@ Now, as we get to Bank Station, we’re going to want to turn right, down Lombar
 </main>
 <<include "footer">>
 
-:: AC-09 {"position":"450,1875","size":"100,100"}
+
+:: AC-09 {"position":"1400,400","size":"100,100"}
 <<set $passage to "AC-09">><<set $nextpass to "">>
 <<include "header">>
 <main>
@@ -558,7 +558,8 @@ It happened sometime in the 1700s — there was a pig being kept in Hampstead He
 </main>
 <<include "footer">>
 
-:: AC-10 {"position":"450,1875","size":"100,100"}
+
+:: AC-10 {"position":"600,900","size":"100,100"}
 <<set $passage to "AC-10">><<set $nextpass to "">>
 <<include "header">>
 <main>
@@ -573,7 +574,7 @@ It sounds like they’re back. Now, there’s no need to be scared, as long as y
 <<include "footer">>
 
 
-:: AC-11 {"position":"450,1875","size":"100,100"}
+:: AC-11 {"position":"800,900","size":"100,100"}
 <<set $passage to "AC-11">><<set $nextpass to "">>
 <<include "header">>
 <main>
@@ -592,7 +593,8 @@ What I need you to do, then, is to say, as loud and as clear as you can, “pudd
 </main>
 <<include "footer">>
 
-:: countdown {"position":"450,1875","size":"100,100"}
+
+:: countdown {"position":"1200,600","size":"100,100"}
 <<set $passage to "countdown">><<set $nextpass to "">>
 <<include "header">>
 <main>
@@ -614,7 +616,7 @@ Countdown: <span id="countdown">$seconds seconds remaining</span>!\
 <<include "footer">>
 
 
-:: AC-12 {"position":"450,1875","size":"100,100"}
+:: AC-12 {"position":"1000,900","size":"100,100"}
 <<set $passage to "AC-12">><<set $nextpass to "">><<set $myMap3 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
 <<include "header">>
 <main>
@@ -629,7 +631,8 @@ Let’s head right on Cornhill and walk down. When you’re walking down Cornhil
 </main>
 <<include "footer">>
 
-:: AC-13 {"position":"450,1875","size":"100,100"}
+
+:: AC-13 {"position":"1200,900","size":"100,100"}
 <<set $passage to "AC-13">><<set $nextpass to "">><<set $myMap4 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
 <<include "header">>
 <main>
@@ -651,7 +654,8 @@ Okay, I think they’re gone. That was a close one. They’re getting smarter. Q
 </main>
 <<include "footer">>
 
-:: AC-14 {"position":"450,1875","size":"100,100"}
+
+:: AC-14 {"position":"1400,900","size":"100,100"}
 <<set $passage to "AC-14">><<set $nextpass to "">><<set $myMap5 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
 <<include "header">>
 <main>
@@ -668,7 +672,8 @@ Seems like we’re heading into the 19th century here. That’s good. We can fin
 </main>
 <<include "footer">>
 
-:: AC-15 {"position":"450,1875","size":"100,100"}
+
+:: AC-15 {"position":"600,1300","size":"100,100"}
 <<set $passage to "11">><<set $nextpass to "">><<set $myMap6 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
 <<include "header">>
 <main>
@@ -689,7 +694,8 @@ Now, off we go. Let’s head through Cullum Street.
 </main>
 <<include "footer">>
 
-:: AC-16 {"position":"450,1875","size":"100,100"}
+
+:: AC-16 {"position":"800,1300","size":"100,100"}
 <<set $passage to "11">><<set $nextpass to "">><<set $myMap7 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
 <<include "header">>
 <main>
@@ -702,7 +708,8 @@ Right, now we have to find our final animal. We’re looking for Faith the Cat �
 </main>
 <<include "footer">>
 
-:: AC-17 {"position":"450,1875","size":"100,100"}
+
+:: AC-17 {"position":"1000,1300","size":"100,100"}
 <<set $passage to "12">><<set $nextpass to "">>
 <<include "header">>
 <main>
@@ -731,7 +738,8 @@ Countdown: <span id="countdown">$seconds seconds remaining</span>!\
 </main>
 <<include "footer">>
 
-:: AC-18 {"position":"450,1875","size":"100,100"}
+
+:: AC-18 {"position":"1200,1300","size":"100,100"}
 <<set $passage to "AC-18">><<set $nextpass to "">><<set $myMap8 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
 <<include "header">>
 <main>
@@ -744,7 +752,8 @@ That did the trick! Can you hear her? She must be down Rood Lane. Come on, quick
 </main>
 <<include "footer">>
 
-:: AC-19 {"position":"450,1875","size":"100,100"}
+
+:: AC-19 {"position":"1400,1300","size":"100,100"}
 <<set $passage to "AC-19">><<set $nextpass to "">><<set $myMap9 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
 <<include "header">>
 <main>
@@ -761,7 +770,8 @@ Come on, you lot. Head onto Eastcheap, and then Great Tower Street.
 </main>
 <<include "footer">>
 
-:: AC-20 {"position":"450,1875","size":"100,100"}
+
+:: AC-20 {"position":"600,1700","size":"100,100"}
 <<set $passage to "13">><<set $nextpass to "">><<set $myMap9 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
 <<include "header">>
 <main>
@@ -773,7 +783,8 @@ Oh, blast. I thought we’d lost them. It’s the pigs. They’re closer to the 
 </main>
 <<include "footer">>
 
-:: AC-21 {"position":"450,1875","size":"100,100"}
+
+:: AC-21 {"position":"800,1700","size":"100,100"}
 <<set $passage to "13">><<set $nextpass to "">><<set $myMap10 = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>><<include "header">>
 <main>
 Okay! That sounds good. We need to do it as hard as we possibly can to make sure they run back into the sewers. Our end point is St Dunstan in the East. Just down the road. Do it as hard as you can. We need to scare them off. You can even yell if you want to as you’re doing it. Something like “Go away!” or “Leave us alone!” Okay? Ready? Let’s go!
@@ -789,7 +800,8 @@ Okay! That sounds good. We need to do it as hard as we possibly can to make sure
 </main>
 <<include "footer">>
 
-:: AC-22 {"position":"450,1875","size":"100,100"}
+
+:: AC-22 {"position":"1000,1700","size":"100,100"}
 <<set $passage to "AC-22">><<set $nextpass to "">><<include "header">>
 <main>
 You did it! That was brilliant. It sounds like they’ve retreated back down into the bottom of the sewers.
@@ -804,7 +816,8 @@ There might be more dragon pigeons around here. Have a look, and then tell someo
 </main>
 <<include "footer">>
 
-:: AC-23 {"position":"450,1875","size":"100,100"}
+
+:: AC-23 {"position":"1200,1700","size":"100,100"}
 <<set $passage to "AC-23">><<set $nextpass to "">><<include "header">>
 <main>
 Wow. Look at us, huh? Me, the grand expert in animal wrangling, and you lot...my excellent helpers.
@@ -830,7 +843,7 @@ Thank you for your help, my friends.
 <<include "footer">>
 
 
-:: end {"position":"450,1875","size":"100,100"}
+:: end {"position":"100,700","size":"100,100"}
 <<set $passage to "19">><<set $nextpass to "">><<set $endMap = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>><<include "header">>
 <main>
 
@@ -840,3 +853,4 @@ $endMap
   
 </main>
 <<include "footer">>
+
