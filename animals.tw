@@ -15,6 +15,11 @@ Animals of the City
 :: Story Stylesheet [stylesheet]
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
 
+@font-face {
+  font-family: "Big John";
+  src: url("/assets/fonts/bigjohn.otf") format("opentype");
+}
+
 /* GENERICS */
 html {
   box-sizing: border-box;
@@ -160,17 +165,17 @@ button{
 }
 
 button:hover{
-	background-color:#cf1b98;
+	background-color:#ea9e25;
 	border: #fff 1px solid;
 	color: #fff;
 }
 
 a {
-  color: #f2647d;
+  color:#ea9e25;;
 }
 
 a:active {
-  background-color: #f2647d;
+  background-color: #ea9e25;;
 }
 
 a:hover {
@@ -188,10 +193,14 @@ a:hover {
 /* GENERAL STYLES */
 body{
   font-size: 1.6rem;
+  font-weight: 600;
   font-family: "Space Grotesk";
+  color:#fff;
+  color:#000
   overflow:scroll;
-  background:#000;
+  background: #1c8f93;
   /* padding: 1.5rem */
+
   display:flex;
   flex-direction: column
 }
@@ -200,7 +209,9 @@ header{
   display:flex;
   justify-content: flex-end;
   align-items: center;
-    padding: 2rem
+    padding: 2rem;
+    font-family: "Big John";
+    font-size: 2rem
 }
 
 main{
@@ -216,7 +227,7 @@ footer{
   bottom: 0;
   padding: 2rem;
   width: 100%;
-  background-color: #000
+background: #1c8f93;
 }
 
 nav{
@@ -271,39 +282,8 @@ justify-content: space-around;
   text-align: right;
 }
 
-.door-item{
-  display:flex;
-  flex-direction:column
-}
+/* SPECIFICS  */
 
-.door-item > button > img {
-  max-width: 7rem
-}
-
-.door-item > span {
-  text-align: center
-}
-
-textarea{
-  min-width: 60vw
-}
-
-.wordcontainer{
-  display:flex;
-  flex-direction: row;
-}
-
-.letter-item > input[type=text]{
-    min-width: 2em;
-  	max-width: 2em;
-  	margin-inline-end:10px;
-}
-
-.letter-item > .correct-letter{
-  min-width: 2em;
-  	max-width: 2em;
-  	margin-inline-end:10px;
-}
 
 /* MAP */
 	.map{
