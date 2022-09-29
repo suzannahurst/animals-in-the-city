@@ -416,7 +416,8 @@ word += alphabet[Math.round((alphabet.length-1)*Math.random())];
 
 
 :: StoryInit {"position":"100,100","size":"100,100"}
-<<cacheaudio "AC_05" "https://animals-in-the-city.netlify.app/assets/audio/AC_05.mp3">>
+<<cacheaudio "badjoke" "https://youhavefoundconey.net/CG/what/assets/audio/badjoke.mp3">>
+<<cacheaudio "AC_05" "https://www.animals-in-the-city.netlify.app/assets/audio/AC_05.mp3">>
 <<cacheaudio "AC_06" "./assets/audio/AC_06.mp3">>
 <<cacheaudio "AC_07" "./assets/audio/AC_07.mp3">>
 <<cacheaudio "AC_08" "./assets/audio/AC_08.mp3">>
@@ -473,9 +474,9 @@ You have two options:
 
 
 :: AC-05 {"position":"600,400","size":"100,100"}
-<<set $passage to "AC-05">><<set $myMap = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
-<<audio "AC_05" play>>
-<<include "header">>
+<<set $passage to "AC-05">><<set $myMap = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>><<include "header">>
+
+<<audio "badjoke" play>>
 <main>
   <div id="captions"><<type 70ms >>Hello? Is someone there?
 Oh! Thank goodness. You’re from 2022, aren’t you? I can tell by your clothes. Interesting dress sense in
