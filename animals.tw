@@ -416,7 +416,26 @@ word += alphabet[Math.round((alphabet.length-1)*Math.random())];
 
 
 :: StoryInit {"position":"100,100","size":"100,100"}
-<<cacheaudio "badjoke" "https://youhavefoundconey.net/CG/what/assets/audio/badjoke.mp3">>
+<<cacheaudio "AC_05" "./assets/AC_05.mp3">>
+<<cacheaudio "AC_06" "./assets/AC_06.mp3">>
+<<cacheaudio "AC_07" "./assets/AC_07.mp3">>
+<<cacheaudio "AC_08" "./assets/AC_08.mp3">>
+<<cacheaudio "AC_09" "./assets/AC_09.mp3">>
+<<cacheaudio "AC_10" "./assets/AC_10.mp3">>
+<<cacheaudio "AC_11" "./assets/AC_11.mp3">>
+<<cacheaudio "AC_12" "./assets/AC_12.mp3">>
+<<cacheaudio "AC_13" "./assets/AC_13.mp3">>
+<<cacheaudio "AC_14" "./assets/AC_14.mp3">>
+<<cacheaudio "AC_15" "./assets/AC_15.mp3">>
+<<cacheaudio "AC_16" "./assets/AC_16.mp3">>
+<<cacheaudio "AC_17" "./assets/AC_17.mp3">>
+<<cacheaudio "AC_18" "./assets/AC_18.mp3">>
+<<cacheaudio "AC_19" "./assets/AC_19.mp3">>
+<<cacheaudio "AC_20" "./assets/AC_20.mp3">>
+<<cacheaudio "AC_21" "./assets/AC_21.mp3">>
+<<cacheaudio "AC_22" "./assets/AC_22.mp3">>
+<<cacheaudio "AC_23" "./assets/AC_23.mp3">>
+<<cacheaudio "AC_allinone" "./assets/AC_allinone.mp3">>
 <<waitforaudio>>
 
 
@@ -455,6 +474,7 @@ You have two options:
 
 :: AC-05 {"position":"600,400","size":"100,100"}
 <<set $passage to "AC-05">><<set $myMap = setup.generateDirectionsMap(51.515145100985166,-0.08905860787295125,51.51341581900639, -0.0850674807043743)>>
+<<audio "AC_05" play>>
 <<include "header">>
 <main>
   <div id="captions"><<type 70ms >>Hello? Is someone there?
