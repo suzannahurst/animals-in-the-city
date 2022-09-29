@@ -416,26 +416,26 @@ word += alphabet[Math.round((alphabet.length-1)*Math.random())];
 
 
 :: StoryInit {"position":"100,100","size":"100,100"}
-<<cacheaudio "AC_05" "./assets/AC_05.mp3">>
-<<cacheaudio "AC_06" "./assets/AC_06.mp3">>
-<<cacheaudio "AC_07" "./assets/AC_07.mp3">>
-<<cacheaudio "AC_08" "./assets/AC_08.mp3">>
-<<cacheaudio "AC_09" "./assets/AC_09.mp3">>
-<<cacheaudio "AC_10" "./assets/AC_10.mp3">>
-<<cacheaudio "AC_11" "./assets/AC_11.mp3">>
-<<cacheaudio "AC_12" "./assets/AC_12.mp3">>
-<<cacheaudio "AC_13" "./assets/AC_13.mp3">>
-<<cacheaudio "AC_14" "./assets/AC_14.mp3">>
-<<cacheaudio "AC_15" "./assets/AC_15.mp3">>
-<<cacheaudio "AC_16" "./assets/AC_16.mp3">>
-<<cacheaudio "AC_17" "./assets/AC_17.mp3">>
-<<cacheaudio "AC_18" "./assets/AC_18.mp3">>
-<<cacheaudio "AC_19" "./assets/AC_19.mp3">>
-<<cacheaudio "AC_20" "./assets/AC_20.mp3">>
-<<cacheaudio "AC_21" "./assets/AC_21.mp3">>
-<<cacheaudio "AC_22" "./assets/AC_22.mp3">>
-<<cacheaudio "AC_23" "./assets/AC_23.mp3">>
-<<cacheaudio "AC_allinone" "./assets/AC_allinone.mp3">>
+<<cacheaudio "AC_05" "https://animals-in-the-city.netlify.app/assets/audio/AC_05.mp3">>
+<<cacheaudio "AC_06" "./assets/audio/AC_06.mp3">>
+<<cacheaudio "AC_07" "./assets/audio/AC_07.mp3">>
+<<cacheaudio "AC_08" "./assets/audio/AC_08.mp3">>
+<<cacheaudio "AC_09" "./assets/audio/AC_09.mp3">>
+<<cacheaudio "AC_10" "./assets/audio/AC_10.mp3">>
+<<cacheaudio "AC_11" "./assets/audio/AC_11.mp3">>
+<<cacheaudio "AC_12" "./assets/audio/AC_12.mp3">>
+<<cacheaudio "AC_13" "./assets/audio/AC_13.mp3">>
+<<cacheaudio "AC_14" "./assets/audio/AC_14.mp3">>
+<<cacheaudio "AC_15" "./assets/audio/AC_15.mp3">>
+<<cacheaudio "AC_16" "./assets/audio/AC_16.mp3">>
+<<cacheaudio "AC_17" "./assets/audio/AC_17.mp3">>
+<<cacheaudio "AC_18" "./assets/audio/AC_18.mp3">>
+<<cacheaudio "AC_19" "./assets/audio/AC_19.mp3">>
+<<cacheaudio "AC_20" "./assets/audio/AC_20.mp3">>
+<<cacheaudio "AC_21" "./assets/audio/AC_21.mp3">>
+<<cacheaudio "AC_22" "./assets/audio/AC_22.mp3">>
+<<cacheaudio "AC_23" "./assets/audio/AC_23.mp3">>
+<<cacheaudio "AC_allinone" "./assets/audio/AC_allinone.mp3">>
 <<waitforaudio>>
 
 
