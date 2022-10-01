@@ -222,7 +222,7 @@ main{
 footer{
    display:flex;
   justify-content: space-between;
-  align-items: flex-end; 
+  align-items: baseline; 
   position:fixed;
   bottom: 0;
   padding: 2rem;
@@ -249,9 +249,19 @@ align-items: flex-end
   margin-block-end: 0.5rem
 }
 
-.nav-item:last-child{
-  margin-block-end: 0
+footer> button {
+  font-size:1.3rem
 }
+
+.nav-item.forward > button, 
+.nav-item.back > button{
+  font-size:2rem
+}
+footer > button:first-child,  {
+  font-size:2rem
+}
+
+
 
 .nav-item > button{
  font-size: 1.3rem
@@ -430,10 +440,10 @@ word += alphabet[Math.round((alphabet.length-1)*Math.random())];
 
 :: footer {"position":"100,350","size":"100,100"}
 <footer>
-<<button "Back">><<goto $prevpass>><</button>>
-<<button "Replay">><<goto $passage>><</button>> 
-<<button "Take me to the end">><<goto "lost">><</button>>
-<<button "Forward">><<goto $nextpass>><</button>>
+<div class="nav-item back"><<button "<">><<goto $prevpass>><</button>></div>
+<div class="nav-item"><<button "Replay">><<goto $passage>><</button>> </div>
+<div class="nav-item"><<button "Take me to the end">><<goto "lost">><</button>></div>
+<div class="nav-item forward"><<button ">">><<goto $nextpassage>><</button>></div>
 </footer>
 
 
