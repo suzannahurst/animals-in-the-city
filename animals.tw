@@ -222,7 +222,7 @@ main{
 footer{
    display:flex;
   justify-content: space-between;
-  align-items: baseline; 
+align-items: end;
   position:fixed;
   bottom: 0;
   padding: 2rem;
@@ -246,7 +246,20 @@ align-items: flex-end
 }
 
 .nav-item{
-  margin-block-end: 0.5rem
+  margin-block-end: 0.5rem;
+  width:100%;
+  display:flex
+}
+
+.nav-item.replay, .nav-item.end{
+justify-content: center
+}
+.nav-item.replay, .nav-item.forward{
+justify-content: end
+}
+
+.nav-item.replay, .nav-item.back{
+justify-content: start
 }
 
 footer> button {
@@ -441,9 +454,11 @@ word += alphabet[Math.round((alphabet.length-1)*Math.random())];
 :: footer {"position":"100,350","size":"100,100"}
 <footer>
 <div class="nav-item back"><<button "<">><<goto $prevpass>><</button>></div>
-<div class="nav-item"><<button "Replay">><<goto $passage>><</button>> </div>
-<div class="nav-item"><<button "Take me to the end">><<goto "lost">><</button>></div>
-<div class="nav-item forward"><<button ">">><<goto $nextpassage>><</button>></div>
+<div class="nav-item replay"><<button "Replay">><<goto $passage>><</button>> </div>
+<div class="nav-item end"><<button "Take me to the end">><<set $prevpass to $passage>><<goto "lost">><</button>></div>
+<div class="nav-item forward"><<button ">">><<set $prevpass to $passage>><<goto $nextpassage>><</button>></div>
+
+
 </footer>
 
 
@@ -474,7 +489,7 @@ You have two options:
 
 :: AC-05 {"position":"600,400","size":"100,100"}
 <<set $passage to "AC-05">><<set $nextpassage to "AC-06">><<set $myMap = setup.generateDirectionsMap(51.51273574253808, -0.09190867122182791,51.51318914905516, -0.09147383074234947)>><<include "header">>
-/* <<audio "AC_05" play>> */
+<<audio "AC_05" play>>
 <main>
   <div id="captions"></div><<timed 18s>><<replace "#captions">><<type 70ms >>Hello? <</type>><</replace>><</timed>>
  <<timed 23s>><<replace "#captions">><<type 70ms >> Is someone there?<</type>><</replace>><</timed>>
