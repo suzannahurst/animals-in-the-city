@@ -529,14 +529,14 @@ word += alphabet[Math.round((alphabet.length-1)*Math.random())];
 
 
 &lt;/footer&gt;</tw-passagedata><tw-passagedata pid="4" name="landing" tags="" position="375,150" size="100,100">&lt;&lt;set $passage to &quot;landing&quot;&gt;&gt;
-&lt;&lt;include &quot;header&quot;&gt;&gt;
+
 &lt;main&gt;
 landing page
 
 &lt;&lt;button &quot;begin&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-05&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="lost" tags="" position="100,500" size="100,100">&lt;&lt;set $passage to &quot;lost&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
-&lt;&lt;include &quot;header&quot;&gt;&gt;
+
 &lt;main&gt;
 Sorry to hear that you&#39;re lost! 
 You have two options:
@@ -545,7 +545,7 @@ You have two options:
 
 &lt;&lt;button &quot;Take me straight to the end location!&quot;&gt;&gt;&lt;&lt;goto &quot;end&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="AC-05" tags="" position="600,400" size="100,100">&lt;&lt;set $passage to &quot;AC-05&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-06&quot;&gt;&gt;&lt;&lt;set $myMap = setup.generateDirectionsMap(51.51273574253808, -0.09190867122182791,51.51318914905516, -0.09147383074234947)&gt;&gt;&lt;&lt;include &quot;header&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="AC-05" tags="" position="600,400" size="100,100">&lt;&lt;set $passage to &quot;AC-05&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-06&quot;&gt;&gt;&lt;&lt;set $myMap = setup.generateDirectionsMap(51.51273574253808, -0.09190867122182791,51.51318914905516, -0.09147383074234947)&gt;&gt;
 &lt;&lt;audio &quot;AC_05&quot; play&gt;&gt;
 &lt;main&gt;
   &lt;div id=&quot;captions&quot;&gt;&lt;/div&gt;&lt;&lt;timed 18s&gt;&gt;&lt;&lt;replace &quot;#captions&quot;&gt;&gt;&lt;&lt;type 70ms &gt;&gt;Hello? &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -555,7 +555,7 @@ You have two options:
 &lt;&lt;timed 55s&gt;&gt;&lt;&lt;button &quot;We&#39;re here&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-06&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="AC-06" tags="" position="800,400" size="100,100">&lt;&lt;set $passage to &quot;AC-06&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-07&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_06&quot; play&gt;&gt;
-&lt;&lt;include &quot;header&quot;&gt;&gt;
+
 &lt;main&gt;
  Everyone okay? Thanks for coming here. I’m Max. Nice to meet you. Sorry about the faff. I’m in a bit of a state, clearly. But listen, I’m going to cut to the chase. I need your help. You might have heard about this thing...dragon time? Felix and I go way back, he’s always coming up with mischief like this. 
 
@@ -572,7 +572,7 @@ Especially you. But I don’t think I can do it on my own. Do you think you coul
 &lt;&lt;timed 10s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-07&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="AC-07" tags="" position="1000,400" size="100,100">&lt;&lt;set $passage to &quot;AC-07&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-08&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_07&quot; play&gt;&gt;
-&lt;&lt;include &quot;header&quot;&gt;&gt;
+
 &lt;main&gt;Well, that was a good start. Let’s keep up the enthusiasm, okay? Enthusiasm is a really big part of being the City’s Animal Custodian. 
 
 What we’re going to do is we’re going to go on a hunt. An animal hunt. We’re not going to hurt the animals, mind you, we’re just going to return them to my care. Right now, they’re running havoc, and we can’t have that. We won’t be catching all of them, exactly, but we’ll be taking inventory of them. Making sure we know where they are, so I can swoop round and pick them up once you’re all gone.
@@ -586,8 +586,8 @@ Take a minute and think about it, then introduce yourself to those around you.
 /* TODO NEEDS TO SHOW AFTER THE TEXT */
 &lt;&lt;timed 10s&gt;&gt;&lt;&lt;button &quot;We&#39;ve all introduced ourselves&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-08&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="AC-08" tags="" position="1200,400" size="100,100">&lt;&lt;set $passage to &quot;AC-08&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-09&quot;&gt;&gt;&lt;&lt;set $myMap2 = setup.generateDirectionsMap(51.51318914905516, -0.09147383074234947,51.513306270196175, -0.0897463101374395)&gt;&gt;&lt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_08&quot; play&gt;&gt;
-&lt;&lt;include &quot;header&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="AC-08" tags="" position="1200,400" size="100,100">&lt;&lt;set $passage to &quot;AC-08&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-09&quot;&gt;&gt;&lt;&lt;set $myMap2 = setup.generateDirectionsMap(51.51318914905516, -0.09147383074234947,51.513306270196175, -0.0897463101374395)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_08&quot; play&gt;&gt;
+
 &lt;main&gt;
 Very good. Off we go. Let’s head up Queen Victoria Street — I believe towards Bank Station, in 2022 times.
 
@@ -602,7 +602,7 @@ Now, as we get to Bank Station, we’re going to want to turn right, down Lombar
 &lt;&lt;timed 15s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-09&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="AC-09" tags="" position="1400,400" size="100,100">&lt;&lt;set $passage to &quot;AC-09&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-10&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_09&quot; play&gt;&gt;
-&lt;&lt;include &quot;header&quot;&gt;&gt;
+
 &lt;main&gt;Wait!! Stop where you are! Stand absolutely still on the pavement!
 
 Everyone be quiet. Stop what you’re doing. This is very, very important.
@@ -623,8 +623,8 @@ It happened sometime in the 1700s — there was a pig being kept in Hampstead He
 &lt;&lt;timed 10s&gt;&gt;$myMap2&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 15s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-10&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="AC-10" tags="" position="600,900" size="100,100">&lt;&lt;set $passage to &quot;AC-10&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_10&quot; play&gt;&gt;
-&lt;&lt;include &quot;header&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="AC-10" tags="" position="600,900" size="100,100">&lt;&lt;set $passage to &quot;AC-10&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-11&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_10&quot; play&gt;&gt;
+
 &lt;main&gt;
 It sounds like they’re back. Now, there’s no need to be scared, as long as you listen to your good friend Max. What I need you to do is to be very careful with how you walk down Lombard Street. You need to avoid every crack or line in the pavement if you’re not going to alert the pigs to your position. Hop or skip over the cracks on the ground until you get to Birchin Lane. It should be on your left, just a little further. Ready? And...let’s go.
 
@@ -633,7 +633,7 @@ It sounds like they’re back. Now, there’s no need to be scared, as long as y
 &lt;&lt;timed 15s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;button &quot;We made it!&quot;&gt;&gt;&lt;&lt;goto &quot;AC-11&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="AC-11" tags="" position="800,900" size="100,100">&lt;&lt;set $passage to &quot;AC-11&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-12&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_11&quot; play&gt;&gt;
-&lt;&lt;include &quot;header&quot;&gt;&gt;
+
 &lt;main&gt;Alright. Hang on for a moment. Everyone still here? We haven’t lost anyone to the pigs? Good stuff. I reckon they’re gone for now, so we should be alright to walk normally. But keep an eye out! They still might come back, so be careful. I’ll give you a heads up.
 
 Now then, our next task is to catch Polly the Parrot. She’s a cheeky one, I have to admit. This might be tricky. Always nips my fingers if I don’t feed her brussel sprouts quickly enough.
@@ -650,7 +650,7 @@ What I need you to do, then, is to say, as loud and as clear as you can, “pudd
 &lt;&lt;timed 5s&gt;&gt;&lt;&lt;button &quot;Here we go&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;countdown&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="countdown" tags="" position="1200,600" size="100,100">&lt;&lt;set $passage to &quot;countdown&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-12&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
-&lt;&lt;include &quot;header&quot;&gt;&gt;
+
 &lt;main&gt;
 &lt;&lt;set $seconds to 30&gt;&gt;
 Countdown: &lt;span id=&quot;countdown&quot;&gt;$seconds seconds remaining&lt;/span&gt;!\
@@ -668,7 +668,7 @@ Countdown: &lt;span id=&quot;countdown&quot;&gt;$seconds seconds remaining&lt;/s
 &lt;&lt;/silently&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="AC-12" tags="" position="1000,900" size="100,100">&lt;&lt;set $passage to &quot;AC-12&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-13&quot;&gt;&gt;&lt;&lt;set $myMap3 = setup.generateDirectionsMap(51.513306270196175, -0.0897463101374395,51.51337859600987, -0.08679861566052868)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_12&quot; play&gt;&gt;
-&lt;&lt;include &quot;header&quot;&gt;&gt;
+
 &lt;main&gt;
 There she is! Can you hear her? I can’t see her, but I reckon she should be just behind that building. She has grey feathers, you know, so she blends in easily. Oh, Polly, it’s so good to hear from you, even if your squawks are a bit loud. Stay right there, won’t you? Thank you for your help, friends, that’s another one in the bag.
 
@@ -680,7 +680,7 @@ Let’s head right on Cornhill and walk down. When you’re walking down Cornhil
 &lt;&lt;timed 15s&gt;&gt;&lt;&lt;button &quot;We&#39;re at Cornhill&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-13&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="AC-13" tags="" position="1200,900" size="100,100">&lt;&lt;set $passage to &quot;AC-13&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-14&quot;&gt;&gt;&lt;&lt;set $myMap4 = setup.generateDirectionsMap(51.51337859600987, -0.08679861566052868,51.512841075137494, -0.08374897587811146)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_13&quot; play&gt;&gt;
-&lt;&lt;include &quot;header&quot;&gt;&gt;
+
 &lt;main&gt;
 Stop! Do you hear that?
 
@@ -694,7 +694,7 @@ Okay, I think they’re gone. That was a close one. They’re getting smarter. Q
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="AC-14" tags="" position="1400,900" size="100,100">&lt;&lt;set $passage to &quot;AC-14&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-15&quot;&gt;&gt;&lt;&lt;set $myMap5 = setup.generateDirectionsMap(51.512841075137494, -0.08374897587811146,51.513491455258226, -0.08169454559785203)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_14&quot; play&gt;&gt;
-&lt;&lt;include &quot;header&quot;&gt;&gt;
+
 &lt;main&gt;
 Ooh. Can you hear that?
 
@@ -705,8 +705,8 @@ Seems like we’re heading into the 19th century here. That’s good. We can fin
 &lt;&lt;timed 15s&gt;&gt;&lt;&lt;button &quot;We&#39;re here&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-15&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="AC-15" tags="" position="600,1300" size="100,100">&lt;&lt;set $passage to &quot;AC-15&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-15&quot;&gt;&gt;&lt;&lt;set $myMap6 = setup.generateDirectionsMap(51.513491455258226, -0.08169454559785203,51.51197301158849, -0.08213992254285558)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_15&quot; play&gt;&gt;
-&lt;&lt;include &quot;header&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="AC-15" tags="" position="600,1300" size="100,100">&lt;&lt;set $passage to &quot;AC-15&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-16&quot;&gt;&gt;&lt;&lt;set $myMap6 = setup.generateDirectionsMap(51.513491455258226, -0.08169454559785203,51.51197301158849, -0.08213992254285558)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_15&quot; play&gt;&gt;
+
 &lt;main&gt;
 This looks right. Head down Lime Street for me, would you.
 
@@ -723,8 +723,8 @@ Now, off we go. Let’s head through Cullum Street.
 &lt;&lt;timed 15s&gt;&gt;&lt;&lt;button &quot;We&#39;re Cullum Street&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-16&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="AC-16" tags="" position="800,1300" size="100,100">&lt;&lt;set $passage to &quot;AC-16&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-16&quot;&gt;&gt;&lt;&lt;set $myMap7 = setup.generateDirectionsMap(51.51197301158849, -0.08213992254285558,51.51159138418852, -0.08295967435508012)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_16&quot; play&gt;&gt;
-&lt;&lt;include &quot;header&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="AC-16" tags="" position="800,1300" size="100,100">&lt;&lt;set $passage to &quot;AC-16&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-17&quot;&gt;&gt;&lt;&lt;set $myMap7 = setup.generateDirectionsMap(51.51197301158849, -0.08213992254285558,51.51159138418852, -0.08295967435508012)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_16&quot; play&gt;&gt;
+
 &lt;main&gt;
 Hang about here for a moment, will you?
 Right, now we have to find our final animal. We’re looking for Faith the Cat — a very, very lucky old cat. Oh, she’s a darling. Faith always seems to know when I’m having a bad day. Loves to sit on my lap and purr the house down. Helps if I’ve got a tin of tuna in my pocket, but hey. Hopefully some of her famous luck will rub off on us! Now Faith is a lovely cat — you can’t say that for every cat, let’s be honest, but Faith is a special case. You see, Faith actually survived the Blitz. She was a church cat — I first found her in the late 1930s in a church called St Augustine’s with her little black and white kitten, Panda. Now, when London was being bombed in World War II, lots of important landmarks got hit. One night, on the 9th September 1940, Faith and Panda took shelter in the basement of St Augustine’s, where it was warmest. But that very same night, a German bomber bombed the church, as well as 7 other churches. The priest of the church was told that there couldn’t possibly be any survivors — Faith and Panda were most likely dead. But the priest, Ross, couldn’t bring himself to believe it. The cat was called Faith, after all. So he bent down and crawled under the smouldering rubble, and made his way to the basement. And what did he find? Faith and Panda, unharmed, and meowing their little hearts out. Isn’t that amazing? Faith was actually awarded a medal for bravery, for protecting her son. So you’ll understand if she can get a little nervous, won’t you? What we need to do is when we get onto Fenchurch Street, we’re going to whisper “pspspsps” for about 20 seconds. Hopefully that’ll be enough to pique her interest.
@@ -734,8 +734,8 @@ Right, now we have to find our final animal. We’re looking for Faith the Cat �
 &lt;&lt;timed 15s&gt;&gt;&lt;&lt;button &quot;We&#39;re here and ready!&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-17&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="AC-17" tags="" position="1000,1300" size="100,100">&lt;&lt;set $passage to &quot;AC-17&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-18&quot;&gt;&gt;&lt;&lt;set $seconds to &quot;&quot;&gt;&gt;
-/* &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_17&quot; play&gt;&gt; */
-&lt;&lt;include &quot;header&quot;&gt;&gt;&lt;main&gt;
+&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_17&quot; play&gt;&gt;
+&lt;main&gt;
 &lt;span id=&quot;countdown&quot; class=&quot;countdown&quot;&gt;$seconds &lt;/span&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 &lt;&lt;timed 0.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 40ms&gt;&gt;Okay. Ready? Go.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -814,8 +814,8 @@ Right, now we have to find our final animal. We’re looking for Faith the Cat �
 /* TODO NEEDS TO CONTINUE AFTER THE TEXT */
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="AC-18" tags="" position="1200,1300" size="100,100">&lt;&lt;set $passage to &quot;AC-18&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-18&quot;&gt;&gt;&lt;&lt;set $myMap8 = setup.generateDirectionsMap(51.51159138418852, -0.08295967435508012,51.510699568738694, -0.08319849968545442)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_18&quot; play&gt;&gt;
-&lt;&lt;include &quot;header&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="AC-18" tags="" position="1200,1300" size="100,100">&lt;&lt;set $passage to &quot;AC-18&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-19&quot;&gt;&gt;&lt;&lt;set $myMap8 = setup.generateDirectionsMap(51.51159138418852, -0.08295967435508012,51.510699568738694, -0.08319849968545442)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_18&quot; play&gt;&gt;
+
 &lt;main&gt;
 That did the trick! Can you hear her? She must be down Rood Lane. Come on, quick!
 /* TODO NEEDS TO CONTINUE AFTER THE TEXT */
@@ -823,7 +823,7 @@ That did the trick! Can you hear her? She must be down Rood Lane. Come on, quick
 &lt;&lt;timed 15s&gt;&gt;&lt;&lt;button &quot;We&#39;re here!&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-19&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="AC-19" tags="" position="1400,1300" size="100,100">&lt;&lt;set $passage to &quot;AC-19&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-20&quot;&gt;&gt;&lt;&lt;set $myMap9 = setup.generateDirectionsMap(51.510699568738694, -0.08319849968545442,51.510205447243436, -0.08184300454801961)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_19&quot; play&gt;&gt;
-&lt;&lt;include &quot;header&quot;&gt;&gt;
+
 &lt;main&gt;
 Faith! There you are. Come here, girl. That’s it! Very good.
 That did the trick, didn’t it? Excellent stuff, everyone.
@@ -836,7 +836,7 @@ Come on, you lot. Head onto Eastcheap, and then Great Tower Street.
 &lt;&lt;timed 15s&gt;&gt;&lt;&lt;button &quot;We&#39;re on Great Tower Street!&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-20&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="AC-20" tags="" position="600,1700" size="100,100">&lt;&lt;set $passage to &quot;AC-20&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-21&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_20&quot; play&gt;&gt;
-&lt;&lt;include &quot;header&quot;&gt;&gt;
+
 &lt;main&gt;
 Oh, blast. I thought we’d lost them. It’s the pigs. They’re closer to the surface than ever, can you hear? I think they’re getting hungry...We’ve tried running and hiding. We need to be brave. We need to stand up to them. I think we need to scare them. How do you think we should do it?
 /* TODO NEEDS TO CONTINUE AFTER THE TEXT */
@@ -844,7 +844,7 @@ Oh, blast. I thought we’d lost them. It’s the pigs. They’re closer to the 
 &lt;&lt;timed 6s&gt;&gt;&lt;&lt;button &quot;Jump on the middle of each paving stone&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-21&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
   
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="AC-21" tags="" position="800,1700" size="100,100">&lt;&lt;set $passage to &quot;AC-21&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-22&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_21&quot; play&gt;&gt;&lt;&lt;set $myMap10 = setup.generateDirectionsMap(51.510205447243436, -0.08184300454801961,51.50975237659481, -0.0824661751178505)&gt;&gt;&lt;&lt;include &quot;header&quot;&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="AC-21" tags="" position="800,1700" size="100,100">&lt;&lt;set $passage to &quot;AC-21&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-22&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_21&quot; play&gt;&gt;&lt;&lt;set $myMap10 = setup.generateDirectionsMap(51.510205447243436, -0.08184300454801961,51.50975237659481, -0.0824661751178505)&gt;&gt;
 &lt;main&gt;
 Okay! That sounds good. We need to do it as hard as we possibly can to make sure they run back into the sewers. Our end point is St Dunstan in the East. Just down the road. Do it as hard as you can. We need to scare them off. You can even yell if you want to as you’re doing it. Something like “Go away!” or “Leave us alone!” Okay? Ready? Let’s go!
 /* TODO NEEDS TO CONTINUE AFTER THE TEXT */
@@ -855,7 +855,7 @@ Okay! That sounds good. We need to do it as hard as we possibly can to make sure
 &lt;&lt;timed 15s&gt;&gt;&lt;&lt;button &quot;We&#39;re here!&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-22&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
   
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="AC-22" tags="" position="1000,1700" size="100,100">&lt;&lt;set $passage to &quot;AC-22&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-23&quot;&gt;&gt;&lt;&lt;include &quot;header&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_22&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="AC-22" tags="" position="1000,1700" size="100,100">&lt;&lt;set $passage to &quot;AC-22&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-23&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_22&quot; play&gt;&gt;
 &lt;main&gt;
 You did it! That was brilliant. It sounds like they’ve retreated back down into the bottom of the sewers.
 
@@ -867,7 +867,7 @@ There might be more dragon pigeons around here. Have a look, and then tell someo
 &lt;&lt;timed 5s&gt;&gt;&lt;&lt;button &quot;We&#39;re done&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-23&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
   
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="AC-23" tags="" position="1200,1700" size="100,100">&lt;&lt;set $passage to &quot;AC-23&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;end&quot;&gt;&gt;&lt;&lt;include &quot;header&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_23&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="AC-23" tags="" position="1200,1700" size="100,100">&lt;&lt;set $passage to &quot;AC-23&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;end&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_23&quot; play&gt;&gt;
 &lt;main&gt;
 Wow. Look at us, huh? Me, the grand expert in animal wrangling, and you lot...my excellent helpers.
 
@@ -888,10 +888,8 @@ Thank you for your help, my friends.
 &lt;&lt;timed 5s&gt;&gt;&lt;&lt;button &quot;End&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;end&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
   
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="end" tags="" position="100,700" size="100,100">&lt;&lt;set $passage to &quot;end&quot;&gt;&gt;&lt;&lt;set $endMap = setup.generateDirectionsMap(51.50975237659481, -0.0824661751178505,51.50975237659481, -0.0824661751178505)&gt;&gt;&lt;&lt;include &quot;header&quot;&gt;&gt;
-&lt;main&gt;
-
-End location
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="end" tags="" position="100,700" size="100,100">&lt;&lt;set $passage to &quot;end&quot;&gt;&gt;&lt;&lt;set $endMap = setup.generateDirectionsMap(51.50975237659481, -0.0824661751178505,51.50975237659481, -0.0824661751178505)&gt;&gt;
+&lt;main&gt;End location
 
 $endMap
   
