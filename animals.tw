@@ -7,7 +7,7 @@ Animals of the City
 	"ifid": "F9E39354-F641-4070-8B45-C310A3FDC8C1",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
-	"start": "AC-17",
+	"start": "landing",
 	"zoom": 0.3
 }
 
@@ -192,7 +192,7 @@ a:hover {
 
 /* GENERAL STYLES */
 body{
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
   font-family: "Space Grotesk";
   color:#fff;
@@ -289,6 +289,7 @@ footer > button:first-child,  {
 margin-inline-end: 10px;
 margin-block-end: 10px
 }
+
 
 
 /* SPECIFICS  */
@@ -464,10 +465,10 @@ You have two options:
 <<set $passage to "AC-05">><<set $nextpassage to "AC-06">><<set $myMap = setup.generateDirectionsMap(51.51273574253808, -0.09190867122182791,51.51318914905516, -0.09147383074234947)>>
 <<audio "AC_05" play>>
 <main>
-  <div id="captions"></div><<timed 18s>><<replace "#captions">><<type 70ms >>Hello? <</type>><</replace>><</timed>>
- <<timed 23s>><<replace "#captions">><<type 70ms >> Is someone there?<</type>><</replace>><</timed>>
-<<timed 30s>><<replace "#captions">><<type 70ms >>Oh! Thank goodness. You’re from 2022, aren’t you? I can tell by your clothes. Interesting dress sense in 2022. <</type>><</replace>><</timed>>
-<<timed 40s>><<replace "#captions">><<type 70ms >>Don’t worry, you’ll grow out of it. Gets much better in the 30s. Can you head towards Sise Lane? I need to talk to you somewhere a bit calmer.<</type>><</replace>><</timed>><<timed 50s>>$myMap<</timed>>
+  <div id="mount"></div><<timed 18s>><<replace "#mount">><<type 70ms >>Hello? <</type>><</replace>><</timed>>
+ <<timed 23s>><<replace "#mount">><<type 70ms >> Is someone there?<</type>><</replace>><</timed>>
+<<timed 30s>><<replace "#mount">><<type 70ms >>Oh! Thank goodness. You’re from 2022, aren’t you? I can tell by your clothes. Interesting dress sense in 2022. <</type>><</replace>><</timed>>
+<<timed 40s>><<replace "#mount">><<type 70ms >>Don’t worry, you’ll grow out of it. Gets much better in the 30s. Can you head towards Sise Lane? I need to talk to you somewhere a bit calmer.<</type>><</replace>><</timed>><<timed 50s>>$myMap<</timed>>
 <<timed 55s>><<button "We're here">><<set $prevpass to $passage>><<goto "AC-06">><</button>><</timed>>
 </main>
 <<include "footer">>
@@ -475,21 +476,52 @@ You have two options:
 
 :: AC-06 {"position":"800,400","size":"100,100"}
 <<set $passage to "AC-06">><<set $nextpassage to "AC-07">><<audio ":all" stop>><<audio "AC_06" play>>
-
 <main>
- Everyone okay? Thanks for coming here. I’m Max. Nice to meet you. Sorry about the faff. I’m in a bit of a state, clearly. But listen, I’m going to cut to the chase. I need your help. You might have heard about this thing...dragon time? Felix and I go way back, he’s always coming up with mischief like this. 
+ <div id="mount"></div>
 
-Anyway, my job is to be the Animal Custodian of the City. Basically, I take care of all the animals you see around the City of London, across space and time. That’s right, I can time travel. Yes, it’s cool. Yes, you can get a bit seasick. Don’t make a big thing of it.
+<<timed 4s>><<replace "#mount">><<type 50ms>>Everyone okay? <</type>><</replace>><</timed>>
 
-The problem is, Felix implementing dragon time across the City has meant that...well...I’ve kinda, sorta,
-lost track of all the animals I was meant to be taking care of. I promise this doesn’t usually happen. Well, there was one time in the 1300s involving a very angry cow and a pair of shears...but that’s not important right now.
+<<timed 7s>><<replace "#mount">><<type 50ms>>Thanks for coming here. 
 
-So...I really need your help. I hate to ask. I know you’re probably very busy, very important people.
-Especially you. But I don’t think I can do it on my own. Do you think you could help me? In return, I’ll show you some interesting parts of the City that I’ll bet you’ve not seen before. Say yes, very loudly, if you think you can help me.
+I'm Max.
 
+Nice to meet you. 
+
+Sorry about the faff, I'm in a bit of a state clearly. <</type>><</replace>><</timed>>
+
+<<timed 14s>><<replace "#mount">><<type 50ms>>But listen, I'm going to cut to the chase. 
+
+I need your help. You might have heard about this thing. <</type>><</replace>><</timed>>
+
+<<timed 21s>><<replace "#mount">><<type 50ms>>Dragon time. 
+
+Felix and I go way back. <</type>><</replace>><</timed>>
+
+<<timed 25s>><<replace "#mount">><<type 50ms>>He's always coming up with mischief like this. 
+
+Anyway, my job is to be the animal custodian of the city. <</type>><</replace>><</timed>>
+
+<<timed 33s>><<replace "#mount">><<type 50ms>>Basically, I take care of all the animals you see around the city of London, across space and time. 
+
+That's right. <</type>><</replace>><</timed>>
+
+<<timed 41s>><<replace "#mount">><<type 50ms>>I can time travel. Yes, it's cool. Yes, you get a bit seasick don't make a big thing of it. <</type>><</replace>><</timed>>
+
+<<timed 51s>><<replace "#mount">><<type 50ms>>Problem is Felix implementing dragon time across the city has meant that... well I've of kinda a sort of lost track of all the animals I was meant to be taken care of. <</type>><</replace>><</timed>>
+  
+<<timed 65s>><<replace "#mount">><<type 50ms>>I promise this doesn't usually happen. 
+Well, there was that one time in the 1300s involving a very angry cow and a pair of shears. That's not important right now. <</type>><</replace>><</timed>>
+  
+<<timed 78s>><<replace "#mount">><<type 50ms>>So I really need your help. And I hate to ask. <</type>><</replace>><</timed>>
+  
+<<timed 84s>><<replace "#mount">><<type 50ms>>I know you're probably very busy, very important people, especially you, but I don't think I can do it on my own. <</type>><</replace>><</timed>>
+  
+<<timed 93s>><<replace "#mount">><<type 50ms>>Do you think you could help me? In return, I'll show you some of the interesting parts of the city that I'll bet you've not seen before.<</type>><</replace>><</timed>> 
+  
+<<timed 103s>><<replace "#mount">><<type 50ms>>Say yes, very loudly if you think you can help me.<</type>><</replace>><</timed>>
 
 /* TODO NEEDS TO CONTINUE AFTER THE TEXT */
-<<timed 10s>><<set $prevpass to $passage>><<goto "AC-07">><</timed>>
+<<timed 120s>><<set $prevpass to $passage>><<goto "AC-07">><</timed>>
 </main>
 <<include "footer">>
 
