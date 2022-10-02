@@ -219,6 +219,8 @@ main{
    margin-block-end: 10rem
 }
 
+/* FOOTER  */
+
 footer{
    display:flex;
   justify-content: space-between;
@@ -262,10 +264,6 @@ justify-content: end
 justify-content: start
 }
 
-footer> button {
-  font-size:1.3rem
-}
-
 .nav-item.forward > button, 
 .nav-item.back > button{
   font-size:2rem
@@ -274,16 +272,11 @@ footer > button:first-child,  {
   font-size:2rem
 }
 
-
-
 .nav-item > button{
  font-size: 1.3rem
 }
 
-.nav-wrapper:last-child{
-display:flex;
-align-items: flex-end
-}
+/* GENERAL */
 
 .menu-wrapper{
   display: flex;
@@ -297,13 +290,6 @@ margin-inline-end: 10px;
 margin-block-end: 10px
 }
 
-.door-container{
-  display:flex;
-  flex-direction: row;
-justify-content: space-around;
-  align-items:center;
-  text-align: right;
-}
 
 /* SPECIFICS  */
 .countdown{
@@ -411,17 +397,6 @@ return iFrame
 // this.mapMount.appendChild(iFrame)
 }
 
-//Get random 5 letter word
-
-setup.generate5LetterCode = () => {
-const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-let word = ""
-for (let i =0 ; i < 5 ; i++){
-word += alphabet[Math.round((alphabet.length-1)*Math.random())];
-}
-  return word;
-}
-
 
 :: StoryInit {"position":"100,100","size":"100,100"}
 <<cacheaudio "AC_05" "https://www.youhavefoundconey.net/tgksnd/AC/AC_05.mp3">>
@@ -457,8 +432,6 @@ word += alphabet[Math.round((alphabet.length-1)*Math.random())];
 <div class="nav-item replay"><<button "Replay">><<goto $passage>><</button>> </div>
 <div class="nav-item end"><<button "Take me to the end">><<set $prevpass to $passage>><<goto "lost">><</button>></div>
 <div class="nav-item forward"><<button ">">><<set $prevpass to $passage>><<goto $nextpassage>><</button>></div>
-
-
 </footer>
 
 

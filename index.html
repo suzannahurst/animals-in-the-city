@@ -304,6 +304,8 @@ main{
    margin-block-end: 10rem
 }
 
+/* FOOTER  */
+
 footer{
    display:flex;
   justify-content: space-between;
@@ -347,10 +349,6 @@ justify-content: end
 justify-content: start
 }
 
-footer> button {
-  font-size:1.3rem
-}
-
 .nav-item.forward > button, 
 .nav-item.back > button{
   font-size:2rem
@@ -359,16 +357,11 @@ footer > button:first-child,  {
   font-size:2rem
 }
 
-
-
 .nav-item > button{
  font-size: 1.3rem
 }
 
-.nav-wrapper:last-child{
-display:flex;
-align-items: flex-end
-}
+/* GENERAL */
 
 .menu-wrapper{
   display: flex;
@@ -382,13 +375,6 @@ margin-inline-end: 10px;
 margin-block-end: 10px
 }
 
-.door-container{
-  display:flex;
-  flex-direction: row;
-justify-content: space-around;
-  align-items:center;
-  text-align: right;
-}
 
 /* SPECIFICS  */
 .countdown{
@@ -490,17 +476,6 @@ const mount = document.getElementById("mapMount")
 // console.log(iFrame)
 return iFrame
 // this.mapMount.appendChild(iFrame)
-}
-
-//Get random 5 letter word
-
-setup.generate5LetterCode = () => {
-const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-let word = ""
-for (let i =0 ; i < 5 ; i++){
-word += alphabet[Math.round((alphabet.length-1)*Math.random())];
-}
-  return word;
 }</script><tw-passagedata pid="1" name="StoryInit" tags="" position="100,100" size="100,100">&lt;&lt;cacheaudio &quot;AC_05&quot; &quot;https://www.youhavefoundconey.net/tgksnd/AC/AC_05.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;AC_06&quot; &quot;https://www.youhavefoundconey.net/tgksnd/AC/AC_06.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;AC_07&quot; &quot;https://www.youhavefoundconey.net/tgksnd/AC/AC_07.mp3&quot;&gt;&gt;
@@ -526,8 +501,6 @@ word += alphabet[Math.round((alphabet.length-1)*Math.random())];
 &lt;div class=&quot;nav-item replay&quot;&gt;&lt;&lt;button &quot;Replay&quot;&gt;&gt;&lt;&lt;goto $passage&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;/div&gt;
 &lt;div class=&quot;nav-item end&quot;&gt;&lt;&lt;button &quot;Take me to the end&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;lost&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
 &lt;div class=&quot;nav-item forward&quot;&gt;&lt;&lt;button &quot;&gt;&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto $nextpassage&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
-
-
 &lt;/footer&gt;</tw-passagedata><tw-passagedata pid="4" name="landing" tags="" position="375,150" size="100,100">&lt;&lt;set $passage to &quot;landing&quot;&gt;&gt;
 
 &lt;main&gt;
