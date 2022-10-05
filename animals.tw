@@ -1074,11 +1074,11 @@ Felix isn't the only dragon around these parts, you know? <</type>><</replace>><
 <<timed 106s>><<replace "#mount">><<type 50ms>>Oof, I needed to let that out. Listen, I need to stretch my wings a bit. 
 
 You lot stay as long as you need to. Thank you for your help my friends.<</type>><</replace>><</timed>>
-/* TODO NEEDS TO CONTINUE AFTER THE TEXT */
+
 <<timed 116s>><<button "End">><<set $prevpass to $passage>><<goto "end">><</button>><</timed>>
   
 </main>
-<<include "footerend">>
+<<include "footer">>
 
 
 :: end {"position":"100,700","size":"100,100"}
@@ -1088,7 +1088,7 @@ You lot stay as long as you need to. Thank you for your help my friends.<</type>
 $endMap
   
 </main>
-<<include "footer">>
+<<include "footerend">>
 
 :: footerend {"position":"99,485","size":"100,100"}
 <footer>
