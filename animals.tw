@@ -439,18 +439,13 @@ return iFrame
 <<set $passage to "landing">>
 
 <main>
-landing page
-
 <<button "begin">><<set $prevpass to $passage>><<goto "AC-05">><</button>>
 </main>
-<<include "footer">>
 
 
 :: lost {"position":"100,500","size":"100,100"}
 <<set $passage to "lost">><<audio ":all" stop>>
-
 <main>
-Sorry to hear that you're lost! 
 You have two options:
 
 <<button "Begin the adventure again">><<goto "landing">><</button>>
@@ -461,13 +456,9 @@ You have two options:
 
 
 :: AC-05 {"position":"600,400","size":"100,100"}
-<<set $passage to "AC-05">><<set $nextpassage to "AC-06">><<set $myMap = setup.generateDirectionsMap(51.51273574253808, -0.09190867122182791,51.51318914905516, -0.09147383074234947)>><<audio ":all" stop>>
-<<audio "AC_05" play>>
+<<set $passage to "AC-05">><<set $nextpassage to "AC-06">><<set $myMap = setup.generateDirectionsMap(51.51273574253808, -0.09190867122182791,51.51318914905516, -0.09147383074234947)>><<audio ":all" stop>><<audio "AC_05" play>>
 <main>
-  <div id="mount"></div><<timed 18s>><<replace "#mount">><<type 70ms >>Hello? <</type>><</replace>><</timed>>
- <<timed 23s>><<replace "#mount">><<type 70ms >> Is someone there?<</type>><</replace>><</timed>>
-<<timed 30s>><<replace "#mount">><<type 70ms >>Oh! Thank goodness. You’re from 2022, aren’t you? I can tell by your clothes. Interesting dress sense in 2022. <</type>><</replace>><</timed>>
-<<timed 40s>><<replace "#mount">><<type 70ms >>Don’t worry, you’ll grow out of it. Gets much better in the 30s. Can you head towards Sise Lane? I need to talk to you somewhere a bit calmer.<</type>><</replace>><</timed>><<timed 50s>>$myMap<</timed>>
+<div id="mount"></div><<timed 18s>><<replace "#mount">><<type 70ms >>Hello? <</type>><</replace>><</timed>><<timed 23s>><<replace "#mount">><<type 70ms >> Is someone there?<</type>><</replace>><</timed>><<timed 30s>><<replace "#mount">><<type 70ms >>Oh! Thank goodness. You’re from 2022, aren’t you? I can tell by your clothes. Interesting dress sense in 2022. <</type>><</replace>><</timed>><<timed 40s>><<replace "#mount">><<type 70ms >>Don’t worry, you’ll grow out of it. Gets much better in the 30s. Can you head towards Sise Lane? I need to talk to you somewhere a bit calmer.<</type>><</replace>><</timed>><<timed 50s>>$myMap<</timed>>
 <<timed 55s>><<button "We're here">><<set $prevpass to $passage>><<goto "AC-06">><</button>><</timed>>
 </main>
 <<include "footer">>
@@ -482,9 +473,7 @@ You have two options:
 
 <<timed 7s>><<replace "#mount">><<type 50ms>>Thanks for coming here. 
 
-I'm Max.
-
-Nice to meet you. 
+I'm Max. Nice to meet you. 
 
 Sorry about the faff, I'm in a bit of a state clearly. <</type>><</replace>><</timed>>
 
@@ -492,11 +481,11 @@ Sorry about the faff, I'm in a bit of a state clearly. <</type>><</replace>><</t
 
 I need your help. You might have heard about this thing. <</type>><</replace>><</timed>>
 
-<<timed 21s>><<replace "#mount">><<type 50ms>>Dragon time. 
+<<timed 21s>><<replace "#mount">><<type 70ms>>Dragon time. 
 
 Felix and I go way back. <</type>><</replace>><</timed>>
 
-<<timed 25s>><<replace "#mount">><<type 50ms>>He's always coming up with mischief like this. 
+<<timed 25s>><<replace "#mount">><<type 70ms>>He's always coming up with mischief like this. 
 
 Anyway, my job is to be the animal custodian of the city. <</type>><</replace>><</timed>>
 
@@ -506,7 +495,7 @@ That's right. <</type>><</replace>><</timed>>
 
 <<timed 41s>><<replace "#mount">><<type 50ms>>I can time travel. Yes, it's cool. Yes, you get a bit seasick don't make a big thing of it. <</type>><</replace>><</timed>>
 
-<<timed 51s>><<replace "#mount">><<type 50ms>>Problem is Felix implementing dragon time across the city has meant that... well I've of kinda a sort of lost track of all the animals I was meant to be taken care of. <</type>><</replace>><</timed>>
+<<timed 51s>><<replace "#mount">><<type 50ms>>Problem is... Felix implementing dragon time across the city has meant that... well I've of kind of... I sort of lost track of all the animals I was meant to be taken care of. <</type>><</replace>><</timed>>
   
 <<timed 65s>><<replace "#mount">><<type 50ms>>I promise this doesn't usually happen. 
 Well, there was that one time in the 1300s involving a very angry cow and a pair of shears. That's not important right now. <</type>><</replace>><</timed>>
@@ -515,33 +504,54 @@ Well, there was that one time in the 1300s involving a very angry cow and a pair
   
 <<timed 84s>><<replace "#mount">><<type 50ms>>I know you're probably very busy, very important people, especially you, but I don't think I can do it on my own. <</type>><</replace>><</timed>>
   
-<<timed 93s>><<replace "#mount">><<type 50ms>>Do you think you could help me? In return, I'll show you some of the interesting parts of the city that I'll bet you've not seen before.<</type>><</replace>><</timed>> 
+<<timed 93s>><<replace "#mount">><<type 50ms>>Do you think you could help me? In return, I'll show you some of the interesting parts of the city, that I'll bet you've not seen before.<</type>><</replace>><</timed>> 
   
 <<timed 103s>><<replace "#mount">><<type 50ms>>Say yes, very loudly if you think you can help me.<</type>><</replace>><</timed>>
 
-/* TODO NEEDS TO CONTINUE AFTER THE TEXT */
-<<timed 120s>><<set $prevpass to $passage>><<goto "AC-07">><</timed>>
+<<timed 112s>><<set $prevpass to $passage>><<goto "AC-07">><</timed>>
 </main>
 <<include "footer">>
 
 
 :: AC-07 {"position":"1000,400","size":"100,100"}
 <<set $passage to "AC-07">><<set $nextpassage to "AC-08">><<audio ":all" stop>><<audio "AC_07" play>><main>
-
  <div id="mount"></div>
+  <<timed 2s>><<replace "#mount">><<type 70ms>> Well, that was a good start. <</type>><</replace>><</timed>>
  
- Well, that was a good start. Let’s keep up the enthusiasm, okay? Enthusiasm is a really big part of being the City’s Animal Custodian. 
+<<timed 5s>><<replace "#mount">><<type 50ms>> Let's keep up the enthusiasm, okay? 
 
-What we’re going to do is we’re going to go on a hunt. An animal hunt. We’re not going to hurt the animals, mind you, we’re just going to return them to my care. Right now, they’re running havoc, and we can’t have that. We won’t be catching all of them, exactly, but we’ll be taking inventory of them. Making sure we know where they are, so I can swoop round and pick them up once you’re all gone.
+Enthusiasm is a really big part of being the city's animal custodian. <</type>><</replace>><</timed>>
+ 
+<<timed 12s>><<replace "#mount">><<type 50ms>> What we're going to do is we're going to go on a hunt, an animal hunt. 
 
-First off, I need you to introduce yourselves to each other. Follow my lead. Take your first name, and follow it up with your favourite animal, and the word “whisperer” or “wrangler.” For example, I’d be “Max the Fox Whisperer.” Yes, foxes are my favourite animal. Not country foxes, mind. City foxes.
+Well, we're not going to hurt the animals mind you, we're just going to return them to my care. <</type>><</replace>><</timed>>
+ 
+<<timed 24s>><<replace "#mount">><<type 50ms>> Right now, they're running havoc, and we can't have that. 
 
-London foxes. They’re one of a kind! Have you ever seen them running around at night? I saw one the other day and thought it might actually shake my hand, it came up so close. Bold as brass, London foxes. 
-Curious, adaptable, and agile — all the traits that make up a true Londoner!
-Take a minute and think about it, then introduce yourself to those around you.
+We won't be catching all of them exactly... But we'll be taking inventory of them, making sure we know where they are. <</type>><</replace>><</timed>>
+ 
+<<timed 37s>><<replace "#mount">><<type 50ms>> So I can swoop round and pick them up once you're all gone. 
 
-/* TODO NEEDS TO SHOW AFTER THE TEXT */
-<<timed 10s>><<button "We've all introduced ourselves">><<set $prevpass to $passage>><<goto "AC-08">><</button>><</timed>>
+First off, I need you to introduce yourselves to each other. Follow my lead.<</type>><</replace>><</timed>>
+ 
+<<timed 48s>><<replace "#mount">><<type 50ms>> Take your first name and follow it up with your favorite animal. And then the word "whisperer" or "Wrangler". <</type>><</replace>><</timed>>
+ 
+<<timed 57s>><<replace "#mount">><<type 50ms>> For example, I'd be Max the Fox Whisperer. 
+
+Yeah, foxes are my favorite animal. Not country foxes, mind! City foxes, London foxes. They are one of a kind. Have you ever seen them running around at night? <</type>><</replace>><</timed>>
+ 
+<<timed 77s>><<replace "#mount">><<type 65ms>> I saw one the other day and thought it might actually shake my hand it came up so close. 
+
+Bold as brass London foxes, curious, adaptable and agile. All the traits that make up a true Londoner.<</type>><</replace>><</timed>>
+ 
+<<timed 95s>><<replace "#mount">><<type 50ms>> Take a minute and think about it. 
+
+Then introduce yourselves to those around you!
+
+<<button "We've all introduced ourselves">><<set $prevpass to $passage>><<goto "AC-08">><</button>>
+
+<</type>><</replace>><</timed>>
+
 </main>
 <<include "footer">>
 
@@ -550,17 +560,42 @@ Take a minute and think about it, then introduce yourself to those around you.
 <<set $passage to "AC-08">><<set $nextpassage to "AC-09">><<set $myMap2 = setup.generateDirectionsMap(51.51318914905516, -0.09147383074234947,51.513306270196175, -0.0897463101374395)>><<audio ":all" stop>><<audio "AC_08" play>><main>
 
  <div id="mount"></div>
-Very good. Off we go. Let’s head up Queen Victoria Street — I believe towards Bank Station, in 2022 times.
+<<timed 1s>><<replace "#mount">><<type 50ms>>Very good. <</type>><</replace>><</timed>>  
+<<timed 5s>><<replace "#mount">><<type 50ms>>Off we go. And let's head up Queen Victoria Street, I believe towards Bank Station in 2022 times. <</type>><</replace>><</timed>>  
+<<timed 14s>><<replace "#mount">><<type 50ms>>So, one of the first animals we need to look out for are dragons. 
 
-So, one of the first animals we need to look out for are dragons. I know you’ve already met a dragon in the shape of Felix — and maybe you’ll meet more before our time together ends, who can say — but what you might not know is that dragons, due to the funny way time works around these parts, can sometimes be found in the shape of pigeons.
+I know you've already met a dragon in the shape of Felix. And maybe you'll meet more before our time together ends, who can say? <</type>><</replace>><</timed>>  
+<<timed 29s>><<replace "#mount">><<type 50ms>>But what you might not know is that dragons, due to the funny way time works around these parts, can sometimes be found in the shape of pigeons. <</type>><</replace>><</timed>>  
+<<timed 40s>><<replace "#mount">><<type 70ms>>Yes, pigeons!
 
-Yes. Pigeons. Not every pigeon, mind. But what I need you to do is to keep a tally of the dragon pigeons you see flying about the City. Now, how can you tell the difference between a dragon pigeon and a pigeon pigeon? Simply put, dragon pigeons are the pigeons you see that have something...slightly strange about them. Maybe they’re missing a foot. Maybe they’re a bit bigger than a normal pigeon. Maybe you can see the green shimmering feathers a bit clearer on them. That kind of thing. Every time you see a pigeon that looks different, that looks somewhat special, note it down. Be sure to tell the people you’re with why that particular pigeon is special, too. We’ll keep a count and tally them up at the end of our journey. Make sure you don’t forget!
+Not every pigeon, mind, but what I need you to do is to keep a tally of the Dragon pigeons you see flying around the city. <</type>><</replace>><</timed>>  
+<<timed 53s>><<replace "#mount">><<type 65ms>>Now, how can you tell the difference between a dragon-pigeon and a pigeon-pigeon? 
 
-Now, as we get to Bank Station, we’re going to want to turn right, down Lombard Street. Off we go! This is going mighty well already, I can tell. I’m feeling good. You lot have sharp eyes. You might even put me out of a job. Keep counting those dragon pigeons!
+Simply put, Dragon pigeons are the pigeons you see that have something slightly strange about them. <</type>><</replace>><</timed>>  
+<<timed 69s>><<replace "#mount">><<type 50ms>>Maybe they're missing a foot. 
 
-/* TODO NEEDS TO SHOW AFTER THE TEXT */
-<<timed 10s>>$myMap2<</timed>>
-<<timed 15s>><<set $prevpass to $passage>><<goto "AC-09">><</timed>>
+Maybe they're a bit bigger than a normal pigeon. 
+
+Maybe you can see the green shimmering feathers a bit clearer on them. That kind of thing. <</type>><</replace>><</timed>>  
+<<timed 81s>><<replace "#mount">><<type 50ms>>Every time you see a pigeon that looks different. That looks somewhat special, note it down. 
+
+And be sure to tell the people you're with why that particular pigeon is special too.<</type>><</replace>><</timed>>  
+<<timed 96s>><<replace "#mount">><<type 50ms>>We'll keep count and tally them up at the end of our journey. 
+
+Make sure you don't forget. <</type>><</replace>><</timed>>  
+<<timed 103s>><<replace "#mount">><<type 50ms>>Now, as we get to Bank Station, we're going to want to turn right down Lombard Street. 
+
+Off we go! <</type>><</replace>><</timed>>
+
+<<timed 111s>><<replace "#mount">><<type 70ms>>This is going mighty well already I can tell! 
+
+I'm feeling good! You lot have sharp eyes. You might even put me out of a job. <</type>><</replace>><</timed>>  
+<<timed 121s>><<replace "#mount">><<type 50ms>>Keep counting those dragon pigeons!<</type>><</replace>><</timed>>
+
+<<timed 131s>><<replace "#mount">>$myMap2
+
+<<button "Next">><<set $prevpass to $passage>><<goto "AC-09">><</button>><</replace>><</timed>>
+
 </main>
 <<include "footer">>
 
@@ -568,41 +603,65 @@ Now, as we get to Bank Station, we’re going to want to turn right, down Lombar
 :: AC-09 {"position":"1400,400","size":"100,100"}
 <<set $passage to "AC-09">><<set $nextpassage to "AC-10">><<audio ":all" stop>><<audio "AC_09" play>>
 <main>
- <div id="mount"></div>
- Wait!! Stop where you are! Stand absolutely still on the pavement!
+<div id="mount"></div>
+ <<timed 4s>><<replace "#mount">><<type 75ms>>Wait, stop where you are!
 
-Everyone be quiet. Stop what you’re doing. This is very, very important.
+Stand absolutely still on the pavement!<</type>><</replace>><</timed>>  
+<<timed 19s>><<replace "#mount">><<type 80ms>>Everyone be quiet. Stop what you're doing. 
 
-The pigs. The pigs have escaped.
+This is very, very important. <</type>><</replace>><</timed>>  
+<<timed 30s>><<replace "#mount">><<type 85ms>>The pigs, the pigs have escaped, you don't know what that means, do you?<</type>><</replace>><</timed>>  
+<<timed 38s>><<replace "#mount">><<type 80ms>>Oh goodness me!<</type>><</replace>><</timed>> 
+<<timed 43s>><<replace "#mount">><<type 80ms>> Shh! Absolute silence!<</type>><</replace>><</timed>>  
+<<timed 71s>><<replace "#mount">><<type 70ms>> Ah thank goodness. Listen, I didn't tell you this before. 
 
-You don’t know what that means, do you? Oh goodness me.
+I'm sorry I was - truth be told, I didn't think there'd be an issue today. And I didn't want to worry you. <</type>><</replace>><</timed>>  
+<<timed 84.5s>><<replace "#mount">><<type 50ms>>I'll never lie to you again. I promise. 
 
-Shhhhh. Absolute silence.
+The fact of the matter is that there is a herd of feral pigs living under the city! Don't look so shocked. <</type>><</replace>><</timed>>  
+<<timed 94s>><<replace "#mount">><<type 50ms>>It's the least shocking thing that you've learned today, surely? 
 
-Thank goodness.
+It happened sometime in the 1700s. <</type>><</replace>><</timed>>  
+<<timed 102s>><<replace "#mount">><<type 50ms>>There was a pig being kept in Hampstead Heath by a butcher. 
 
-Listen. I didn’t tell you this before. I’m sorry. I was...truth be told, I didn’t think they’d be an issue today, and I didn’t want to worry you. I’ll never lie to you again, I promise. The fact of the matter is that there is a herd of feral pigs living underneath the City. Don’t look so shocked! That’s the least shocking thing that you’ve learned today, surely.
+One day as the Butcher was carefully sharpening his biggest knife, the Pig got wind of what was happening. <</type>><</replace>><</timed>>  
+<<timed 115s>><<replace "#mount">><<type 65ms>>She made a run for it. And she escaped. 
 
-It happened sometime in the 1700s — there was a pig being kept in Hampstead Heath by a butcher. One day, as the butcher was carefully sharpening his biggest knife, the pig got wind of what was happening. She made a run for it. And she escaped! The butcher chased after her, as quick as he could — she was a month’s worth of bacon, at least — but she ran into the sewers underneath London and lost him. Now, the sewers...that’s almost a whole other city unto itself. Tunnels that spider out under the city — more than you could ever know. It’s no surprise then that the pig got lost. Couldn’t find her way out. And you know what? She was pregnant, too. One day, she had lots of little baby piglets. And now, they roam the sewers together, little hooves clip clopping away. But this is where it gets a bit scary. With nothing to eat down there, it’s said that they’ve developed a taste for human flesh...All of which is to say that, if you hear the sound of hooves and grunting...it’s the pigs. I can’t control them — no-one can. But I can help you avoid them.
+The Butcher chased after her, as quick as he could. She was a month's worth of bacon at least. 
 
-/* TODO NEEDS TO SHOW AFTER THE TEXT */
-<<timed 10s>>$myMap2<</timed>>
-<<timed 15s>><<set $prevpass to $passage>><<goto "AC-10">><</timed>>
+But she ran into the sewers underneath London and lost him. <</type>><</replace>><</timed>>  
+<<timed 129s>><<replace "#mount">><<type 50ms>>Now, the sewers that's almost a whole other city unto itself, tunnels that spider out under the city more than you could ever know. <</type>><</replace>><</timed>>  
+<<timed 140s>><<replace "#mount">><<type 70ms>>It's not surprising, then, that the Pig got lost, couldn't find a way out and you know what? She was pregnant too! 
+
+One day, she had lots of little baby piglets, and now they roam the sewers together. 
+
+Little hooves clip clopping away. <</type>><</replace>><</timed>>  
+<<timed 161s>><<replace "#mount">><<type 50ms>>This is where it gets a bit scary. 
+
+With nothing to eat down there, it's said that they've developed a taste for human flesh. <</type>><</replace>><</timed>>  
+<<timed 172s>><<replace "#mount">><<type 50ms>>All of which is to say that if you hear the sound of hooves and grunting, it's the pigs. 
+
+I can't control them. No one can but I can help you avoid them.<</type>><</replace>><</timed>>
+
+
+<<timed 182s>>$myMap2
+
+<<button "Next">><<set $prevpass to $passage>><<goto "AC-10">><</button>><</timed>>
+
 </main>
 <<include "footer">>
 
 
 :: AC-10 {"position":"600,900","size":"100,100"}
-<<set $passage to "AC-10">><<set $nextpassage to "AC-11">><<audio ":all" stop>><<audio "AC_10" play>>
+<<set $passage to "AC-10">><<set $nextpassage to "AC-11">><<audio ":all" stop>><<audio "AC_10" play>><<set $myMap2 = setup.generateDirectionsMap(51.51318914905516, -0.09147383074234947,51.513306270196175, -0.0897463101374395)>>
 <main>
-
  <div id="mount"></div>
+<<timed 4s>><<replace "#mount">><<type 50ms>>It sounds like they're back. <</type>><</replace>><</timed>><<timed 7s>><<replace "#mount">><<type 50ms>>Now there's no need to be scared, as long as you listen to your good old friend Max. <</type>><</replace>><</timed>><<timed 12s>><<replace "#mount">><<type 60ms>>What I need you to do is to be very careful with how you walk down Lombard Street. 
 
-It sounds like they’re back. Now, there’s no need to be scared, as long as you listen to your good friend Max. What I need you to do is to be very careful with how you walk down Lombard Street. You need to avoid every crack or line in the pavement if you’re not going to alert the pigs to your position. Hop or skip over the cracks on the ground until you get to Birchin Lane. It should be on your left, just a little further. Ready? And...let’s go.
+You need to avoid every crack or line in the pavement if you're not going to alert the pigs to your position. <</type>><</replace>><</timed>><<timed 27s>><<replace "#mount">><<type 60ms>>Hop or skip over the cracks on the ground until you get to Birchin Lane. 
 
-/* TODO NEEDS TO SHOW AFTER THE TEXT */
-<<timed 10s>>$myMap2<</timed>>
-<<timed 15s>><<set $prevpass to $passage>><<button "We made it!">><<goto "AC-11">><</button>><</timed>>
+It should be on your left just a little further. Ready? Aaand let's go!<</type>><</replace>><</timed>>
+<<timed 37s>><<replace "#mount">>$myMap2<</replace>><</timed>><<timed 45s>><<button "We made it!">><<set $prevpass to $passage>><<goto "AC-11">><</button>><</timed>>
 </main>
 <<include "footer">>
 
@@ -611,20 +670,35 @@ It sounds like they’re back. Now, there’s no need to be scared, as long as y
 <<set $passage to "AC-11">><<set $nextpassage to "AC-12">><<audio ":all" stop>><<audio "AC_11" play>>
 <main>
  <div id="mount"></div>
-Alright. Hang on for a moment. Everyone still here? We haven’t lost anyone to the pigs? Good stuff. I reckon they’re gone for now, so we should be alright to walk normally. But keep an eye out! They still might come back, so be careful. I’ll give you a heads up.
+<<timed 0s>><<replace "#mount">><<type 50ms>>Alright, hang on for a moment. <</type>><</replace>><</timed>>  
+<<timed 3s>><<replace "#mount">><<type 50ms>>Everyone's still here? We haven't lost anyone to the pigs? <</type>><</replace>><</timed>>  
+<<timed 9s>><<replace "#mount">><<type 50ms>>Ah, good stuff. I reckon they're gone for now. 
 
-Now then, our next task is to catch Polly the Parrot. She’s a cheeky one, I have to admit. This might be tricky. Always nips my fingers if I don’t feed her brussel sprouts quickly enough.
+So we should be alright to walk normally, but keep an eye out.
 
-Polly’s an African Grey parrot, which means she’s particularly adept at mimicking noises...
-something that’s got her into heaps of trouble in the past. Polly and I first met in the early 20th Century when she’d sit in Ye Olde Cheshire Cheese, that lovely old pub on Fleet Street, and chat away to customers. Once, she ordered a bottle of champagne on my tab! Naughty girl. She’s a bit of a rascal, truth be told. Always goes missing, so this is nothing new. Once, in 1905, someone left her cage door open and she disappeared! Ended up sparking a City-wide manhunt! They found her in the end, though. Always do.
+They still might come back. So be careful. I'll give you a heads up. <</type>><</replace>><</timed>>  
+<<timed 25s>><<replace "#mount">><<type 60ms>>Now then, our next task is to catch Polly the parrot. 
 
-I’ve found that the best way to track Polly down when she’s missing is to say one of her catchphrases.
+Oh, she's a cheeky one. I have to admit. This might be tricky, always nips my fingers,  if I don't feed her brussel sprouts quickly enough. <</type>><</replace>><</timed>>  
+<<timed 40s>><<replace "#mount">><<type 60ms>>Polly is an African grey parrot, which means she's particularly adept at mimicking noises. 
 
-What I need you to do, then, is to say, as loud and as clear as you can, “pudding and two veg!” as we head down Birchin Lane. You could even add a “rats!” in there if you’re feeling it. We’ll do it for 30 seconds, okay? 
+Something that's got her into heaps of trouble in the past. <</type>><</replace>><</timed>>  
+<<timed 51s>><<replace "#mount">><<type 60ms>>Polly and I first met in the early 20th century, when she'd sit in Ye Olde Cheshire Cheese, that lovely old pub on Fleet Street, and chat away to customers. <</type>><</replace>><</timed>>  
+<<timed 64s>><<replace "#mount">><<type 60ms>>Once she ordered a bottle of champagne on my tab, naughty girl. 
 
-/* TODO NEEDS TO SHOW AFTER THE TEXT */
+She's a bit of a rascal truth be told, always goes missing. So this is nothing new. <</type>><</replace>><</timed>>  
+<<timed 77s>><<replace "#mount">><<type 60ms>>Once in 1905, someone left her cage door open and she disappeared. 
 
-<<timed 5s>><<button "Here we go">><<set $prevpass to $passage>><<goto "countdown">><</button>><</timed>>
+Ended up sparking a city wide man hunt - they found her in the end though, always do. <</type>><</replace>><</timed>>  
+<<timed 90s>><<replace "#mount">><<type 50ms>>I found the best way to track Polly down when she's missing is to say one of her catchphrases. <</type>><</replace>><</timed>>  
+<<timed 96s>><<replace "#mount">><<type 70ms>>What I need you to do then is to say as loud and as clear as you can "PUDDING AND TWO VEG!", as we head down Birchin Lane. 
+
+You can even add a "RATS!" in there if you feel like it. 
+
+We'll do it for 30 seconds, okay? Here we go<</type>><</replace>><</timed>>
+ 
+
+<<timed 106s>><<button "Here we go">><<set $prevpass to $passage>><<goto "countdown">><</button>><</timed>>
 </main>
 <<include "footer">>
 
@@ -655,14 +729,20 @@ Countdown: <span id="countdown">$seconds seconds remaining</span>!\
 <<set $passage to "AC-12">><<set $nextpassage to "AC-13">><<set $myMap3 = setup.generateDirectionsMap(51.513306270196175, -0.0897463101374395,51.51337859600987, -0.08679861566052868)>><<audio ":all" stop>><<audio "AC_12" play>>
 <main>
  <div id="mount"></div>
-There she is! Can you hear her? I can’t see her, but I reckon she should be just behind that building. She has grey feathers, you know, so she blends in easily. Oh, Polly, it’s so good to hear from you, even if your squawks are a bit loud. Stay right there, won’t you? Thank you for your help, friends, that’s another one in the bag.
+<<timed 4s>><<replace "#mount">><<type 60ms>>There she is! 
 
-Let’s head right on Cornhill and walk down. When you’re walking down Cornhill, let me know.
+Can you hear her? 
 
+I can't see her but I reckon she should be just behind that building. <</type>><</replace>><</timed>>  
+<<timed 13s>><<replace "#mount">><<type 50ms>>She has gray feathers, you know, so she blends in easily.<</type>><</replace>><</timed>>  
+<<timed 24s>><<replace "#mount">><<type 60ms>>Oh, Polly it's so good to hear from you even if your squawks are a bit loud.
 
-/* TODO NEEDS TO SHOW AFTER THE TEXT */
-<<timed 5s>>$myMap3<</timed>>
-<<timed 15s>><<button "We're at Cornhill">><<set $prevpass to $passage>><<goto "AC-13">><</button>><</timed>>
+Stay right there, won't you! Thank you for your help, friends. That's another one in the bag. <</type>><</replace>><</timed>>  
+<<timed 36s>><<replace "#mount">><<type 50ms>>Let's head right on Cornhill and walk down. 
+
+When you're walking down Cornhill, let me know<</type>><</replace>><</timed>><<timed 47s>><<replace "#mount">>$myMap3
+
+<<button "We're at Cornhill">><<set $prevpass to $passage>><<goto "AC-13">><</button>><</replace>><</timed>>
 </main>
 <<include "footer">>
 
@@ -671,15 +751,21 @@ Let’s head right on Cornhill and walk down. When you’re walking down Cornhil
 <<set $passage to "AC-13">><<set $nextpassage to "AC-14">><<set $myMap4 = setup.generateDirectionsMap(51.51337859600987, -0.08679861566052868,51.512841075137494, -0.08374897587811146)>><<audio ":all" stop>><<audio "AC_13" play>>
 <main>
  <div id="mount"></div>
-Stop! Do you hear that?
+<<timed 5s>><<replace "#mount">><<type 80ms>>Stop. Do you hear that? The pigs, they've doubled back. <</type>><</replace>><</timed>>
+<<timed 13s>><<replace "#mount">><<type 50ms>>Now, if you can, balance yourself on one foot and hold your breath, if you can't balance just hold your breath for as long as possible.
 
-The pigs! They’ve doubled back. Now, if you can, balance yourself on one foot, and hold your breath. If you can’t balance, just hold your breath for as long as possible. That way, the pigs won’t hear the vibrations of your feet. Do it for as long as you can! Start now.
+That way the pigs won't hear the vibrations of your feet. Do it for as long as you can! Start now!<</type>><</replace>><</timed>>
+<<timed 45s>><<replace "#mount">><<type 60ms>>Okay, I think they're gone. 
 
-Okay, I think they’re gone. That was a close one. They’re getting smarter. Quick, let’s head right onto Gracechurch Street. Let me know when you’re outside Leadenhall Market. And don’t forget to keep looking out for the dragon pigeons.
+Oh, that was a close one. They're getting smarter. <</type>><</replace>><</timed>>
+<<timed 53s>><<replace "#mount">><<type 50ms>>Quick. Let's head on to Gracechurch Street. Let me know when you're outside Leadenhall Market. 
 
-/* TODO NEEDS TO SHOW AFTER THE TEXT */
-<<timed 5s>>$myMap4<</timed>>
-<<timed 15s>><<button "We're at the market">><<set $prevpass to $passage>><<goto "AC-14">><</button>><</timed>>
+And don't forget to keep looking out for the dragon pigeons.<</type>><</replace>><</timed>>
+
+<<timed 65s>><<replace "#mount">>$myMap4
+
+<<button "We're at the market">><<set $prevpass to $passage>><<goto "AC-14">><</button>><</replace>><</timed>>
+
 
 </main>
 <<include "footer">>
@@ -689,35 +775,62 @@ Okay, I think they’re gone. That was a close one. They’re getting smarter. Q
 <<set $passage to "AC-14">><<set $nextpassage to "AC-15">><<set $myMap5 = setup.generateDirectionsMap(51.512841075137494, -0.08374897587811146,51.513491455258226, -0.08169454559785203)>><<audio ":all" stop>><<audio "AC_14" play>>
 <main>
  <div id="mount"></div>
-Ooh. Can you hear that?
+  
+<<timed 4s>><<replace "#mount">><<type 50ms>>Oh, can you hear that? <</type>><</replace>><</timed>>  
+<<timed 13s>><<replace "#mount">><<type 50ms>>Seems like we're heading into the 19th century here. That's good. 
 
-Seems like we’re heading into the 19th century here. That’s good. We can find Old Tom the Goose. Now, I’m not saying that I have favourites. All the animals of the City are my favourites, obviously. But if you forced me to decide? Well, Old Tom would probably be up there. I can’t lie! Do you know Old Tom? He was a right troublemaker, you know. He and I are birds of a feather. Heh. Get it? Anyway, he got shipped over from Belgium, and was meant to make a lovely tasty roast dinner for some lord and lady — but he escaped! Just as he was about to be slaughtered! Crafty fellow. He slipped out from between the butcher’s hands and fled into the depths of Leadenhall Market, right where you’re standing now. Everyone was enlisted to catch him, but no-one could — he was too slippery, too clever. After a few days, the butcher thought, well, he’s proved his worth. We’ll leave him be. So throughout the 1830s, Old Tom would just wander around the market hall, doing as he pleased, often getting fed bits of cabbage or carrot. Lucky old thing. Now — Tom wouldn’t hang around inside Leadenhall Market — he’s far too crafty for that. I think he might be on one of those little side streets. Can you find the corner of Leadenhall Street and Lime Street for me?
+We can find old Tom the goose now. <</type>><</replace>><</timed>>  
+<<timed 22s>><<replace "#mount">><<type 60ms>>Now I'm not saying that I have favorites. All the animals of the city are my favorites, obviously. 
 
-/* TODO NEEDS TO SHOW AFTER THE TEXT */
-<<timed 5s>>$myMap5<</timed>>
-<<timed 15s>><<button "We're here">><<set $prevpass to $passage>><<goto "AC-15">><</button>><</timed>>
+But if you force me to decide, well, Old Tom would probably be up there, I can't lie. <</type>><</replace>><</timed>>  
+<<timed 37s>><<replace "#mount">><<type 50ms>>Do you know Old Tom? He was all right troublemaker you know. 
+
+He and I are birds of a feather. Ha! Get it? <</type>><</replace>><</timed>>  
+<<timed 46s>><<replace "#mount">><<type 50ms>>Anyway, he got shipped over from Belgium and was meant to make a lovely tasty roast dinner for some Lord and Lady. 
+
+But he escaped. Just as he was about to be slaughtered. <</type>><</replace>><</timed>>  
+<<timed 61s>><<replace "#mount">><<type 50ms>>Crafty fellow, he slipped out from between the butchers hands and fled into the depths of Leadenhall market, right where you're standing now. <</type>><</replace>><</timed>>  
+<<timed 71s>><<replace "#mount">><<type 50ms>>Everyone was enlisted to catch him. But no one could. He was too slippery, too clever. 
+
+After a few days, the butcher thought well, he's proved his worth, we'll leave him be. <</type>><</replace>><</timed>>  
+<<timed 83s>><<replace "#mount">><<type 50ms>>So throughout the 1830s old Tom would just wander around the market hall doing as he pleased, often getting fed bits of cabbage or carrot. 
+
+Lucky old thing! <</type>><</replace>><</timed>>  
+<<timed 95s>><<replace "#mount">><<type 50ms>>Now Tom wouldn't hang around inside Leadenhall Market. He's far too crafty for that. I think he might be on one of those little side streets.
+
+Can you find the corner of Leadenhall Street and Lime Street for me?<</type>><</replace>><</timed>>
+
+/* TODO MAP NOT SHOWING UP HERE */
+<<timed 125s>><<replace "#mount">>$myMap5
+
+<<button "We're here">><<set $prevpass to $passage>><<goto "AC-15">><</button>><</replace>><</timed>>
+
 
 </main>
 <<include "footer">>
-
 
 :: AC-15 {"position":"600,1300","size":"100,100"}
 <<set $passage to "AC-15">><<set $nextpassage to "AC-16">><<set $myMap6 = setup.generateDirectionsMap(51.513491455258226, -0.08169454559785203,51.51197301158849, -0.08213992254285558)>><<audio ":all" stop>><<audio "AC_15" play>>
 <main>
  <div id="mount"></div>
-This looks right. Head down Lime Street for me, would you.
+<<timed 1s>><<replace "#mount">><<type 50ms>>This looks right. Head down Lime Street for me, would you?<</type>><</replace>><</timed>>  
+<<timed 51s>><<replace "#mount">><<type 60ms>>There you are Tom, you old rascal don't move a muscle. 
 
-There you are! Tom, you old rascal. Don’t move a muscle. Yes it’s me! Don’t honk. We’re friends, remember?
+Yes, it's me. Don't honk with friends, remember? <</type>><</replace>><</timed>>  
+<<timed 61s>><<replace "#mount">><<type 50ms>>If you keep making that terrible noise, I'm going to feed you to the pigs.<</type>><</replace>><</timed>>  
+<<timed 66s>><<replace "#mount">><<type 60ms>>That's better. I was only joking. 
 
-If you keep making that terrible noise, I’m going to feed you to the pigs!
+You know that right? <</type>><</replace>><</timed>>  
+<<timed 72s>><<replace "#mount">><<type 60ms>>Thank you, my friends. That's another one ticked off the list. 
 
-That’s better. I was only joking. You know that, right?
-Thank you, my friends. That’s another one ticked off the list. Don’t get too close to him — he’ll think your fingers are delicious carrots and give you a nip. Stay there, Tom. I’ll come and get you in a minute.
-Now, off we go. Let’s head through Cullum Street.
+Don't get too close to him. He'll think your fingers are delicious carrots and give you a nip. 
 
-/* TODO NEEDS TO SHOW AFTER THE TEXT */
-<<timed 5s>>$myMap6<</timed>>
-<<timed 15s>><<button "We're Cullum Street">><<set $prevpass to $passage>><<goto "AC-16">><</button>><</timed>>
+Stay there, Tom. I'll come and get you in a minute.<</type>><</replace>><</timed>>  
+<<timed 86s>><<replace "#mount">><<type 50ms>>Now off we go. Let's head through Cullum Street.<</type>><</replace>><</timed>>
+
+<<timed 98s>><<replace "#mount">>$myMap6
+
+<<button "We're at Cullum Street">><<set $prevpass to $passage>><<goto "AC-16">><</button>><</replace>><</timed>>
 
 </main>
 <<include "footer">>
@@ -727,12 +840,43 @@ Now, off we go. Let’s head through Cullum Street.
 <<set $passage to "AC-16">><<set $nextpassage to "AC-17">><<set $myMap7 = setup.generateDirectionsMap(51.51197301158849, -0.08213992254285558,51.51159138418852, -0.08295967435508012)>><<audio ":all" stop>><<audio "AC_16" play>>
 <main>
  <div id="mount"></div>
-Hang about here for a moment, will you?
-Right, now we have to find our final animal. We’re looking for Faith the Cat — a very, very lucky old cat. Oh, she’s a darling. Faith always seems to know when I’m having a bad day. Loves to sit on my lap and purr the house down. Helps if I’ve got a tin of tuna in my pocket, but hey. Hopefully some of her famous luck will rub off on us! Now Faith is a lovely cat — you can’t say that for every cat, let’s be honest, but Faith is a special case. You see, Faith actually survived the Blitz. She was a church cat — I first found her in the late 1930s in a church called St Augustine’s with her little black and white kitten, Panda. Now, when London was being bombed in World War II, lots of important landmarks got hit. One night, on the 9th September 1940, Faith and Panda took shelter in the basement of St Augustine’s, where it was warmest. But that very same night, a German bomber bombed the church, as well as 7 other churches. The priest of the church was told that there couldn’t possibly be any survivors — Faith and Panda were most likely dead. But the priest, Ross, couldn’t bring himself to believe it. The cat was called Faith, after all. So he bent down and crawled under the smouldering rubble, and made his way to the basement. And what did he find? Faith and Panda, unharmed, and meowing their little hearts out. Isn’t that amazing? Faith was actually awarded a medal for bravery, for protecting her son. So you’ll understand if she can get a little nervous, won’t you? What we need to do is when we get onto Fenchurch Street, we’re going to whisper “pspspsps” for about 20 seconds. Hopefully that’ll be enough to pique her interest.
+<<timed 0s>><<replace "#mount">><<type 50ms>>Hang about here for a moment will you! <</type>><</replace>><</timed>>
+<<timed 3s>><<replace "#mount">><<type 70ms>>Right, now we have to find our final animal. 
 
-/* TODO NEEDS TO SHOW AFTER THE TEXT */
-<<timed 5s>>$myMap7<</timed>>
-<<timed 15s>><<button "We're here and ready!">><<set $prevpass to $passage>><<goto "AC-17">><</button>><</timed>>
+We're looking for Faith the Cat, a very, very lucky old cat.
+
+Oh, she's a darling. <</type>><</replace>><</timed>> 
+<<timed 17s>><<replace "#mount">><<type 60ms>>Faith always seems to know when I'm having a bad day, loves to sit on my lap and purr the house down. 
+
+Helps if i've got a tin of tuna in my pocket, but hey! 
+
+Hopefully some of her famous slack will rub off on us. <</type>><</replace>><</timed>>
+<<timed 32s>><<replace "#mount">><<type 60ms>>Now, Faith is a lovely cat. You can't say that for every cat, let's be honest.
+
+But Faith is a special case. You see, Faith actually survived the Blitz. <</type>><</replace>><</timed>>
+<<timed 44s>><<replace "#mount">><<type 80ms>>She was a church cat. 
+
+I first found her in the late 1930s in a church called St. Augustine's, with her little black and white kitten, Panda.
+
+Now, when London was being bombed in World War Two, lots of important landmarks got hit. <</type>><</replace>><</timed>>
+<<timed 64s>><<replace "#mount">><<type 70ms>>One night, on the 9th September 1940, Faith and Panda took shelter in the basement of St. Augustine's where it was warmest. 
+
+But that very same night, a German bomber bombed the church, as well as seven other churches. <</type>><</replace>><</timed>>
+<<timed 86s>><<replace "#mount">><<type 60ms>>The priest of the church was told that there couldn't possibly be any survivors. 
+
+Faith and Panda were most likely dead. But the priest, Ross, couldn't bring himself to believe it. The cat was called Faith after all. <</type>><</replace>><</timed>>
+<<timed 102s>><<replace "#mount">><<type 65ms>>So he bent down and crawled under the smoldering rubble and made his way to the basement. And what did he find? <</type>><</replace>><</timed>>
+<<timed 114s>><<replace "#mount">><<type 65ms>>Faith and Panda unharmed, and meowing their little hearts out
+
+Isn't that amazing? 
+
+Faith was actually awarded a medal for bravery, for protecting her son. So you will understand if she can get a little nervous, won't you? <</type>><</replace>><</timed>>
+<<timed 133s>><<replace "#mount">><<type 65ms>>What we need to do is when we get into Fenchurch Street, we're going to whisper "psst psst psst" for about 20 seconds. 
+
+Hopefully that'll be enough to pique her interest.<</type>><</replace>><</timed>><<timed 148s>><<replace "#mount">>$myMap7
+
+<<button "We're here and ready!">><<set $prevpass to $passage>><<goto "AC-17">><</button>><</replace>><</timed>>
+
 </main>
 <<include "footer">>
 
@@ -754,9 +898,11 @@ Right, now we have to find our final animal. We’re looking for Faith the Cat �
 		<<else>>
     	<<replace "#countdown">><</replace>>
 			<<replace "#mount">>
-      Nothing? Hmm. Maybe this will prove trickier than expected. I suppose we have to think about what kinds of things cats like. What kind of food do cats like? Milk, fish...anything else? Have a look at your devices. Pick one of those foods and make them sound as delightful and delectable as possible. Tell her what kind of delicious flaky fish we have, or what lovely filling milk we can give her, or what gorgeous creamy cheese we have if she comes out.<</replace>>
-      <<timed 6s>> <<replace "#mount">>Shall we give it a go? Pick one, and call it out for 20 seconds.
-      
+     <<type 70ms>> Nothing? Hmm. Maybe this will prove trickier than expected. <</type>><</replace>>
+	 
+	 <<timed 7s>><<replace "#mount">><<type 50ms>>I suppose we have to think about what kind of things cats like. What kind of foods do cats like? Milk, fish, anything else? <</type>><</replace>><</timed>>  
+<<timed 20s>><<replace "#mount">><<type 50ms>>Have a look at your devices. Pick one of those foods and make them sound as delightful and delectable as possible. Tell her what kinds of delicious flaky fish we have. <</type>><</replace>><</timed>><<timed 32s>><<replace "#mount">><<type 50ms>>Or what lovely filling milk we can give her. Or what gorgeous creamy cheese we have, as she comes out.<</type>><</replace>><</timed>>
+      <<timed 40s>> <<replace "#mount">><<type 70ms>>Shall we give it a go? Pick one, and call it out for 20 seconds.<</type>> 
      <div class="menu-wrapper">
         <<button"Fish">><<timed 0.2s>>
 <<set $seconds to 21>>
@@ -805,15 +951,11 @@ Right, now we have to find our final animal. We’re looking for Faith the Cat �
 <</silently>><</timed>><</button>>
      </div>
      <</replace>><</timed>>
-/* TODO  The options are fish, milk, and cheese. Each audience member picks one. */
+
 			<<stop>>
 		<</if>>
 	<</repeat>>
 <</silently>><</timed>>
-
-/* The audience call out for Faith, tempting her with treats. After twenty seconds, we hear soft meowing. */
-
-/* TODO NEEDS TO CONTINUE AFTER THE TEXT */
 
 </main>
 <<include "footer">>
@@ -823,10 +965,14 @@ Right, now we have to find our final animal. We’re looking for Faith the Cat �
 <<set $passage to "AC-18">><<set $nextpassage to "AC-19">><<set $myMap8 = setup.generateDirectionsMap(51.51159138418852, -0.08295967435508012,51.510699568738694, -0.08319849968545442)>><<audio ":all" stop>><<audio "AC_18" play>>
 <main>
  <div id="mount"></div>
-That did the trick! Can you hear her? She must be down Rood Lane. Come on, quick!
-/* TODO NEEDS TO CONTINUE AFTER THE TEXT */
-<<timed 5s>>$myMap8<</timed>>
-<<timed 15s>><<button "We're here!">><<set $prevpass to $passage>><<goto "AC-19">><</button>><</timed>>
+<<timed 2s>><<replace "#mount">><<type 70ms>>That did the trick! Can you hear her? 
+
+Oh she must be down Rood Lane! Come on, quick!<</type>><</replace>><</timed>>
+
+<<timed 15s>>$myMap8 
+
+<<button "We're here!">><<set $prevpass to $passage>><<goto "AC-19">><</button>><</timed>>
+
 </main>
 <<include "footer">>
 
@@ -835,15 +981,21 @@ That did the trick! Can you hear her? She must be down Rood Lane. Come on, quick
 <<set $passage to "AC-19">><<set $nextpassage to "AC-20">><<set $myMap9 = setup.generateDirectionsMap(51.510699568738694, -0.08319849968545442,51.510205447243436, -0.08184300454801961)>><<audio ":all" stop>><<audio "AC_19" play>>
 <main>
  <div id="mount"></div>
-Faith! There you are. Come here, girl. That’s it! Very good.
-That did the trick, didn’t it? Excellent stuff, everyone.
+<<timed 0s>><<replace "#mount">><<type 60ms>>Faith! There you are! 
 
-I’ll have some lovely tuna for you when I get back. Faith. You just sit tight. Don’t cause any trouble.
+Ah come here girl. That's it. Very good. 
 
-Come on, you lot. Head onto Eastcheap, and then Great Tower Street.
-/* TODO NEEDS TO CONTINUE AFTER THE TEXT */
-<<timed 5s>>$myMap9<</timed>>
-<<timed 15s>><<button "We're on Great Tower Street!">><<set $prevpass to $passage>><<goto "AC-20">><</button>><</timed>>
+That did the trick, didn't it? Excellent stuff everyone. <</type>><</replace>><</timed>>
+
+<<timed 12s>><<replace "#mount">><<type 60ms>>I'll have some lovely tuna for you and I'll get back Faith. 
+
+You just sit tight. Don't cause any trouble. <</type>><</replace>><</timed>>
+  
+<<timed 22s>><<replace "#mount">><<type 60ms>>Come on you lot. Head on to Eastcheap and then the Great Tower Street.<</type>><</replace>><</timed>>
+<<timed 32s>><<replace "#mount">>$myMap9
+
+<<button "We're on Great Tower Street!">><<set $prevpass to $passage>><<goto "AC-20">><</button>><</replace>><</timed>>
+
 </main>
 <<include "footer">>
 
@@ -852,10 +1004,12 @@ Come on, you lot. Head onto Eastcheap, and then Great Tower Street.
 <<set $passage to "AC-20">><<set $nextpassage to "AC-21">><<audio ":all" stop>><<audio "AC_20" play>>
 <main>
  <div id="mount"></div>
-Oh, blast. I thought we’d lost them. It’s the pigs. They’re closer to the surface than ever, can you hear? I think they’re getting hungry...We’ve tried running and hiding. We need to be brave. We need to stand up to them. I think we need to scare them. How do you think we should do it?
+<<timed 6s>><<replace "#mount">><<type 55ms>>Oh blast. I thought we'd lost them. It's the pigs, they're closer to the surface than ever! Can you hear? <</type>><</replace>><</timed>> 
+
+<<timed 15s>><<replace "#mount">><<type 60ms>>Aw I think they're getting hungry? We've tried running and hiding. We need to be brave. We need to stand up to them. I think we need to scare them. How do you think we should do it?<</type>><</replace>><</timed>> 
 /* TODO NEEDS TO CONTINUE AFTER THE TEXT */
-<<timed 5s>><<button "Stamp on the cracks in the pavement">><<set $prevpass to $passage>><<goto "AC-21">><</button>><</timed>>
-<<timed 6s>><<button "Jump on the middle of each paving stone">><<set $prevpass to $passage>><<goto "AC-21">><</button>><</timed>>
+<<timed 28s>><<button "Stamp on the cracks in the pavement">><<set $prevpass to $passage>><<goto "AC-21">><</button>><</timed>>
+<<timed 29s>><<button "Jump on the middle of each paving stone">><<set $prevpass to $passage>><<goto "AC-21">><</button>><</timed>>
   
 </main>
 <<include "footer">>
@@ -865,13 +1019,19 @@ Oh, blast. I thought we’d lost them. It’s the pigs. They’re closer to the 
 <<set $passage to "AC-21">><<set $nextpassage to "AC-22">><<audio ":all" stop>><<audio "AC_21" play>><<set $myMap10 = setup.generateDirectionsMap(51.510205447243436, -0.08184300454801961,51.50975237659481, -0.0824661751178505)>>
 <main>
  <div id="mount"></div>
-Okay! That sounds good. We need to do it as hard as we possibly can to make sure they run back into the sewers. Our end point is St Dunstan in the East. Just down the road. Do it as hard as you can. We need to scare them off. You can even yell if you want to as you’re doing it. Something like “Go away!” or “Leave us alone!” Okay? Ready? Let’s go!
+<<timed 0s>><<replace "#mount">><<type 50ms>>Okay, that sounds good. We need to do it as hard as we possibly can, to make sure they run back into the sewers. <</type>><</replace>><</timed>>   
+<<timed 10s>><<replace "#mount">><<type 50ms>>Our endpoint is St Dunstan in the East, just down the road. 
+
+Do it as hard as you can, we need to scare them off. <</type>><</replace>><</timed>>   
+<<timed 19s>><<replace "#mount">><<type 50ms>>You can even yell if you want, as you're doing it. Something like "go away" or "leave us alone". 
+
+Okay, ready? Let's go! <</type>><</replace>><</timed>>   
+
+<<timed 27s>>$myMap10<</timed>>
+<<timed 54s>><<replace "#mount">><<type 50ms>>That's great! That's working! <</type>><</replace>><</timed>>   
+<<timed 79s>><<replace "#mount">><<type 50ms>>That's it, they're retreating! Keep stamping!<</type>><</replace>><</timed>>
 /* TODO NEEDS TO CONTINUE AFTER THE TEXT */
-<<timed 5s>>$myMap10<</timed>>
-<<timed 10s>>That’s great! That’s working!<</timed>>
-<<timed 15s>>That’s it! They’re retreating! Keep stamping.<</timed>>
-/* TODO NEEDS TO CONTINUE AFTER THE TEXT */
-<<timed 15s>><<button "We're here!">><<set $prevpass to $passage>><<goto "AC-22">><</button>><</timed>>
+<<timed 85s>><<button "We're here!">><<set $prevpass to $passage>><<goto "AC-22">><</button>><</timed>>
   
 </main>
 <<include "footer">>
@@ -881,14 +1041,15 @@ Okay! That sounds good. We need to do it as hard as we possibly can to make sure
 <<set $passage to "AC-22">><<set $nextpassage to "AC-23">><<audio ":all" stop>><<audio "AC_22" play>>
 <main>
  <div id="mount"></div>
-You did it! That was brilliant. It sounds like they’ve retreated back down into the bottom of the sewers.
+<<timed 0s>><<replace "#mount">><<type 60ms>>You did it. That was brilliant. 
 
-They shouldn’t be a problem from now on. Well done, everyone. And look where we are now. St Dunstan in the East! Isn’t it beautiful?
+It sounds like They've retreated back down to the bottom of the sewers. They shouldn't be a problem for us from now on. <</type>><</replace>><</timed>>   
+<<timed 11s>><<replace "#mount">><<type 60ms>>Oh, well done everyone! 
 
-There might be more dragon pigeons around here. Have a look, and then tell someone around you how many dragons you’ve found. Tell me when you’re done.
+And look where we are now - St Dunstan in the East. Isn't it beautiful? <</type>><</replace>><</timed>>   
+<<timed 20s>><<replace "#mount">><<type 50ms>>There might be more Dragon pigeons around here. Have a look. And then tell someone around you how many dragons you found. Tell me when you're done!<</type>><</replace>><</timed>> 
 
-/* TODO NEEDS TO CONTINUE AFTER THE TEXT */
-<<timed 5s>><<button "We're done">><<set $prevpass to $passage>><<goto "AC-23">><</button>><</timed>>
+<<timed 35s>><<button "We're done">><<set $prevpass to $passage>><<goto "AC-23">><</button>><</timed>>
   
 </main>
 <<include "footer">>
@@ -898,23 +1059,28 @@ There might be more dragon pigeons around here. Have a look, and then tell someo
 <<set $passage to "AC-23">><<set $nextpassage to "end">><<audio ":all" stop>><<audio "AC_23" play>>
 <main>
  <div id="mount"></div>
-Wow. Look at us, huh? Me, the grand expert in animal wrangling, and you lot...my excellent helpers.
+ <<timed 5s>><<replace "#mount">><<type 50ms>>Wow, look at us, eh? Me, the grand expert in animal wrangling, and you lot my excellent helpers. 
 
-Tell you what, I’m going to do something I don’t normally do.
+Tell you what, I'm going to do something I don't normally do!<</type>><</replace>><</timed>>  
+<<timed 22s>><<replace "#mount">><<type 50ms>>I now pronounce each of you Junior City animal Wranglers. That's right. That is an official title. 
 
-Ahem.
+You should be very honored, you know. Not everyone has a knack for this job. But you lot have shown the kind of moxie, a junior wrangler needs. Congratulations. <</type>><</replace>><</timed>>  
+<<timed 47s>><<replace "#mount">><<type 50ms>>You know, I'll let you in on a secret - this is my favorite place in the city. 
 
-I now pronounce each of you...Junior City Animal Wranglers! That’s right, that is an official title. You should be very honoured, you know. Not everyone has the knack for this job, but you lot have shown the kind of moxie a junior wrangler needs. Congratulations!
+Somewhere where nature meets man. It's stood here since 1100. <</type>><</replace>><</timed>>  
+<<timed 64s>><<replace "#mount">><<type 50ms>>It's survived fires, bombings, and it's still standing. Well, some of it is! But look how the plants are growing - there's life here. <</type>><</replace>><</timed>>  
+<<timed 79s>><<replace "#mount">><<type 50ms>>I feel like it's a very potent place for Dragon time. 
 
-You know, I’ll let you in on a secret — this is my favourite place in the City. Somewhere where nature meets man. It’s stood here since the 1100s. It’s survived fires, bombings...and it’s still standing. Well, some of it is. But look at how the plants are growing. There’s life here. I feel like it’s a very potent place for dragon time. In fact...I feel something coming over me.
+In fact, I feel something coming over me! <</type>><</replace>><</timed>>  
+<<timed 92s>><<replace "#mount">><<type 50ms>>I'm shapeshifting! <</type>><</replace>><</timed>>  
+<<timed 99s>><<replace "#mount">><<type 50ms>>What? Did you think I was human? 
 
-I’m shapeshifting! What, did you think I was human? Felix isn’t the only dragon around these parts, you know.
+Felix isn't the only dragon around these parts, you know? <</type>><</replace>><</timed>>  
+<<timed 106s>><<replace "#mount">><<type 50ms>>Oof, I needed to let that out. Listen, I need to stretch my wings a bit. 
 
-Oof, I needed to let that out. Listen, I need to stretch my wings a bit. You lot stay as long as you need to.
-
-Thank you for your help, my friends.
+You lot stay as long as you need to. Thank you for your help my friends.<</type>><</replace>><</timed>>
 /* TODO NEEDS TO CONTINUE AFTER THE TEXT */
-<<timed 5s>><<button "End">><<set $prevpass to $passage>><<goto "end">><</button>><</timed>>
+<<timed 116s>><<button "End">><<set $prevpass to $passage>><<goto "end">><</button>><</timed>>
   
 </main>
 <<include "footerend">>
