@@ -661,7 +661,9 @@ I can't control them. No one can but I can help you avoid them.<</type>><</repla
 You need to avoid every crack or line in the pavement if you're not going to alert the pigs to your position. <</type>><</replace>><</timed>><<timed 27s>><<replace "#mount">><<type 60ms>>Hop or skip over the cracks on the ground until you get to Birchin Lane. 
 
 It should be on your left just a little further. Ready? Aaand let's go!<</type>><</replace>><</timed>>
-<<timed 37s>><<replace "#mount">>$myMap2<</replace>><</timed>><<timed 45s>><<button "We made it!">><<set $prevpass to $passage>><<goto "AC-11">><</button>><</timed>>
+<<timed 37s>><<replace "#mount">>$myMap2
+<<button "We made it!">><<set $prevpass to $passage>><<goto "AC-11">><</button>>
+<</replace>><</timed>>
 </main>
 <<include "footer">>
 
