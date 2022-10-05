@@ -461,7 +461,7 @@ You have two options:
 
 
 :: AC-05 {"position":"600,400","size":"100,100"}
-<<set $passage to "AC-05">><<set $nextpassage to "AC-06">><<set $myMap = setup.generateDirectionsMap(51.51273574253808, -0.09190867122182791,51.51318914905516, -0.09147383074234947)>>
+<<set $passage to "AC-05">><<set $nextpassage to "AC-06">><<set $myMap = setup.generateDirectionsMap(51.51273574253808, -0.09190867122182791,51.51318914905516, -0.09147383074234947)>><<audio ":all" stop>>
 <<audio "AC_05" play>>
 <main>
   <div id="mount"></div><<timed 18s>><<replace "#mount">><<type 70ms >>Hello? <</type>><</replace>><</timed>>
@@ -917,7 +917,7 @@ Thank you for your help, my friends.
 <<timed 5s>><<button "End">><<set $prevpass to $passage>><<goto "end">><</button>><</timed>>
   
 </main>
-<<include "footer">>
+<<include "footerend">>
 
 
 :: end {"position":"100,700","size":"100,100"}
@@ -929,3 +929,7 @@ $endMap
 </main>
 <<include "footer">>
 
+:: footerend {"position":"99,485","size":"100,100"}
+<footer>
+<div class="nav-item"><<button "Start again">><<goto "landing">><</button>></div>
+</footer>
