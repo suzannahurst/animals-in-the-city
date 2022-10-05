@@ -883,9 +883,8 @@ Hopefully that'll be enough to pique her interest.<</type>><</replace>><</timed>
 
 :: AC-17 {"position":"1000,1300","size":"100,100"}
 <<set $passage to "AC-17">><<set $nextpassage to "AC-18">><<set $seconds to "">>
-<<audio ":all" stop>><<audio "AC_17" play>>
-<main>
-<span id="countdown" class="countdown">$seconds </span>
+<<audio ":all" stop>><<audio "AC_17" play>><main><span id="countdown" class="countdown">$seconds </span>
+
 <div id="mount"></div>
 <<timed 0.5s>><<replace "#mount">><<type 40ms>>Okay. Ready? Go.<</type>><</replace>><</timed>>
 <<timed 4s>><<set $seconds to 21>><</timed>>
@@ -1004,11 +1003,10 @@ You just sit tight. Don't cause any trouble. <</type>><</replace>><</timed>>
 <<set $passage to "AC-20">><<set $nextpassage to "AC-21">><<audio ":all" stop>><<audio "AC_20" play>>
 <main>
  <div id="mount"></div>
-<<timed 6s>><<replace "#mount">><<type 55ms>>Oh blast. I thought we'd lost them. It's the pigs, they're closer to the surface than ever! Can you hear? <</type>><</replace>><</timed>> 
+<<timed 6s>><<replace "#mount">><<type 55ms>>Oh blast. I thought we'd lost them. It's the pigs, they're closer to the surface than ever! Can you hear? <</type>><</replace>><</timed>> <<timed 15s>><<replace "#mount">><<type 60ms>>Aw I think they're getting hungry? We've tried running and hiding. 
+We need to be brave. We need to stand up to them. I think we need to scare them. 
+How do you think we should do it?<</type>><</replace>><</timed>> <<timed 28s>><<button "Stamp on the cracks in the pavement">><<set $prevpass to $passage>><<goto "AC-21">><</button>><</timed>>
 
-<<timed 15s>><<replace "#mount">><<type 60ms>>Aw I think they're getting hungry? We've tried running and hiding. We need to be brave. We need to stand up to them. I think we need to scare them. How do you think we should do it?<</type>><</replace>><</timed>> 
-/* TODO NEEDS TO CONTINUE AFTER THE TEXT */
-<<timed 28s>><<button "Stamp on the cracks in the pavement">><<set $prevpass to $passage>><<goto "AC-21">><</button>><</timed>>
 <<timed 29s>><<button "Jump on the middle of each paving stone">><<set $prevpass to $passage>><<goto "AC-21">><</button>><</timed>>
   
 </main>
@@ -1025,14 +1023,11 @@ You just sit tight. Don't cause any trouble. <</type>><</replace>><</timed>>
 Do it as hard as you can, we need to scare them off. <</type>><</replace>><</timed>>   
 <<timed 19s>><<replace "#mount">><<type 50ms>>You can even yell if you want, as you're doing it. Something like "go away" or "leave us alone". 
 
-Okay, ready? Let's go! <</type>><</replace>><</timed>>   
+Okay, ready? Let's go! <</type>><</replace>><</timed>><<timed 30s>><<replace "#mount">>$myMap10
 
-<<timed 27s>>$myMap10<</timed>>
-<<timed 54s>><<replace "#mount">><<type 50ms>>That's great! That's working! <</type>><</replace>><</timed>>   
-<<timed 79s>><<replace "#mount">><<type 50ms>>That's it, they're retreating! Keep stamping!<</type>><</replace>><</timed>>
-/* TODO NEEDS TO CONTINUE AFTER THE TEXT */
-<<timed 85s>><<button "We're here!">><<set $prevpass to $passage>><<goto "AC-22">><</button>><</timed>>
-  
+<<timed 24s>><<type 50ms>>That's great! That's working! <</type>><</timed>>   
+<<timed 49s>><<type 50ms>>That's it, they're retreating! Keep stamping!<</type>><</timed>>
+<<timed 55s>><<button "We're here!">><<set $prevpass to $passage>><<goto "AC-22">><</button>><</timed>><</replace>><</timed>>  
 </main>
 <<include "footer">>
 

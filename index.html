@@ -889,9 +889,8 @@ Hopefully that&#39;ll be enough to pique her interest.&lt;&lt;/type&gt;&gt;&lt;&
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="AC-17" tags="" position="1000,1300" size="100,100">&lt;&lt;set $passage to &quot;AC-17&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-18&quot;&gt;&gt;&lt;&lt;set $seconds to &quot;&quot;&gt;&gt;
-&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_17&quot; play&gt;&gt;
-&lt;main&gt;
-&lt;span id=&quot;countdown&quot; class=&quot;countdown&quot;&gt;$seconds &lt;/span&gt;
+&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_17&quot; play&gt;&gt;&lt;main&gt;&lt;span id=&quot;countdown&quot; class=&quot;countdown&quot;&gt;$seconds &lt;/span&gt;
+
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 &lt;&lt;timed 0.5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 40ms&gt;&gt;Okay. Ready? Go.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 4s&gt;&gt;&lt;&lt;set $seconds to 21&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -998,11 +997,10 @@ You just sit tight. Don&#39;t cause any trouble. &lt;&lt;/type&gt;&gt;&lt;&lt;/r
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="AC-20" tags="" position="600,1700" size="100,100">&lt;&lt;set $passage to &quot;AC-20&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-21&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_20&quot; play&gt;&gt;
 &lt;main&gt;
  &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-&lt;&lt;timed 6s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 55ms&gt;&gt;Oh blast. I thought we&#39;d lost them. It&#39;s the pigs, they&#39;re closer to the surface than ever! Can you hear? &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt; 
+&lt;&lt;timed 6s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 55ms&gt;&gt;Oh blast. I thought we&#39;d lost them. It&#39;s the pigs, they&#39;re closer to the surface than ever! Can you hear? &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt; &lt;&lt;timed 15s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Aw I think they&#39;re getting hungry? We&#39;ve tried running and hiding. 
+We need to be brave. We need to stand up to them. I think we need to scare them. 
+How do you think we should do it?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt; &lt;&lt;timed 28s&gt;&gt;&lt;&lt;button &quot;Stamp on the cracks in the pavement&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-21&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 15s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Aw I think they&#39;re getting hungry? We&#39;ve tried running and hiding. We need to be brave. We need to stand up to them. I think we need to scare them. How do you think we should do it?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt; 
-/* TODO NEEDS TO CONTINUE AFTER THE TEXT */
-&lt;&lt;timed 28s&gt;&gt;&lt;&lt;button &quot;Stamp on the cracks in the pavement&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-21&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 29s&gt;&gt;&lt;&lt;button &quot;Jump on the middle of each paving stone&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-21&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
   
 &lt;/main&gt;
@@ -1015,14 +1013,11 @@ You just sit tight. Don&#39;t cause any trouble. &lt;&lt;/type&gt;&gt;&lt;&lt;/r
 Do it as hard as you can, we need to scare them off. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;   
 &lt;&lt;timed 19s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;You can even yell if you want, as you&#39;re doing it. Something like &quot;go away&quot; or &quot;leave us alone&quot;. 
 
-Okay, ready? Let&#39;s go! &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;   
+Okay, ready? Let&#39;s go! &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 30s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;$myMap10
 
-&lt;&lt;timed 27s&gt;&gt;$myMap10&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 54s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;That&#39;s great! That&#39;s working! &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;   
-&lt;&lt;timed 79s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;That&#39;s it, they&#39;re retreating! Keep stamping!&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
-/* TODO NEEDS TO CONTINUE AFTER THE TEXT */
-&lt;&lt;timed 85s&gt;&gt;&lt;&lt;button &quot;We&#39;re here!&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-22&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
-  
+&lt;&lt;timed 24s&gt;&gt;&lt;&lt;type 50ms&gt;&gt;That&#39;s great! That&#39;s working! &lt;&lt;/type&gt;&gt;&lt;&lt;/timed&gt;&gt;   
+&lt;&lt;timed 49s&gt;&gt;&lt;&lt;type 50ms&gt;&gt;That&#39;s it, they&#39;re retreating! Keep stamping!&lt;&lt;/type&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 55s&gt;&gt;&lt;&lt;button &quot;We&#39;re here!&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-22&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="AC-22" tags="" position="1000,1700" size="100,100">&lt;&lt;set $passage to &quot;AC-22&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-23&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_22&quot; play&gt;&gt;
 &lt;main&gt;
