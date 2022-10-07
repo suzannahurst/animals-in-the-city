@@ -458,8 +458,14 @@ You have two options:
 :: AC-05 {"position":"600,400","size":"100,100"}
 <<set $passage to "AC-05">><<set $nextpassage to "AC-06">><<set $myMap = setup.generateDirectionsMap(51.51273574253808, -0.09190867122182791,51.51318914905516, -0.09147383074234947)>><<audio ":all" stop>><<audio "AC_05" play>>
 <main>
-<div id="mount"></div><<timed 18s>><<replace "#mount">><<type 70ms >>Hello? <</type>><</replace>><</timed>><<timed 23s>><<replace "#mount">><<type 70ms >> Is someone there?<</type>><</replace>><</timed>><<timed 30s>><<replace "#mount">><<type 70ms >>Oh! Thank goodness. You’re from 2022, aren’t you? I can tell by your clothes. Interesting dress sense in 2022. <</type>><</replace>><</timed>><<timed 40s>><<replace "#mount">><<type 70ms >>Don’t worry, you’ll grow out of it. Gets much better in the 30s. Can you head towards Sise Lane? I need to talk to you somewhere a bit calmer.<</type>><</replace>><</timed>><<timed 50s>>$myMap<</timed>>
-<<timed 55s>><<button "We're here">><<set $prevpass to $passage>><<goto "AC-06">><</button>><</timed>>
+<div id="mount"></div>
+  <<timed 1s>><<replace "#mount">><<type 70ms >>[connecting...] <</type>><</replace>><</timed>>
+   <<timed 5s>><<replace "#mount">><<type 70ms >>[connecting...] <</type>><</replace>><</timed>>
+      <<timed 10s>><<replace "#mount">><<type 70ms >>[connecting...] <</type>><</replace>><</timed>>
+  <<timed 18s>><<replace "#mount">><<type 70ms >>Hello? <</type>><</replace>><</timed>><<timed 23s>><<replace "#mount">><<type 70ms >> Is someone there?<</type>><</replace>><</timed>><<timed 30s>><<replace "#mount">><<type 70ms >>Oh! Thank goodness. You’re from 2022, aren’t you? I can tell by your clothes. Interesting dress sense in 2022. <</type>><</replace>><</timed>><<timed 40s>><<replace "#mount">><<type 70ms >>Don’t worry, you’ll grow out of it. Gets much better in the 30s. Can you head towards Sise Lane? I need to talk to you somewhere a bit calmer.<</type>><</replace>><</timed>>
+  <<timed 50s>><<replace "#mount">>$myMap
+
+<<button "We're here">><<set $prevpass to $passage>><<goto "AC-06">><</button>><</replace>><</timed>>
 </main>
 <<include "footer">>
 
@@ -544,9 +550,7 @@ Yeah, foxes are my favorite animal. Not country foxes, mind! City foxes, London 
 
 Bold as brass London foxes, curious, adaptable and agile. All the traits that make up a true Londoner.<</type>><</replace>><</timed>>
  
-<<timed 95s>><<replace "#mount">><<type 50ms>> Take a minute and think about it. 
-
-Then introduce yourselves to those around you!
+<<timed 95s>><<replace "#mount">><<type 50ms>> Take a minute and think about it. Then introduce yourselves to those around you!
 
 <<button "We've all introduced ourselves">><<set $prevpass to $passage>><<goto "AC-08">><</button>>
 
@@ -557,7 +561,7 @@ Then introduce yourselves to those around you!
 
 
 :: AC-08 {"position":"1200,400","size":"100,100"}
-<<set $passage to "AC-08">><<set $nextpassage to "AC-09">><<set $myMap2 = setup.generateDirectionsMap(51.51318914905516, -0.09147383074234947,51.513306270196175, -0.0897463101374395)>><<audio ":all" stop>><<audio "AC_08" play>><main>
+<<set $passage to "AC-08">><<set $nextpassage to "AC-09">><<set $myMap2 = setup.generateDirectionsMap(51.51211727556783, -0.09093602904008877,51.513034780792495, -0.09146067804541748)>><<audio ":all" stop>><<audio "AC_08" play>><main>
 
  <div id="mount"></div>
 <<timed 1s>><<replace "#mount">><<type 50ms>>Very good. <</type>><</replace>><</timed>>  
@@ -643,17 +647,16 @@ With nothing to eat down there, it's said that they've developed a taste for hum
 
 I can't control them. No one can but I can help you avoid them.<</type>><</replace>><</timed>>
 
+<<timed 182s>><<replace "#mount">>$myMap2
 
-<<timed 182s>>$myMap2
-
-<<button "Next">><<set $prevpass to $passage>><<goto "AC-10">><</button>><</timed>>
+<<button "Next">><<set $prevpass to $passage>><<goto "AC-10">><</button>><</replace>><</timed>>
 
 </main>
 <<include "footer">>
 
 
 :: AC-10 {"position":"600,900","size":"100,100"}
-<<set $passage to "AC-10">><<set $nextpassage to "AC-11">><<audio ":all" stop>><<audio "AC_10" play>><<set $myMap2 = setup.generateDirectionsMap(51.51318914905516, -0.09147383074234947,51.513306270196175, -0.0897463101374395)>>
+<<set $passage to "AC-10">><<set $nextpassage to "AC-11">><<audio ":all" stop>><<audio "AC_10" play>><<set $myMap2 = setup.generateDirectionsMap(51.513034780792495, -0.09146067804541748,51.512728516794084, -0.08734020494510825)>>
 <main>
  <div id="mount"></div>
 <<timed 4s>><<replace "#mount">><<type 50ms>>It sounds like they're back. <</type>><</replace>><</timed>><<timed 7s>><<replace "#mount">><<type 50ms>>Now there's no need to be scared, as long as you listen to your good old friend Max. <</type>><</replace>><</timed>><<timed 12s>><<replace "#mount">><<type 60ms>>What I need you to do is to be very careful with how you walk down Lombard Street. 
@@ -697,38 +700,37 @@ Ended up sparking a city wide man hunt - they found her in the end though, alway
 
 You can even add a "RATS!" in there if you feel like it. 
 
-We'll do it for 30 seconds, okay? Here we go<</type>><</replace>><</timed>>
- 
+We'll do it for 30 seconds, okay? Here we go
 
-<<timed 106s>><<button "Here we go">><<set $prevpass to $passage>><<goto "countdown">><</button>><</timed>>
-</main>
-<<include "footer">>
+<<button "Here we go">><<set $prevpass to $passage>>
+<<addclass "#mount" "countdown">>
 
-
-:: countdown {"position":"1200,600","size":"100,100"}
-<<set $passage to "countdown">><<set $nextpassage to "AC-12">><<audio ":all" stop>>
-
-<main>
 <<set $seconds to 30>>
-Countdown: <span id="countdown">$seconds seconds remaining</span>!\
+<<replace "#mount">> $seconds <</replace>>
 <<silently>>
 	<<repeat 1s>>
 		<<set $seconds to $seconds - 1>>
 		<<if $seconds gt 0>>
-			<<replace "#countdown">>$seconds seconds remaining<</replace>>
+			<<replace "#mount">>$seconds <</replace>>
 		<<else>>
-			<<replace "#countdown">>Times up!<</replace>>
+			<<replace "#mount">>Times up!<</replace>>
 			<<timed 2s>><<set $prevpass to $passage>><<goto "AC-12">><</timed>>
 			<<stop>>
 		<</if>>
 	<</repeat>>
 <</silently>>
+
+<</button>><</type>><</replace>><</timed>>
+ 
 </main>
 <<include "footer">>
 
 
+
+
+
 :: AC-12 {"position":"1000,900","size":"100,100"}
-<<set $passage to "AC-12">><<set $nextpassage to "AC-13">><<set $myMap3 = setup.generateDirectionsMap(51.513306270196175, -0.0897463101374395,51.51337859600987, -0.08679861566052868)>><<audio ":all" stop>><<audio "AC_12" play>>
+<<set $passage to "AC-12">><<set $nextpassage to "AC-13">><<set $myMap3 = setup.generateDirectionsMap(51.512728516794084, -0.08734020494510825,51.51341455586006, -0.08541233142218205)>><<audio ":all" stop>><<audio "AC_12" play>>
 <main>
  <div id="mount"></div>
 <<timed 4s>><<replace "#mount">><<type 60ms>>There she is! 
@@ -750,7 +752,7 @@ When you're walking down Cornhill, let me know<</type>><</replace>><</timed>><<t
 
 
 :: AC-13 {"position":"1200,900","size":"100,100"}
-<<set $passage to "AC-13">><<set $nextpassage to "AC-14">><<set $myMap4 = setup.generateDirectionsMap(51.51337859600987, -0.08679861566052868,51.512841075137494, -0.08374897587811146)>><<audio ":all" stop>><<audio "AC_13" play>>
+<<set $passage to "AC-13">><<set $nextpassage to "AC-14">><<set $myMap4 = setup.generateDirectionsMap(51.51341455586006, -0.08541233142218205,51.51290030832439, -0.08350380841284431)>><<audio ":all" stop>><<audio "AC_13" play>>
 <main>
  <div id="mount"></div>
 <<timed 5s>><<replace "#mount">><<type 80ms>>Stop. Do you hear that? The pigs, they've doubled back. <</type>><</replace>><</timed>>
@@ -774,7 +776,7 @@ And don't forget to keep looking out for the dragon pigeons.<</type>><</replace>
 
 
 :: AC-14 {"position":"1400,900","size":"100,100"}
-<<set $passage to "AC-14">><<set $nextpassage to "AC-15">><<set $myMap5 = setup.generateDirectionsMap(51.512841075137494, -0.08374897587811146,51.513491455258226, -0.08169454559785203)>><<audio ":all" stop>><<audio "AC_14" play>>
+<<set $passage to "AC-14">><<set $nextpassage to "AC-15">><<set $myMap5 = setup.generateDirectionsMap(51.51290030832439, -0.08350380841284431,51.51247497118074, -0.08235936246320881)>><<audio ":all" stop>><<audio "AC_14" play>>
 <main>
  <div id="mount"></div>
   
@@ -802,7 +804,6 @@ Lucky old thing! <</type>><</replace>><</timed>>
 
 Can you find the corner of Leadenhall Street and Lime Street for me?<</type>><</replace>><</timed>>
 
-/* TODO MAP NOT SHOWING UP HERE */
 <<timed 125s>><<replace "#mount">>$myMap5
 
 <<button "We're here">><<set $prevpass to $passage>><<goto "AC-15">><</button>><</replace>><</timed>>
@@ -812,7 +813,7 @@ Can you find the corner of Leadenhall Street and Lime Street for me?<</type>><</
 <<include "footer">>
 
 :: AC-15 {"position":"600,1300","size":"100,100"}
-<<set $passage to "AC-15">><<set $nextpassage to "AC-16">><<set $myMap6 = setup.generateDirectionsMap(51.513491455258226, -0.08169454559785203,51.51197301158849, -0.08213992254285558)>><<audio ":all" stop>><<audio "AC_15" play>>
+<<set $passage to "AC-15">><<set $nextpassage to "AC-16">><<set $myMap6 = setup.generateDirectionsMap(51.51247497118074, -0.08235936246320881,51.51197899154091, -0.08213677303303842)>><<audio ":all" stop>><<audio "AC_15" play>>
 <main>
  <div id="mount"></div>
 <<timed 1s>><<replace "#mount">><<type 50ms>>This looks right. Head down Lime Street for me, would you?<</type>><</replace>><</timed>>  
@@ -839,7 +840,7 @@ Stay there, Tom. I'll come and get you in a minute.<</type>><</replace>><</timed
 
 
 :: AC-16 {"position":"800,1300","size":"100,100"}
-<<set $passage to "AC-16">><<set $nextpassage to "AC-17">><<set $myMap7 = setup.generateDirectionsMap(51.51197301158849, -0.08213992254285558,51.51159138418852, -0.08295967435508012)>><<audio ":all" stop>><<audio "AC_16" play>>
+<<set $passage to "AC-16">><<set $nextpassage to "AC-17">><<set $myMap7 = setup.generateDirectionsMap(51.51197899154091, -0.08213677303303842,51.51159679905388, -0.0826336243817569)>><<audio ":all" stop>><<audio "AC_16" play>>
 <main>
  <div id="mount"></div>
 <<timed 0s>><<replace "#mount">><<type 50ms>>Hang about here for a moment will you! <</type>><</replace>><</timed>>
@@ -963,13 +964,12 @@ Hopefully that'll be enough to pique her interest.<</type>><</replace>><</timed>
 
 
 :: AC-18 {"position":"1200,1300","size":"100,100"}
-<<set $passage to "AC-18">><<set $nextpassage to "AC-19">><<set $myMap8 = setup.generateDirectionsMap(51.51159138418852, -0.08295967435508012,51.510699568738694, -0.08319849968545442)>><<audio ":all" stop>><<audio "AC_18" play>>
+<<set $passage to "AC-18">><<set $nextpassage to "AC-19">><<set $myMap8 = setup.generateDirectionsMap(51.51159679905388, -0.0826336243817569,51.51105751876667, -0.08310662684002927)>><<audio ":all" stop>><<audio "AC_18" play>>
 <main>
  <div id="mount"></div>
 <<timed 2s>><<replace "#mount">><<type 70ms>>That did the trick! Can you hear her? 
 
 Oh she must be down Rood Lane! Come on, quick!<</type>><</replace>><</timed>>
-
 <<timed 15s>>$myMap8 
 
 <<button "We're here!">><<set $prevpass to $passage>><<goto "AC-19">><</button>><</timed>>
@@ -979,7 +979,7 @@ Oh she must be down Rood Lane! Come on, quick!<</type>><</replace>><</timed>>
 
 
 :: AC-19 {"position":"1400,1300","size":"100,100"}
-<<set $passage to "AC-19">><<set $nextpassage to "AC-20">><<set $myMap9 = setup.generateDirectionsMap(51.510699568738694, -0.08319849968545442,51.510205447243436, -0.08184300454801961)>><<audio ":all" stop>><<audio "AC_19" play>>
+<<set $passage to "AC-19">><<set $nextpassage to "AC-20">><<set $myMap9 = setup.generateDirectionsMap(51.51105751876667, -0.08310662684002927,51.51038182997402, -0.08265063935196834)>><<audio ":all" stop>><<audio "AC_19" play>>
 <main>
  <div id="mount"></div>
 <<timed 0s>><<replace "#mount">><<type 60ms>>Faith! There you are! 
@@ -1016,7 +1016,7 @@ How do you think we should do it?<</type>><</replace>><</timed>> <<timed 28s>><<
 
 
 :: AC-21 {"position":"800,1700","size":"100,100"}
-<<set $passage to "AC-21">><<set $nextpassage to "AC-22">><<audio ":all" stop>><<audio "AC_21" play>><<set $myMap10 = setup.generateDirectionsMap(51.510205447243436, -0.08184300454801961,51.50975237659481, -0.0824661751178505)>>
+<<set $passage to "AC-21">><<set $nextpassage to "AC-22">><<audio ":all" stop>><<audio "AC_21" play>><<set $myMap10 = setup.generateDirectionsMap(51.51038182997402, -0.08265063935196834,51.50975595070593, -0.08245587364563815)>>
 <main>
  <div id="mount"></div>
 <<timed 0s>><<replace "#mount">><<type 50ms>>Okay, that sounds good. We need to do it as hard as we possibly can, to make sure they run back into the sewers. <</type>><</replace>><</timed>>   
@@ -1025,7 +1025,8 @@ How do you think we should do it?<</type>><</replace>><</timed>> <<timed 28s>><<
 Do it as hard as you can, we need to scare them off. <</type>><</replace>><</timed>>   
 <<timed 19s>><<replace "#mount">><<type 50ms>>You can even yell if you want, as you're doing it. Something like "go away" or "leave us alone". 
 
-Okay, ready? Let's go! <</type>><</replace>><</timed>><<timed 30s>><<replace "#mount">>$myMap10
+Okay, ready? Let's go! <</type>><</replace>><</timed>><<timed 30s>><<replace "#mount">>[Keep stamping!] 
+$myMap10
 
 <<timed 24s>><<type 50ms>>That's great! That's working! <</type>><</timed>>   
 <<timed 49s>><<type 50ms>>That's it, they're retreating! Keep stamping!<</type>><</timed>>
@@ -1044,9 +1045,10 @@ It sounds like They've retreated back down to the bottom of the sewers. They sho
 <<timed 11s>><<replace "#mount">><<type 60ms>>Oh, well done everyone! 
 
 And look where we are now - St Dunstan in the East. Isn't it beautiful? <</type>><</replace>><</timed>>   
-<<timed 20s>><<replace "#mount">><<type 50ms>>There might be more Dragon pigeons around here. Have a look. And then tell someone around you how many dragons you found. Tell me when you're done!<</type>><</replace>><</timed>> 
+<<timed 20s>><<replace "#mount">><<type 50ms>>There might be more Dragon pigeons around here. Have a look. And then tell someone around you how many dragons you found. Tell me when you're done!
 
-<<timed 35s>><<button "We're done">><<set $prevpass to $passage>><<goto "AC-23">><</button>><</timed>>
+<<button "We're done">><<set $prevpass to $passage>><<goto "AC-23">><</button>><</type>><</replace>><</timed>> 
+
   
 </main>
 <<include "footer">>
@@ -1075,9 +1077,11 @@ In fact, I feel something coming over me! <</type>><</replace>><</timed>>
 Felix isn't the only dragon around these parts, you know? <</type>><</replace>><</timed>>  
 <<timed 106s>><<replace "#mount">><<type 50ms>>Oof, I needed to let that out. Listen, I need to stretch my wings a bit. 
 
-You lot stay as long as you need to. Thank you for your help my friends.<</type>><</replace>><</timed>>
+You lot stay as long as you need to. Thank you for your help my friends.
 
-<<timed 116s>><<button "End">><<set $prevpass to $passage>><<goto "end">><</button>><</timed>>
+<<button "End">><<set $prevpass to $passage>><<goto "end">><</button>><</type>><</replace>><</timed>>
+
+
   
 </main>
 <<include "footer">>
