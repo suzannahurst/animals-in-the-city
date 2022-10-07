@@ -100,10 +100,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 	</div>
 	<!-- UUID://F9E39354-F641-4070-8B45-C310A3FDC8C1// --><tw-storydata name="Animals of the City" startnode="4" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="F9E39354-F641-4070-8B45-C310A3FDC8C1" zoom="0.3" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
 
-@font-face {
-  font-family: "Big John";
-  src: url("/assets/fonts/bigjohn.otf") format("opentype");
-}
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 /* GENERICS */
 html {
@@ -283,7 +280,7 @@ body{
   color:#fff;
   /* color:#000; */
   overflow:scroll;
-  background: #1c8f93;
+  background: #188081;
   /* padding: 1.5rem */
   display:flex;
   flex-direction: column
@@ -294,7 +291,7 @@ header{
   justify-content: flex-end;
   align-items: center;
     padding: 2rem;
-    font-family: "Big John";
+ font-family: 'Archivo Black', sans-serif;
     font-size: 2rem
 }
 
@@ -313,7 +310,7 @@ align-items: end;
   bottom: 0;
   padding: 2rem;
   width: 100%;
-background: #1c8f93;
+background: #188081;
 }
 
 nav{
@@ -513,7 +510,7 @@ You have two options:
 
 &lt;&lt;button &quot;Take me straight to the end location!&quot;&gt;&gt;&lt;&lt;goto &quot;end&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="AC-05" tags="" position="600,400" size="100,100">&lt;&lt;set $passage to &quot;AC-05&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-06&quot;&gt;&gt;&lt;&lt;set $myMap = setup.generateDirectionsMap(51.51273574253808, -0.09190867122182791,51.51318914905516, -0.09147383074234947)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_05&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="AC-05" tags="" position="600,400" size="100,100">&lt;&lt;set $passage to &quot;AC-05&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-06&quot;&gt;&gt;&lt;&lt;set $myMap = setup.generateDirectionsMap(51.5119868911241, -0.09083538693506675,51.51308065576968, -0.09148058281022127)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_05&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
   &lt;&lt;timed 1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 70ms &gt;&gt;[connecting...] &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -606,7 +603,7 @@ Bold as brass London foxes, curious, adaptable and agile. All the traits that ma
 &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="AC-08" tags="" position="1200,400" size="100,100">&lt;&lt;set $passage to &quot;AC-08&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-09&quot;&gt;&gt;&lt;&lt;set $myMap2 = setup.generateDirectionsMap(51.51211727556783, -0.09093602904008877,51.513034780792495, -0.09146067804541748)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_08&quot; play&gt;&gt;&lt;main&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="AC-08" tags="" position="1200,400" size="100,100">&lt;&lt;set $passage to &quot;AC-08&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-09&quot;&gt;&gt;&lt;&lt;set $myMap2 = setup.generateDirectionsMap(51.51308065576968, -0.09148058281022127,51.512799670889784, -0.08762452405208396)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_08&quot; play&gt;&gt;&lt;main&gt;
 
  &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 &lt;&lt;timed 1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Very good. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
@@ -646,7 +643,7 @@ I&#39;m feeling good! You lot have sharp eyes. You might even put me out of a jo
 &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-09&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="AC-09" tags="" position="1400,400" size="100,100">&lt;&lt;set $passage to &quot;AC-09&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-10&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_09&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="AC-09" tags="" position="1400,400" size="100,100">&lt;&lt;set $passage to &quot;AC-09&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-10&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_09&quot; play&gt;&gt;&lt;&lt;set $myMap2 = setup.generateDirectionsMap(51.512799670889784, -0.08762452405208396,51.512826172108504, -0.08641831715527316)&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
  &lt;&lt;timed 4s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 75ms&gt;&gt;Wait, stop where you are!
@@ -688,12 +685,12 @@ With nothing to eat down there, it&#39;s said that they&#39;ve developed a taste
 
 I can&#39;t control them. No one can but I can help you avoid them.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 182s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;$myMap2
+&lt;&lt;timed 190s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;$myMap2
 
 &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-10&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="AC-10" tags="" position="600,900" size="100,100">&lt;&lt;set $passage to &quot;AC-10&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-11&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_10&quot; play&gt;&gt;&lt;&lt;set $myMap2 = setup.generateDirectionsMap(51.513034780792495, -0.09146067804541748,51.512728516794084, -0.08734020494510825)&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="AC-10" tags="" position="600,900" size="100,100">&lt;&lt;set $passage to &quot;AC-10&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-11&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_10&quot; play&gt;&gt;&lt;&lt;set $myMap2 = setup.generateDirectionsMap(51.512799670889784, -0.08762452405208396,51.512826172108504, -0.08641831715527316)&gt;&gt;
 &lt;main&gt;
  &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 &lt;&lt;timed 4s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;It sounds like they&#39;re back. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 7s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Now there&#39;s no need to be scared, as long as you listen to your good old friend Max. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 12s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;What I need you to do is to be very careful with how you walk down Lombard Street. 
@@ -756,7 +753,7 @@ We&#39;ll do it for 30 seconds, okay? Here we go
 &lt;&lt;/button&gt;&gt;&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
  
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="AC-12" tags="" position="1000,900" size="100,100">&lt;&lt;set $passage to &quot;AC-12&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-13&quot;&gt;&gt;&lt;&lt;set $myMap3 = setup.generateDirectionsMap(51.512728516794084, -0.08734020494510825,51.51341455586006, -0.08541233142218205)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_12&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="AC-12" tags="" position="1000,900" size="100,100">&lt;&lt;set $passage to &quot;AC-12&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-13&quot;&gt;&gt;&lt;&lt;set $myMap3 = setup.generateDirectionsMap(51.512826172108504, -0.08641831715527316,51.51337628966253, -0.08569948531711313)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_12&quot; play&gt;&gt;
 &lt;main&gt;
  &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 &lt;&lt;timed 4s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;There she is! 
@@ -772,9 +769,9 @@ Stay right there, won&#39;t you! Thank you for your help, friends. That&#39;s an
 
 When you&#39;re walking down Cornhill, let me know&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 47s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;$myMap3
 
-&lt;&lt;button &quot;We&#39;re at Cornhill&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-13&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;button &quot;We&#39;re walking down Cornhill&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-13&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="AC-13" tags="" position="1200,900" size="100,100">&lt;&lt;set $passage to &quot;AC-13&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-14&quot;&gt;&gt;&lt;&lt;set $myMap4 = setup.generateDirectionsMap(51.51341455586006, -0.08541233142218205,51.51290030832439, -0.08350380841284431)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_13&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="AC-13" tags="" position="1200,900" size="100,100">&lt;&lt;set $passage to &quot;AC-13&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-14&quot;&gt;&gt;&lt;&lt;set $myMap4 = setup.generateDirectionsMap(51.51337628966253, -0.08569948531711313,51.51295648967556, -0.08434317973859515)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_13&quot; play&gt;&gt;
 &lt;main&gt;
  &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 &lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 80ms&gt;&gt;Stop. Do you hear that? The pigs, they&#39;ve doubled back. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -794,18 +791,19 @@ And don&#39;t forget to keep looking out for the dragon pigeons.&lt;&lt;/type&gt
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="AC-14" tags="" position="1400,900" size="100,100">&lt;&lt;set $passage to &quot;AC-14&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-15&quot;&gt;&gt;&lt;&lt;set $myMap5 = setup.generateDirectionsMap(51.51290030832439, -0.08350380841284431,51.51247497118074, -0.08235936246320881)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_14&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="AC-14" tags="" position="1400,900" size="100,100">/* TODO CHECK MAPS AFTER THIS POINT  */
+&lt;&lt;set $passage to &quot;AC-14&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-15&quot;&gt;&gt;&lt;&lt;set $myMap5 = setup.generateDirectionsMap(51.51295648967556, -0.08434317973859515,51.51247497118074, -0.08235936246320881)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_14&quot; play&gt;&gt;
 &lt;main&gt;
  &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
   
 &lt;&lt;timed 4s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Oh, can you hear that? &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
 &lt;&lt;timed 13s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Seems like we&#39;re heading into the 19th century here. That&#39;s good. 
 
-We can find old Tom the goose now. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
+We can find Old Tom the goose now. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
 &lt;&lt;timed 22s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Now I&#39;m not saying that I have favorites. All the animals of the city are my favorites, obviously. 
 
 But if you force me to decide, well, Old Tom would probably be up there, I can&#39;t lie. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
-&lt;&lt;timed 37s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Do you know Old Tom? He was all right troublemaker you know. 
+&lt;&lt;timed 37s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Do you know Old Tom? He was a right troublemaker you know. 
 
 He and I are birds of a feather. Ha! Get it? &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
 &lt;&lt;timed 46s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Anyway, he got shipped over from Belgium and was meant to make a lovely tasty roast dinner for some Lord and Lady. 
@@ -815,14 +813,14 @@ But he escaped. Just as he was about to be slaughtered. &lt;&lt;/type&gt;&gt;&lt
 &lt;&lt;timed 71s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Everyone was enlisted to catch him. But no one could. He was too slippery, too clever. 
 
 After a few days, the butcher thought well, he&#39;s proved his worth, we&#39;ll leave him be. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
-&lt;&lt;timed 83s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;So throughout the 1830s old Tom would just wander around the market hall doing as he pleased, often getting fed bits of cabbage or carrot. 
+&lt;&lt;timed 83s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;So throughout the 1830s Old Tom would just wander around the market hall doing as he pleased, often getting fed bits of cabbage or carrot. 
 
 Lucky old thing! &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
 &lt;&lt;timed 95s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Now Tom wouldn&#39;t hang around inside Leadenhall Market. He&#39;s far too crafty for that. I think he might be on one of those little side streets.
 
 Can you find the corner of Leadenhall Street and Lime Street for me?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 125s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;$myMap5
+&lt;&lt;timed 112s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;$myMap5
 
 &lt;&lt;button &quot;We&#39;re here&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-15&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
@@ -834,7 +832,7 @@ Can you find the corner of Leadenhall Street and Lime Street for me?&lt;&lt;/typ
 &lt;&lt;timed 1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;This looks right. Head down Lime Street for me, would you?&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
 &lt;&lt;timed 51s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;There you are Tom, you old rascal don&#39;t move a muscle. 
 
-Yes, it&#39;s me. Don&#39;t honk with friends, remember? &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
+Yes, it&#39;s me. Don&#39;t honk we&#39;re friends, remember? &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
 &lt;&lt;timed 61s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;If you keep making that terrible noise, I&#39;m going to feed you to the pigs.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
 &lt;&lt;timed 66s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;That&#39;s better. I was only joking. 
 
@@ -864,7 +862,7 @@ Oh, she&#39;s a darling. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/t
 
 Helps if i&#39;ve got a tin of tuna in my pocket, but hey! 
 
-Hopefully some of her famous slack will rub off on us. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+Hopefully some of her famous luck will rub off on us. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 32s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Now, Faith is a lovely cat. You can&#39;t say that for every cat, let&#39;s be honest.
 
 But Faith is a special case. You see, Faith actually survived the Blitz. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -879,7 +877,7 @@ But that very same night, a German bomber bombed the church, as well as seven ot
 &lt;&lt;timed 86s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;The priest of the church was told that there couldn&#39;t possibly be any survivors. 
 
 Faith and Panda were most likely dead. But the priest, Ross, couldn&#39;t bring himself to believe it. The cat was called Faith after all. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 102s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 65ms&gt;&gt;So he bent down and crawled under the smoldering rubble and made his way to the basement. And what did he find? &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 102s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 65ms&gt;&gt;So he bent down and crawled under the smouldering rubble and made his way to the basement. And what did he find? &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 114s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 65ms&gt;&gt;Faith and Panda unharmed, and meowing their little hearts out
 
 Isn&#39;t that amazing? 
@@ -889,7 +887,7 @@ Faith was actually awarded a medal for bravery, for protecting her son. So you w
 
 Hopefully that&#39;ll be enough to pique her interest.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 148s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;$myMap7
 
-&lt;&lt;button &quot;We&#39;re here and ready!&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-17&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;button &quot;We&#39;re at Fenchurch street&#39;&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-17&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="AC-17" tags="" position="1000,1300" size="100,100">&lt;&lt;set $passage to &quot;AC-17&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-18&quot;&gt;&gt;&lt;&lt;set $seconds to &quot;&quot;&gt;&gt;
@@ -910,7 +908,7 @@ Hopefully that&#39;ll be enough to pique her interest.&lt;&lt;/type&gt;&gt;&lt;&
      &lt;&lt;type 70ms&gt;&gt; Nothing? Hmm. Maybe this will prove trickier than expected. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;
 	 
 	 &lt;&lt;timed 7s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;I suppose we have to think about what kind of things cats like. What kind of foods do cats like? Milk, fish, anything else? &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
-&lt;&lt;timed 20s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Have a look at your devices. Pick one of those foods and make them sound as delightful and delectable as possible. Tell her what kinds of delicious flaky fish we have. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 32s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Or what lovely filling milk we can give her. Or what gorgeous creamy cheese we have, as she comes out.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 20s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Have a look at your devices. Pick one of those foods and make them sound as delightful and delectable as possible. Tell her what kinds of delicious flaky fish we have. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 32s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Or what lovely filling milk we can give her. Or what gorgeous creamy cheese we have, if she comes out.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
       &lt;&lt;timed 40s&gt;&gt; &lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 70ms&gt;&gt;Shall we give it a go? Pick one, and call it out for 20 seconds.&lt;&lt;/type&gt;&gt; 
      &lt;div class=&quot;menu-wrapper&quot;&gt;
         &lt;&lt;button&quot;Fish&quot;&gt;&gt;&lt;&lt;timed 0.2s&gt;&gt;
@@ -973,7 +971,7 @@ Hopefully that&#39;ll be enough to pique her interest.&lt;&lt;/type&gt;&gt;&lt;&
 &lt;&lt;timed 2s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 70ms&gt;&gt;That did the trick! Can you hear her? 
 
 Oh she must be down Rood Lane! Come on, quick!&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 15s&gt;&gt;$myMap8 
+&lt;&lt;timed 20s&gt;&gt;$myMap8 
 
 &lt;&lt;button &quot;We&#39;re here!&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-19&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
@@ -1028,7 +1026,7 @@ $myMap10
  &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 &lt;&lt;timed 0s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;You did it. That was brilliant. 
 
-It sounds like They&#39;ve retreated back down to the bottom of the sewers. They shouldn&#39;t be a problem for us from now on. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;   
+It sounds like they&#39;ve retreated back down to the bottom of the sewers. They shouldn&#39;t be a problem for us from now on. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;   
 &lt;&lt;timed 11s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;Oh, well done everyone! 
 
 And look where we are now - St Dunstan in the East. Isn&#39;t it beautiful? &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;   
@@ -1044,7 +1042,7 @@ And look where we are now - St Dunstan in the East. Isn&#39;t it beautiful? &lt;
  &lt;&lt;timed 5s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Wow, look at us, eh? Me, the grand expert in animal wrangling, and you lot my excellent helpers. 
 
 Tell you what, I&#39;m going to do something I don&#39;t normally do!&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
-&lt;&lt;timed 22s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;I now pronounce each of you Junior City animal Wranglers. That&#39;s right. That is an official title. 
+&lt;&lt;timed 22s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;I now pronounce each of you Junior City Animal Wranglers. That&#39;s right. That is an official title. 
 
 You should be very honored, you know. Not everyone has a knack for this job. But you lot have shown the kind of moxie, a junior wrangler needs. Congratulations. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
 &lt;&lt;timed 47s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;You know, I&#39;ll let you in on a secret - this is my favorite place in the city. 

@@ -15,10 +15,7 @@ Animals of the City
 :: Story Stylesheet [stylesheet]
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
 
-@font-face {
-  font-family: "Big John";
-  src: url("/assets/fonts/bigjohn.otf") format("opentype");
-}
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 /* GENERICS */
 html {
@@ -198,7 +195,7 @@ body{
   color:#fff;
   /* color:#000; */
   overflow:scroll;
-  background: #1c8f93;
+  background: #188081;
   /* padding: 1.5rem */
   display:flex;
   flex-direction: column
@@ -209,7 +206,7 @@ header{
   justify-content: flex-end;
   align-items: center;
     padding: 2rem;
-    font-family: "Big John";
+ font-family: 'Archivo Black', sans-serif;
     font-size: 2rem
 }
 
@@ -228,7 +225,7 @@ align-items: end;
   bottom: 0;
   padding: 2rem;
   width: 100%;
-background: #1c8f93;
+background: #188081;
 }
 
 nav{
@@ -455,8 +452,9 @@ You have two options:
 <<include "footer">>
 
 
+
 :: AC-05 {"position":"600,400","size":"100,100"}
-<<set $passage to "AC-05">><<set $nextpassage to "AC-06">><<set $myMap = setup.generateDirectionsMap(51.51273574253808, -0.09190867122182791,51.51318914905516, -0.09147383074234947)>><<audio ":all" stop>><<audio "AC_05" play>>
+<<set $passage to "AC-05">><<set $nextpassage to "AC-06">><<set $myMap = setup.generateDirectionsMap(51.5119868911241, -0.09083538693506675,51.51308065576968, -0.09148058281022127)>><<audio ":all" stop>><<audio "AC_05" play>>
 <main>
 <div id="mount"></div>
   <<timed 1s>><<replace "#mount">><<type 70ms >>[connecting...] <</type>><</replace>><</timed>>
@@ -561,7 +559,7 @@ Bold as brass London foxes, curious, adaptable and agile. All the traits that ma
 
 
 :: AC-08 {"position":"1200,400","size":"100,100"}
-<<set $passage to "AC-08">><<set $nextpassage to "AC-09">><<set $myMap2 = setup.generateDirectionsMap(51.51211727556783, -0.09093602904008877,51.513034780792495, -0.09146067804541748)>><<audio ":all" stop>><<audio "AC_08" play>><main>
+<<set $passage to "AC-08">><<set $nextpassage to "AC-09">><<set $myMap2 = setup.generateDirectionsMap(51.51308065576968, -0.09148058281022127,51.512799670889784, -0.08762452405208396)>><<audio ":all" stop>><<audio "AC_08" play>><main>
 
  <div id="mount"></div>
 <<timed 1s>><<replace "#mount">><<type 50ms>>Very good. <</type>><</replace>><</timed>>  
@@ -605,7 +603,7 @@ I'm feeling good! You lot have sharp eyes. You might even put me out of a job. <
 
 
 :: AC-09 {"position":"1400,400","size":"100,100"}
-<<set $passage to "AC-09">><<set $nextpassage to "AC-10">><<audio ":all" stop>><<audio "AC_09" play>>
+<<set $passage to "AC-09">><<set $nextpassage to "AC-10">><<audio ":all" stop>><<audio "AC_09" play>><<set $myMap2 = setup.generateDirectionsMap(51.512799670889784, -0.08762452405208396,51.512826172108504, -0.08641831715527316)>>
 <main>
 <div id="mount"></div>
  <<timed 4s>><<replace "#mount">><<type 75ms>>Wait, stop where you are!
@@ -647,7 +645,7 @@ With nothing to eat down there, it's said that they've developed a taste for hum
 
 I can't control them. No one can but I can help you avoid them.<</type>><</replace>><</timed>>
 
-<<timed 182s>><<replace "#mount">>$myMap2
+<<timed 190s>><<replace "#mount">>$myMap2
 
 <<button "Next">><<set $prevpass to $passage>><<goto "AC-10">><</button>><</replace>><</timed>>
 
@@ -656,7 +654,7 @@ I can't control them. No one can but I can help you avoid them.<</type>><</repla
 
 
 :: AC-10 {"position":"600,900","size":"100,100"}
-<<set $passage to "AC-10">><<set $nextpassage to "AC-11">><<audio ":all" stop>><<audio "AC_10" play>><<set $myMap2 = setup.generateDirectionsMap(51.513034780792495, -0.09146067804541748,51.512728516794084, -0.08734020494510825)>>
+<<set $passage to "AC-10">><<set $nextpassage to "AC-11">><<audio ":all" stop>><<audio "AC_10" play>><<set $myMap2 = setup.generateDirectionsMap(51.512799670889784, -0.08762452405208396,51.512826172108504, -0.08641831715527316)>>
 <main>
  <div id="mount"></div>
 <<timed 4s>><<replace "#mount">><<type 50ms>>It sounds like they're back. <</type>><</replace>><</timed>><<timed 7s>><<replace "#mount">><<type 50ms>>Now there's no need to be scared, as long as you listen to your good old friend Max. <</type>><</replace>><</timed>><<timed 12s>><<replace "#mount">><<type 60ms>>What I need you to do is to be very careful with how you walk down Lombard Street. 
@@ -730,7 +728,7 @@ We'll do it for 30 seconds, okay? Here we go
 
 
 :: AC-12 {"position":"1000,900","size":"100,100"}
-<<set $passage to "AC-12">><<set $nextpassage to "AC-13">><<set $myMap3 = setup.generateDirectionsMap(51.512728516794084, -0.08734020494510825,51.51341455586006, -0.08541233142218205)>><<audio ":all" stop>><<audio "AC_12" play>>
+<<set $passage to "AC-12">><<set $nextpassage to "AC-13">><<set $myMap3 = setup.generateDirectionsMap(51.512826172108504, -0.08641831715527316,51.51337628966253, -0.08569948531711313)>><<audio ":all" stop>><<audio "AC_12" play>>
 <main>
  <div id="mount"></div>
 <<timed 4s>><<replace "#mount">><<type 60ms>>There she is! 
@@ -746,13 +744,13 @@ Stay right there, won't you! Thank you for your help, friends. That's another on
 
 When you're walking down Cornhill, let me know<</type>><</replace>><</timed>><<timed 47s>><<replace "#mount">>$myMap3
 
-<<button "We're at Cornhill">><<set $prevpass to $passage>><<goto "AC-13">><</button>><</replace>><</timed>>
+<<button "We're walking down Cornhill">><<set $prevpass to $passage>><<goto "AC-13">><</button>><</replace>><</timed>>
 </main>
 <<include "footer">>
 
 
 :: AC-13 {"position":"1200,900","size":"100,100"}
-<<set $passage to "AC-13">><<set $nextpassage to "AC-14">><<set $myMap4 = setup.generateDirectionsMap(51.51341455586006, -0.08541233142218205,51.51290030832439, -0.08350380841284431)>><<audio ":all" stop>><<audio "AC_13" play>>
+<<set $passage to "AC-13">><<set $nextpassage to "AC-14">><<set $myMap4 = setup.generateDirectionsMap(51.51337628966253, -0.08569948531711313,51.51295648967556, -0.08434317973859515)>><<audio ":all" stop>><<audio "AC_13" play>>
 <main>
  <div id="mount"></div>
 <<timed 5s>><<replace "#mount">><<type 80ms>>Stop. Do you hear that? The pigs, they've doubled back. <</type>><</replace>><</timed>>
@@ -776,18 +774,19 @@ And don't forget to keep looking out for the dragon pigeons.<</type>><</replace>
 
 
 :: AC-14 {"position":"1400,900","size":"100,100"}
-<<set $passage to "AC-14">><<set $nextpassage to "AC-15">><<set $myMap5 = setup.generateDirectionsMap(51.51290030832439, -0.08350380841284431,51.51247497118074, -0.08235936246320881)>><<audio ":all" stop>><<audio "AC_14" play>>
+/* TODO CHECK MAPS AFTER THIS POINT  */
+<<set $passage to "AC-14">><<set $nextpassage to "AC-15">><<set $myMap5 = setup.generateDirectionsMap(51.51295648967556, -0.08434317973859515,51.51247497118074, -0.08235936246320881)>><<audio ":all" stop>><<audio "AC_14" play>>
 <main>
  <div id="mount"></div>
   
 <<timed 4s>><<replace "#mount">><<type 50ms>>Oh, can you hear that? <</type>><</replace>><</timed>>  
 <<timed 13s>><<replace "#mount">><<type 50ms>>Seems like we're heading into the 19th century here. That's good. 
 
-We can find old Tom the goose now. <</type>><</replace>><</timed>>  
+We can find Old Tom the goose now. <</type>><</replace>><</timed>>  
 <<timed 22s>><<replace "#mount">><<type 60ms>>Now I'm not saying that I have favorites. All the animals of the city are my favorites, obviously. 
 
 But if you force me to decide, well, Old Tom would probably be up there, I can't lie. <</type>><</replace>><</timed>>  
-<<timed 37s>><<replace "#mount">><<type 50ms>>Do you know Old Tom? He was all right troublemaker you know. 
+<<timed 37s>><<replace "#mount">><<type 50ms>>Do you know Old Tom? He was a right troublemaker you know. 
 
 He and I are birds of a feather. Ha! Get it? <</type>><</replace>><</timed>>  
 <<timed 46s>><<replace "#mount">><<type 50ms>>Anyway, he got shipped over from Belgium and was meant to make a lovely tasty roast dinner for some Lord and Lady. 
@@ -797,14 +796,14 @@ But he escaped. Just as he was about to be slaughtered. <</type>><</replace>><</
 <<timed 71s>><<replace "#mount">><<type 50ms>>Everyone was enlisted to catch him. But no one could. He was too slippery, too clever. 
 
 After a few days, the butcher thought well, he's proved his worth, we'll leave him be. <</type>><</replace>><</timed>>  
-<<timed 83s>><<replace "#mount">><<type 50ms>>So throughout the 1830s old Tom would just wander around the market hall doing as he pleased, often getting fed bits of cabbage or carrot. 
+<<timed 83s>><<replace "#mount">><<type 50ms>>So throughout the 1830s Old Tom would just wander around the market hall doing as he pleased, often getting fed bits of cabbage or carrot. 
 
 Lucky old thing! <</type>><</replace>><</timed>>  
 <<timed 95s>><<replace "#mount">><<type 50ms>>Now Tom wouldn't hang around inside Leadenhall Market. He's far too crafty for that. I think he might be on one of those little side streets.
 
 Can you find the corner of Leadenhall Street and Lime Street for me?<</type>><</replace>><</timed>>
 
-<<timed 125s>><<replace "#mount">>$myMap5
+<<timed 112s>><<replace "#mount">>$myMap5
 
 <<button "We're here">><<set $prevpass to $passage>><<goto "AC-15">><</button>><</replace>><</timed>>
 
@@ -819,7 +818,7 @@ Can you find the corner of Leadenhall Street and Lime Street for me?<</type>><</
 <<timed 1s>><<replace "#mount">><<type 50ms>>This looks right. Head down Lime Street for me, would you?<</type>><</replace>><</timed>>  
 <<timed 51s>><<replace "#mount">><<type 60ms>>There you are Tom, you old rascal don't move a muscle. 
 
-Yes, it's me. Don't honk with friends, remember? <</type>><</replace>><</timed>>  
+Yes, it's me. Don't honk we're friends, remember? <</type>><</replace>><</timed>>  
 <<timed 61s>><<replace "#mount">><<type 50ms>>If you keep making that terrible noise, I'm going to feed you to the pigs.<</type>><</replace>><</timed>>  
 <<timed 66s>><<replace "#mount">><<type 60ms>>That's better. I was only joking. 
 
@@ -853,7 +852,7 @@ Oh, she's a darling. <</type>><</replace>><</timed>>
 
 Helps if i've got a tin of tuna in my pocket, but hey! 
 
-Hopefully some of her famous slack will rub off on us. <</type>><</replace>><</timed>>
+Hopefully some of her famous luck will rub off on us. <</type>><</replace>><</timed>>
 <<timed 32s>><<replace "#mount">><<type 60ms>>Now, Faith is a lovely cat. You can't say that for every cat, let's be honest.
 
 But Faith is a special case. You see, Faith actually survived the Blitz. <</type>><</replace>><</timed>>
@@ -868,7 +867,7 @@ But that very same night, a German bomber bombed the church, as well as seven ot
 <<timed 86s>><<replace "#mount">><<type 60ms>>The priest of the church was told that there couldn't possibly be any survivors. 
 
 Faith and Panda were most likely dead. But the priest, Ross, couldn't bring himself to believe it. The cat was called Faith after all. <</type>><</replace>><</timed>>
-<<timed 102s>><<replace "#mount">><<type 65ms>>So he bent down and crawled under the smoldering rubble and made his way to the basement. And what did he find? <</type>><</replace>><</timed>>
+<<timed 102s>><<replace "#mount">><<type 65ms>>So he bent down and crawled under the smouldering rubble and made his way to the basement. And what did he find? <</type>><</replace>><</timed>>
 <<timed 114s>><<replace "#mount">><<type 65ms>>Faith and Panda unharmed, and meowing their little hearts out
 
 Isn't that amazing? 
@@ -878,7 +877,7 @@ Faith was actually awarded a medal for bravery, for protecting her son. So you w
 
 Hopefully that'll be enough to pique her interest.<</type>><</replace>><</timed>><<timed 148s>><<replace "#mount">>$myMap7
 
-<<button "We're here and ready!">><<set $prevpass to $passage>><<goto "AC-17">><</button>><</replace>><</timed>>
+<<button "We're at Fenchurch street'">><<set $prevpass to $passage>><<goto "AC-17">><</button>><</replace>><</timed>>
 
 </main>
 <<include "footer">>
@@ -903,7 +902,7 @@ Hopefully that'll be enough to pique her interest.<</type>><</replace>><</timed>
      <<type 70ms>> Nothing? Hmm. Maybe this will prove trickier than expected. <</type>><</replace>>
 	 
 	 <<timed 7s>><<replace "#mount">><<type 50ms>>I suppose we have to think about what kind of things cats like. What kind of foods do cats like? Milk, fish, anything else? <</type>><</replace>><</timed>>  
-<<timed 20s>><<replace "#mount">><<type 50ms>>Have a look at your devices. Pick one of those foods and make them sound as delightful and delectable as possible. Tell her what kinds of delicious flaky fish we have. <</type>><</replace>><</timed>><<timed 32s>><<replace "#mount">><<type 50ms>>Or what lovely filling milk we can give her. Or what gorgeous creamy cheese we have, as she comes out.<</type>><</replace>><</timed>>
+<<timed 20s>><<replace "#mount">><<type 50ms>>Have a look at your devices. Pick one of those foods and make them sound as delightful and delectable as possible. Tell her what kinds of delicious flaky fish we have. <</type>><</replace>><</timed>><<timed 32s>><<replace "#mount">><<type 50ms>>Or what lovely filling milk we can give her. Or what gorgeous creamy cheese we have, if she comes out.<</type>><</replace>><</timed>>
       <<timed 40s>> <<replace "#mount">><<type 70ms>>Shall we give it a go? Pick one, and call it out for 20 seconds.<</type>> 
      <div class="menu-wrapper">
         <<button"Fish">><<timed 0.2s>>
@@ -970,7 +969,7 @@ Hopefully that'll be enough to pique her interest.<</type>><</replace>><</timed>
 <<timed 2s>><<replace "#mount">><<type 70ms>>That did the trick! Can you hear her? 
 
 Oh she must be down Rood Lane! Come on, quick!<</type>><</replace>><</timed>>
-<<timed 15s>>$myMap8 
+<<timed 20s>>$myMap8 
 
 <<button "We're here!">><<set $prevpass to $passage>><<goto "AC-19">><</button>><</timed>>
 
@@ -1041,7 +1040,7 @@ $myMap10
  <div id="mount"></div>
 <<timed 0s>><<replace "#mount">><<type 60ms>>You did it. That was brilliant. 
 
-It sounds like They've retreated back down to the bottom of the sewers. They shouldn't be a problem for us from now on. <</type>><</replace>><</timed>>   
+It sounds like they've retreated back down to the bottom of the sewers. They shouldn't be a problem for us from now on. <</type>><</replace>><</timed>>   
 <<timed 11s>><<replace "#mount">><<type 60ms>>Oh, well done everyone! 
 
 And look where we are now - St Dunstan in the East. Isn't it beautiful? <</type>><</replace>><</timed>>   
@@ -1061,7 +1060,7 @@ And look where we are now - St Dunstan in the East. Isn't it beautiful? <</type>
  <<timed 5s>><<replace "#mount">><<type 50ms>>Wow, look at us, eh? Me, the grand expert in animal wrangling, and you lot my excellent helpers. 
 
 Tell you what, I'm going to do something I don't normally do!<</type>><</replace>><</timed>>  
-<<timed 22s>><<replace "#mount">><<type 50ms>>I now pronounce each of you Junior City animal Wranglers. That's right. That is an official title. 
+<<timed 22s>><<replace "#mount">><<type 50ms>>I now pronounce each of you Junior City Animal Wranglers. That's right. That is an official title. 
 
 You should be very honored, you know. Not everyone has a knack for this job. But you lot have shown the kind of moxie, a junior wrangler needs. Congratulations. <</type>><</replace>><</timed>>  
 <<timed 47s>><<replace "#mount">><<type 50ms>>You know, I'll let you in on a secret - this is my favorite place in the city. 
