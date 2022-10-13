@@ -473,25 +473,31 @@ return iFrame
 
 
 :: StoryInit {"position":"100,100","size":"100,100"}
-<<cacheaudio "AC_05" "https://www.youhavefoundconey.net/tgksnd/AC/AC_05.mp3">>
-<<cacheaudio "AC_06" "https://www.youhavefoundconey.net/tgksnd/AC/AC_06.mp3">>
-<<cacheaudio "AC_07" "https://www.youhavefoundconey.net/tgksnd/AC/AC_07.mp3">>
-<<cacheaudio "AC_08" "https://www.youhavefoundconey.net/tgksnd/AC/AC_08.mp3">>
-<<cacheaudio "AC_09" "https://www.youhavefoundconey.net/tgksnd/AC/AC_09.mp3">>
-<<cacheaudio "AC_10" "https://www.youhavefoundconey.net/tgksnd/AC/AC_10.mp3">>
-<<cacheaudio "AC_11" "https://www.youhavefoundconey.net/tgksnd/AC/AC_11.mp3">>
-<<cacheaudio "AC_12" "https://www.youhavefoundconey.net/tgksnd/AC/AC_12.mp3">>
-<<cacheaudio "AC_13" "https://www.youhavefoundconey.net/tgksnd/AC/AC_13.mp3">>
-<<cacheaudio "AC_14" "https://www.youhavefoundconey.net/tgksnd/AC/AC_14.mp3">>
-<<cacheaudio "AC_15" "https://www.youhavefoundconey.net/tgksnd/AC/AC_15.mp3">>
-<<cacheaudio "AC_16" "https://www.youhavefoundconey.net/tgksnd/AC/AC_16.mp3">>
-<<cacheaudio "AC_17" "https://www.youhavefoundconey.net/tgksnd/AC/AC_17.mp3">>
-<<cacheaudio "AC_18" "https://www.youhavefoundconey.net/tgksnd/AC/AC_18.mp3">>
-<<cacheaudio "AC_19" "https://www.youhavefoundconey.net/tgksnd/AC/AC_19.mp3">>
-<<cacheaudio "AC_20" "https://www.youhavefoundconey.net/tgksnd/AC/AC_20.mp3">>
-<<cacheaudio "AC_21" "https://www.youhavefoundconey.net/tgksnd/AC/AC_21.mp3">>
-<<cacheaudio "AC_22" "https://www.youhavefoundconey.net/tgksnd/AC/AC_22.mp3">>
-<<cacheaudio "AC_23" "https://www.youhavefoundconey.net/tgksnd/AC/AC_23.mp3">>
+<<cacheaudio "AC_01" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_01.mp3">>
+<<cacheaudio "AC_04" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_04.mp3">>
+<<cacheaudio "AC_05" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_05.mp3">>
+<<cacheaudio "AC_06" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_06.mp3">>
+<<cacheaudio "AC_07" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_07.mp3">>
+<<cacheaudio "AC_08" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_08.mp3">>
+<<cacheaudio "AC_09" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_09.mp3">>
+<<cacheaudio "AC_10" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_10.mp3">>
+<<cacheaudio "AC_11" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_11.mp3">>
+<<cacheaudio "AC_12" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_12.mp3">>
+<<cacheaudio "AC_13" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_13.mp3">>
+<<cacheaudio "AC_14" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_14.mp3">>
+<<cacheaudio "AC_15" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_15.mp3">>
+<<cacheaudio "AC_16" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_16.mp3">>
+<<cacheaudio "AC_17" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_17.mp3">>
+<<cacheaudio "AC_18" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_18.mp3">>
+<<cacheaudio "AC_19" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_19.mp3">>
+<<cacheaudio "AC_20" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_20.mp3">>
+<<cacheaudio "AC_21" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_21.mp3">>
+<<cacheaudio "AC_22" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_22.mp3">>
+<<cacheaudio "AC_23" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_23.mp3">>
+<<cacheaudio "AC_24" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_24.mp3">>
+<<cacheaudio "refergroup" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_02_refergroup.mp3">>
+<<cacheaudio "perfectgroup" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_02_perfectgroup.mp3">>
+<<cacheaudio "03" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_03.mp3">>
 
 <<waitforaudio>>
 
@@ -520,9 +526,9 @@ return iFrame
 <footer><div class="nav-wrapper "><div class="nav-item"><<button "Back">><<goto $prevpass>><</button>></div></div></footer>
 
 :: landing {"position":"375,150","size":"100,100"}
-<<set $passage to "landing">>
-
+<<set $passage to "landing">><<audio ":all" stop>>
 <main>
+<h2>Animals of The City</h2>
 <<button "begin">><<set $prevpass to $passage>><<goto "AC-01">><</button>>
 </main>
 
@@ -540,7 +546,7 @@ You have two options:
 
 :: AC-01 {"position":"449,226","size":"100,100"}
 <<set $passage to "AC-01">><<set $nextpassage to "AC-02B">>
-/* <<audio ":all" stop>><<audio "AC-01" play>> */
+<<audio ":all" stop>><<audio "AC-01" play>>
 <main>
 <div id="mount"></div> 
 Felix, keeper of the Maze, and small dragon, here at your service.
@@ -570,7 +576,7 @@ Now - are you playing this adventure solo, or in a group?
 
 :: AC-02A {"position":"448,476","size":"100,100"}
 <<set $passage to "AC-02A">><<set $nextpassage to "AC-03">>
-/* <<audio ":all" stop>><<audio "EI_02A" play>> */
+<<audio ":all" stop>><<audio "refergroup" play>>
 <main>
 <div id="mount"></div> 
 The adventure may sometimes refer to a group of people but don’t worry, you by yourself are plenty for a group.
@@ -581,7 +587,7 @@ The adventure may sometimes refer to a group of people but don’t worry, you by
 
 :: AC-02B {"position":"448,476","size":"100,100"}
 <<set $passage to "AC-02B">><<set $nextpassage to "AC-03">>
-/* <<audio ":all" stop>><<audio "EI_02A" play>> */
+<<audio ":all" stop>><<audio "perfectgroup" play>>
 <main>
 <div id="mount"></div> 
  This is perfect for a group! If you’re playing on separate devices try to press your buttons at the same time to stay in sync.  
@@ -594,7 +600,7 @@ The adventure may sometimes refer to a group of people but don’t worry, you by
 
 :: AC-03 {"position":"448,476","size":"100,100"}
 <<set $passage to "AC-03">><<set $nextpassage to "AC-04">>
-/* <<audio ":all" stop>><<audio "EI_02A" play>> */
+<<audio ":all" stop>><<audio "EI_03" play>>
 <main>
 <div id="mount"></div> 
 You can always use the arrows or the replay button if you need to hear or read anything again. 
@@ -612,7 +618,7 @@ Are you ready?
 <<include "footer">>
 
 :: AC-04 {"position":"448,476","size":"100,100"}
-<<set $passage to "AC-04">><<set $nextpassage to "AC-05">><<audio ":all" stop>><main>
+<<set $passage to "AC-04">><<set $nextpassage to "AC-05">><<audio ":all" stop>><<audio "AC_04" play>><main>
 My friend Max will be here soon to guide you, connecting from across London’s history.
 
 So let me see… I do think Max should be around here somewhere…
@@ -1252,7 +1258,7 @@ $endMap
 
 :: AC-24 {"position":"520,2113","size":"100,100"}
 <<set $passage to "AC-24">><<set $nextpassage to "AC-33">>
-<<audio ":all" stop>>
+<<audio ":all" stop>><<audio "AC_24" play>>
 <main>
 Max is a Dragon too, one of the very finest of my kin. 
 Thank you so much for helping them out. 
@@ -1267,7 +1273,8 @@ To get through the door into the garden, and discover the surprise waiting insid
 
 :: AC-25 {"position":"520,2113","size":"100,100"}
 <<set $passage to "AC-25">><<set $nextpassage to "EI_23A">>
-<<audio ":all" stop>><main>
+<<audio ":all" stop>>
+<main>
 
 
 <div class="key-wrapper glowing"><img src="./assets/StDunstanintheEast.png"></div>
