@@ -546,9 +546,8 @@ You have two options:
 
 :: AC-01 {"position":"449,226","size":"100,100"}
 <<set $passage to "AC-01">><<set $nextpassage to "AC-02B">>
-<<audio ":all" stop>><<audio "AC-01" play>>
-<main>
-<div id="mount"></div> 
+<<audio ":all" stop>><<audio "AC_01" play>>
+<main><div id="mount"></div> 
 Felix, keeper of the Maze, and small dragon, here at your service.
 
 
@@ -600,7 +599,7 @@ The adventure may sometimes refer to a group of people but don’t worry, you by
 
 :: AC-03 {"position":"448,476","size":"100,100"}
 <<set $passage to "AC-03">><<set $nextpassage to "AC-04">>
-<<audio ":all" stop>><<audio "EI_03" play>>
+<<audio ":all" stop>><<audio "03" play>>
 <main>
 <div id="mount"></div> 
 You can always use the arrows or the replay button if you need to hear or read anything again. 
@@ -618,7 +617,8 @@ Are you ready?
 <<include "footer">>
 
 :: AC-04 {"position":"448,476","size":"100,100"}
-<<set $passage to "AC-04">><<set $nextpassage to "AC-05">><<audio ":all" stop>><<audio "AC_04" play>><main>
+<<set $passage to "AC-04">><<set $nextpassage to "AC-05">><<audio ":all" stop>><<audio "AC_04" play>>
+<main>
 My friend Max will be here soon to guide you, connecting from across London’s history.
 
 So let me see… I do think Max should be around here somewhere…
