@@ -16,6 +16,10 @@ Animals of the City
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
 
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@font-face {
+  font-family: "Big John";
+  src: url("./assets/fonts/bigjohn.otf") format("opentype");
+}
 
 /* GENERICS */
 html {
@@ -323,6 +327,12 @@ display: flex;
   text-align:center
 }
 
+.endpoint {
+  font-family: "Big John";
+  font-size:3rem;
+  text-align:center
+}
+
 .glowing {
   /* width: 100px;
   height: 100px; */
@@ -351,6 +361,7 @@ display: flex;
 .adventure-wrapper{
   padding: 2rem
 }
+
 
 }
 
@@ -1259,8 +1270,8 @@ To get through the door into the garden, and discover the surprise waiting insid
 <<audio ":all" stop>><main>
 
 
-<div class="key-wrapper glowing"><img src="./assets/keys-34.png"></div>
-
+<div class="key-wrapper glowing"><img src="./assets/StDunstanintheEast.png"></div>
+<h2 class="endpoint">ST DUNSTAN IN THE EAST</h2>
 </main>
 <<include "footerkey">>
 
