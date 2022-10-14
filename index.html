@@ -447,7 +447,42 @@ display: flex;
   padding: 2rem
 }
 
+}
 
+/* LANDING  */
+main.landing{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 95vh
+}
+
+.landing > h2 {
+  font-family: "Big John";
+  text-align:center;
+  margin-block-end: 0;
+}
+
+.landing > a {
+  display:flex;    
+  justify-content: center;
+  
+}
+
+.landing > a:active{
+  background-color: transparent;
+
+}
+
+.landing > a > img {
+  width: 80%;
+  max-width: 300px;
+}
+
+/* END */
+main.end > h2{
+  margin-block-end: 0;
 }
 
 /* SPECIFICS  */
@@ -581,11 +616,12 @@ return iFrame
 &lt;div class=&quot;nav-item replay&quot;&gt;&lt;&lt;button &quot;Replay&quot;&gt;&gt;&lt;&lt;goto $passage&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;/div&gt;
 &lt;div class=&quot;nav-item end&quot;&gt;&lt;&lt;button &quot;Take me to the end&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;lost&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
 &lt;div class=&quot;nav-item forward&quot;&gt;&lt;&lt;button &quot;&gt;&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto $nextpassage&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
-&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="4" name="footerkey" tags="" position="475,100" size="100,100">&lt;footer&gt;&lt;div class=&quot;nav-wrapper&quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;&lt;&quot;&gt;&gt;&lt;&lt;goto $prevpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Start again&quot;&gt;&gt;&lt;&lt;goto &quot;landing&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;nav-wrapper end&quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Key&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-25&quot;&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;/div&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Try another adventure&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-25adventures&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="5" name="footerend" tags="" position="100,625" size="100,100">&lt;footer&gt;
+&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="4" name="footerkey" tags="" position="475,100" size="100,100">&lt;footer&gt;&lt;div class=&quot;nav-wrapper&quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;&lt;&quot;&gt;&gt;&lt;&lt;goto $prevpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Start again&quot;&gt;&gt;&lt;&lt;goto &quot;landing&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;nav-wrapper&quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Show map&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;end&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;nav-wrapper end&quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Key&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-25&quot;&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;/div&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Try another adventure&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-25adventures&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="5" name="footerend" tags="" position="100,625" size="100,100">&lt;footer&gt;
 &lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Start again&quot;&gt;&gt;&lt;&lt;goto &quot;landing&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
 &lt;/footer&gt;</tw-passagedata><tw-passagedata pid="6" name="footerlost" tags="" position="100,600" size="100,100">&lt;footer&gt;&lt;div class=&quot;nav-wrapper &quot;&gt;&lt;div class=&quot;nav-item&quot;&gt;&lt;&lt;button &quot;Back&quot;&gt;&gt;&lt;&lt;goto $prevpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/footer&gt;</tw-passagedata><tw-passagedata pid="7" name="landing" tags="" position="375,150" size="100,100">&lt;&lt;set $passage to &quot;landing&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
-&lt;main&gt;
+&lt;main class=&quot;landing&quot;&gt;
 &lt;h2&gt;Animals of The City&lt;/h2&gt;
+&lt;&lt;link &quot;&lt;img src=&#39;./assets/dragon2.gif&#39;&gt;&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-01&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;button &quot;begin&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-01&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;</tw-passagedata><tw-passagedata pid="8" name="lost" tags="" position="100,500" size="100,100">&lt;&lt;set $passage to &quot;lost&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 &lt;main&gt;
@@ -598,28 +634,47 @@ You have two options:
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="AC-01" tags="" position="449,226" size="100,100">&lt;&lt;set $passage to &quot;AC-01&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-02B&quot;&gt;&gt;
 &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_01&quot; play&gt;&gt;
 &lt;main&gt;&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt; 
-Felix, keeper of the Maze, and small dragon, here at your service.
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;
+  Felix, keeper of the Maze, and small dragon, here at your service.
+  &lt;&lt;/replace&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+  &lt;&lt;timed 8s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;
+  I’m opening up the City to you, a City you’ve never experienced before, and its secrets too. 
+  
+  For the City is full of treasure. 
+  &lt;&lt;/replace&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+  &lt;&lt;timed 16s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt; Not the kind of treasure that glitters in candlelight, but something more precious: stories, and the people who carry them. 
+  &lt;&lt;/replace&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
 
+&lt;&lt;timed 24s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;You’re now in Dragontime. Past present and future happening all at once. Two thousand years of messy, pulsing, fiery history since the Romans first called their new home Londinium. Almost as long as I’ve been alive. 
+ &lt;&lt;/replace&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
 
-I’m opening up the City to you, a City you’ve never experienced before, and its secrets too. For the City is full of treasure. Not the kind of treasure that glitters in candlelight, but something more precious: stories, and the people who carry them. 
-
-You’re now in Dragontime. Past present and future happening all at once. Two thousand years of messy, pulsing, fiery history since the Romans first called their new home Londinium. Almost as long as I’ve been alive. 
-
-You’ve opened up door #1 into the maze of adventures. 
+&lt;&lt;timed 38s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;You’ve opened up door #1 into the maze of adventures. 
 
 You’ll be led presently through the streets of the City by a guide from one of its many pasts or possible futures.
+ &lt;&lt;/replace&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
 
-If you follow them all the way along their adventure, I’ll be there to meet you near another door, opening into an amazing experience for you, hidden in one of the secret gems of the City.
+&lt;&lt;timed 47s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;If you follow them all the way along their adventure, I’ll be there to meet you near another door, opening into an amazing experience for you, hidden in one of the secret gems of the City.
+ &lt;&lt;/replace&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
 
-What kind of amazing experience? Well, it’s a surprise. Otherwise this wouldn’t be an adventure.
+&lt;&lt;timed 57s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;What kind of amazing experience? Well, it’s a surprise. Otherwise this wouldn’t be an adventure.
 
 Now - are you playing this adventure solo, or in a group?
 
- 
 &lt;div class=&quot;menu-wrapper&quot;&gt;
   &lt;&lt;button &quot;Solo&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-02A&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
   
   &lt;&lt;button &quot;Group&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-02B&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
+ &lt;&lt;/replace&gt;&gt;
+&lt;&lt;/timed&gt;&gt;
+
+ 
+
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="AC-02A" tags="" position="448,476" size="100,100">&lt;&lt;set $passage to &quot;AC-02A&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-03&quot;&gt;&gt;
 &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;refergroup&quot; play&gt;&gt;
@@ -663,7 +718,7 @@ So let me see… I do think Max should be around here somewhere…
 
 Ah yes, here they are! And by the looks of it, I think they need your help…
 
-&lt;&lt;timed 8s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-05&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 18s&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-05&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="AC-05" tags="" position="600,400" size="100,100">&lt;&lt;set $passage to &quot;AC-05&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-05map&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_05&quot; play&gt;&gt;
@@ -686,7 +741,9 @@ $myMap
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="AC-06" tags="" position="800,400" size="100,100">&lt;&lt;set $passage to &quot;AC-06&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-08&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_06&quot; play&gt;&gt;
 &lt;main&gt;
 &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
-
+&lt;&lt;timed 0s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;[....] &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;[....]&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 4s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Everyone okay? &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 7s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Thanks for coming here. 
@@ -711,9 +768,9 @@ Anyway, my job is to be the animal custodian of the city. &lt;&lt;/type&gt;&gt;&
 
 That&#39;s right. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 41s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;I can time travel. Yes, it&#39;s cool. Yes, you get a bit seasick don&#39;t make a big thing of it. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 41s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;I can time travel. Yes, it&#39;s cool. Yes, you get a bit seasick. Don&#39;t make a big thing of it. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
-&lt;&lt;timed 51s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Problem is... Felix implementing dragon time across the city has meant that... well I&#39;ve of kind of... I sort of lost track of all the animals I was meant to be taken care of. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 51s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Problem is... Felix implementing dragon time across the city has meant that... well I&#39;ve of kind of... I sort of lost track of all the animals I was meant to be taking care of. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
   
 &lt;&lt;timed 65s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;I promise this doesn&#39;t usually happen. 
 Well, there was that one time in the 1300s involving a very angry cow and a pair of shears. That&#39;s not important right now. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
@@ -740,6 +797,8 @@ Now, as we get to Bank Station, we’re going to want to turn right, down Lombar
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="AC-08map" tags="" position="1200,400" size="100,100">&lt;&lt;set $passage to &quot;AC-08map&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-09&quot;&gt;&gt;&lt;&lt;set $myMap2 = setup.generateDirectionsMap(51.513088146077585, -0.09147406818251155,51.512841061514635, -0.08726689897223132)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;main&gt;
+As we get to Bank Station, we’re going to want to turn right, down Lombard Street.
+
  $myMap2
 
 &lt;&lt;button &quot;We&#39;re on Lombard Street&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-09&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
@@ -817,7 +876,7 @@ $myMap2
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="AC-11" tags="" position="800,900" size="100,100">&lt;&lt;set $passage to &quot;AC-11&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-12&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_11&quot; play&gt;&gt;
-&lt;main&gt;
+&lt;main&gt; &lt;div id=&quot;mount2&quot;&gt;&lt;/div&gt;
  &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 &lt;&lt;timed 0s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Alright, hang on for a moment. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
 &lt;&lt;timed 3s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;Everyone&#39;s still here? We haven&#39;t lost anyone to the pigs? &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
@@ -845,10 +904,13 @@ Ended up sparking a city wide man hunt - they found her in the end though, alway
 You can even add a &quot;RATS!&quot; in there if you feel like it. 
 
 &lt;&lt;button &quot;Here we go&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;
+&lt;&lt;replace &quot;#mount2&quot;&gt;&gt;//Continue walking and stop at the end of Birchin Lane//&lt;&lt;/replace&gt;&gt;
 &lt;&lt;addclass &quot;#mount&quot; &quot;countdown&quot;&gt;&gt;
 
 &lt;&lt;set $seconds to 10&gt;&gt;
-&lt;&lt;replace &quot;#mount&quot;&gt;&gt; $seconds &lt;&lt;/replace&gt;&gt;
+
+&lt;&lt;replace &quot;#mount&quot;&gt;&gt; 
+$seconds &lt;&lt;/replace&gt;&gt;
 &lt;&lt;silently&gt;&gt;
 	&lt;&lt;repeat 1s&gt;&gt;
 		&lt;&lt;set $seconds to $seconds - 1&gt;&gt;
@@ -909,6 +971,8 @@ And don&#39;t forget to keep looking out for the dragon pigeons.
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="AC-13map" tags="" position="1200,900" size="100,100">&lt;&lt;set $passage to &quot;AC-13map&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-14&quot;&gt;&gt;&lt;&lt;set $myMap4 = setup.generateDirectionsMap(51.51339312294427, -0.08446243841105257,51.51277576075713, -0.08356723454418663)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 &lt;main&gt;
+Let&#39;s head on to Gracechurch Street. Let me know when you&#39;re outside Leadenhall Market.
+
 $myMap4
 
 &lt;&lt;button &quot;We&#39;re at the market&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-14&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
@@ -955,7 +1019,7 @@ $myMap5
 &lt;&lt;button &quot;We&#39;re on Lime Street&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-15&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="AC-15" tags="" position="600,1300" size="100,100">&lt;&lt;set $passage to &quot;AC-15&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-15map&quot;&gt;&gt;&lt;&lt;set $myMap6 = setup.generateDirectionsMap(51.51245067483352, -0.08239192748522527,51.51171922301195, -0.08377990914014402)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_15&quot; play&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="AC-15" tags="" position="600,1300" size="100,100">&lt;&lt;set $passage to &quot;AC-15&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-15map&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_15&quot; play&gt;&gt;
 &lt;main&gt;
  &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 &lt;&lt;timed 0.1s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 60ms&gt;&gt;This looks right. Turn right and head down to the very bottom of Lime Street.&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
@@ -972,15 +1036,14 @@ Don&#39;t get too close to him. He&#39;ll think your fingers are delicious carro
 
 Stay there, Tom. I&#39;ll come and get you in a minute.
 
-&lt;&lt;button &quot;We&#39;re the very bottom of Lime Street&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-16&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
+&lt;&lt;button &quot;Show map&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-15map&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="AC-15map" tags="" position="600,1300" size="100,100">&lt;&lt;set $passage to &quot;AC-15map&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-15&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
-&lt;main&gt;
- &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="AC-15map" tags="" position="600,1300" size="100,100">&lt;&lt;set $passage to &quot;AC-15map&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-16&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;set $myMap6 = setup.generateDirectionsMap(51.51245067483352, -0.08239192748522527,51.51171922301195, -0.08377990914014402)&gt;&gt;
+&lt;main&gt; &lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
 $myMap6
 
-&lt;&lt;button &quot;We&#39;re the very bottom of Lime Street&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-16&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &quot;We&#39;re at the very bottom of Lime Street&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-16&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="AC-16" tags="" position="800,1300" size="100,100">&lt;&lt;set $passage to &quot;AC-16&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-16map&quot;&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_16&quot; play&gt;&gt;
@@ -1064,7 +1127,7 @@ Oh she must be down Rood Lane! Come on, quick!
 
 
 &lt;/main&gt;
-&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="AC-18map" tags="" position="1200,1300" size="100,100">&lt;&lt;set $passage to &quot;AC-18map&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-19&quot;&gt;&gt;&lt;&lt;set $myMap8 = setup.generateDirectionsMap(51.51171922301195, -0.08377990914014402,51.511196750230205, -0.08307472491210487)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
+&lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="AC-18map" tags="" position="1200,1300" size="100,100">&lt;&lt;set $passage to &quot;AC-18map&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-19&quot;&gt;&gt;&lt;&lt;set $myMap8 = setup.generateDirectionsMap(51.51158843597993, -0.08345034077645208,51.511196750230205, -0.08307472491210487)&gt;&gt;&lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 &lt;main&gt;
  $myMap8 
 
@@ -1146,7 +1209,7 @@ And look where we are now - St Dunstan in the East. Isn&#39;t it beautiful? &lt;
 Tell you what, I&#39;m going to do something I don&#39;t normally do!&lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
 &lt;&lt;timed 22s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;I now pronounce each of you Junior City Animal Wranglers. That&#39;s right. That is an official title. 
 
-You should be very honored, you know. Not everyone has a knack for this job. But you lot have shown the kind of moxie, a junior wrangler needs. Congratulations. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
+You should be very honoured, you know. Not everyone has a knack for this job. But you lot have shown the kind of moxie a junior wrangler needs. Congratulations. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
 &lt;&lt;timed 47s&gt;&gt;&lt;&lt;replace &quot;#mount&quot;&gt;&gt;&lt;&lt;type 50ms&gt;&gt;You know, I&#39;ll let you in on a secret - this is my favorite place in the city. 
 
 Somewhere where nature meets man. It&#39;s stood here since 1100. &lt;&lt;/type&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;  
@@ -1168,13 +1231,16 @@ You lot stay as long as you need to. Thank you for your help my friends.
   
 &lt;/main&gt;
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="end" tags="" position="100,700" size="100,100">&lt;&lt;set $passage to &quot;end&quot;&gt;&gt;&lt;&lt;set $endMap = setup.generateDirectionsMap(51.51212395274584, -0.09093602891508051,51.50975664484968, -0.0824600995012289)&gt;&gt;
-&lt;main&gt;End location
+&lt;main class=&quot;end&quot;&gt;&lt;h2&gt;End location&lt;/h2&gt;
+St Dunstan in The East
+St Dunstan&#39;s Hill
+EC3R 5DD
 
 $endMap
 
   &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;set $prevpass to $passage&gt;&gt;&lt;&lt;goto &quot;AC-24&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;/main&gt;
-&lt;&lt;include &quot;footerend&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="AC-24" tags="" position="520,2113" size="100,100">&lt;&lt;set $passage to &quot;AC-24&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-33&quot;&gt;&gt;
+&lt;&lt;include &quot;footerkey&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="AC-24" tags="" position="520,2113" size="100,100">&lt;&lt;set $passage to &quot;AC-24&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;AC-33&quot;&gt;&gt;
 &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;AC_24&quot; play&gt;&gt;
 &lt;main&gt;
 Max is a Dragon too, one of the very finest of my kin. 
@@ -1189,8 +1255,6 @@ To get through the door into the garden, and discover the surprise waiting insid
 &lt;&lt;include &quot;footer&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="AC-25" tags="" position="520,2113" size="100,100">&lt;&lt;set $passage to &quot;AC-25&quot;&gt;&gt;&lt;&lt;set $nextpassage to &quot;EI_23A&quot;&gt;&gt;
 &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;
 &lt;main&gt;
-
-
 &lt;div class=&quot;key-wrapper glowing&quot;&gt;&lt;img src=&quot;./assets/StDunstanintheEast.png&quot;&gt;&lt;/div&gt;
 &lt;h2 class=&quot;endpoint&quot;&gt;ST DUNSTAN IN THE EAST&lt;/h2&gt;
 &lt;/main&gt;

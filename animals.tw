@@ -362,7 +362,42 @@ display: flex;
   padding: 2rem
 }
 
+}
 
+/* LANDING  */
+main.landing{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 95vh
+}
+
+.landing > h2 {
+  font-family: "Big John";
+  text-align:center;
+  margin-block-end: 0;
+}
+
+.landing > a {
+  display:flex;    
+  justify-content: center;
+  
+}
+
+.landing > a:active{
+  background-color: transparent;
+
+}
+
+.landing > a > img {
+  width: 80%;
+  max-width: 300px;
+}
+
+/* END */
+main.end > h2{
+  margin-block-end: 0;
 }
 
 /* SPECIFICS  */
@@ -515,7 +550,7 @@ return iFrame
 </footer>
 
 :: footerkey
-<footer><div class="nav-wrapper"><div class="nav-item"><<button "<">><<goto $prevpass>><</button>></div><div class="nav-item"><<button "Start again">><<goto "landing">><</button>></div></div><div class="nav-wrapper end"><div class="nav-item"><<button "Key">><<set $prevpass to $passage>><<goto "AC-25">><</button>> </div><div class="nav-item"><<button "Try another adventure">><<set $prevpass to $passage>><<goto "AC-25adventures">><</button>></div></div></footer>
+<footer><div class="nav-wrapper"><div class="nav-item"><<button "<">><<goto $prevpass>><</button>></div><div class="nav-item"><<button "Start again">><<goto "landing">><</button>></div></div><div class="nav-wrapper"><div class="nav-item"><<button "Show map">><<set $prevpass to $passage>><<goto "end">><</button>></div></div><div class="nav-wrapper end"><div class="nav-item"><<button "Key">><<set $prevpass to $passage>><<goto "AC-25">><</button>> </div><div class="nav-item"><<button "Try another adventure">><<set $prevpass to $passage>><<goto "AC-25adventures">><</button>></div></div></footer>
 
 :: footerend {"position":"100,625","size":"100,100"}
 <footer>
@@ -527,8 +562,9 @@ return iFrame
 
 :: landing {"position":"375,150","size":"100,100"}
 <<set $passage to "landing">><<audio ":all" stop>>
-<main>
+<main class="landing">
 <h2>Animals of The City</h2>
+<<link "<img src='./assets/dragon2.gif'>">><<set $prevpass to $passage>><<goto "AC-01">><</link>>
 <<button "begin">><<set $prevpass to $passage>><<goto "AC-01">><</button>>
 </main>
 
@@ -548,28 +584,47 @@ You have two options:
 <<set $passage to "AC-01">><<set $nextpassage to "AC-02B">>
 <<audio ":all" stop>><<audio "AC_01" play>>
 <main><div id="mount"></div> 
-Felix, keeper of the Maze, and small dragon, here at your service.
+<<timed 2s>><<replace "#mount">>
+  Felix, keeper of the Maze, and small dragon, here at your service.
+  <</replace>>
+<</timed>>
+  <<timed 8s>><<replace "#mount">>
+  I’m opening up the City to you, a City you’ve never experienced before, and its secrets too. 
+  
+  For the City is full of treasure. 
+  <</replace>>
+<</timed>>
+  <<timed 16s>><<replace "#mount">> Not the kind of treasure that glitters in candlelight, but something more precious: stories, and the people who carry them. 
+  <</replace>>
+<</timed>>
 
+<<timed 24s>><<replace "#mount">>You’re now in Dragontime. Past present and future happening all at once. Two thousand years of messy, pulsing, fiery history since the Romans first called their new home Londinium. Almost as long as I’ve been alive. 
+ <</replace>>
+<</timed>>
 
-I’m opening up the City to you, a City you’ve never experienced before, and its secrets too. For the City is full of treasure. Not the kind of treasure that glitters in candlelight, but something more precious: stories, and the people who carry them. 
-
-You’re now in Dragontime. Past present and future happening all at once. Two thousand years of messy, pulsing, fiery history since the Romans first called their new home Londinium. Almost as long as I’ve been alive. 
-
-You’ve opened up door #1 into the maze of adventures. 
+<<timed 38s>><<replace "#mount">>You’ve opened up door #1 into the maze of adventures. 
 
 You’ll be led presently through the streets of the City by a guide from one of its many pasts or possible futures.
+ <</replace>>
+<</timed>>
 
-If you follow them all the way along their adventure, I’ll be there to meet you near another door, opening into an amazing experience for you, hidden in one of the secret gems of the City.
+<<timed 47s>><<replace "#mount">>If you follow them all the way along their adventure, I’ll be there to meet you near another door, opening into an amazing experience for you, hidden in one of the secret gems of the City.
+ <</replace>>
+<</timed>>
 
-What kind of amazing experience? Well, it’s a surprise. Otherwise this wouldn’t be an adventure.
+<<timed 57s>><<replace "#mount">>What kind of amazing experience? Well, it’s a surprise. Otherwise this wouldn’t be an adventure.
 
 Now - are you playing this adventure solo, or in a group?
 
- 
 <div class="menu-wrapper">
   <<button "Solo">><<set $prevpass to $passage>><<goto "AC-02A">><</button>>
   
   <<button "Group">><<set $prevpass to $passage>><<goto "AC-02B">><</button>></div>
+ <</replace>>
+<</timed>>
+
+ 
+
 </main>
 <<include "footer">>
 
@@ -625,7 +680,7 @@ So let me see… I do think Max should be around here somewhere…
 
 Ah yes, here they are! And by the looks of it, I think they need your help…
 
-<<timed 8s>><<set $prevpass to $passage>><<goto "AC-05">><</timed>>
+<<timed 18s>><<set $prevpass to $passage>><<goto "AC-05">><</timed>>
 
 </main>
 <<include "footer">>
@@ -659,7 +714,9 @@ $myMap
 <<set $passage to "AC-06">><<set $nextpassage to "AC-08">><<audio ":all" stop>><<audio "AC_06" play>>
 <main>
 <div id="mount"></div>
-
+<<timed 0s>><<replace "#mount">><<type 50ms>>[....] <</type>><</replace>><</timed>>
+<<timed 1s>><<replace "#mount">><<type 50ms>><</type>><</replace>><</timed>>
+<<timed 2s>><<replace "#mount">><<type 50ms>>[....]<</type>><</replace>><</timed>>
 <<timed 4s>><<replace "#mount">><<type 50ms>>Everyone okay? <</type>><</replace>><</timed>>
 
 <<timed 7s>><<replace "#mount">><<type 50ms>>Thanks for coming here. 
@@ -684,9 +741,9 @@ Anyway, my job is to be the animal custodian of the city. <</type>><</replace>><
 
 That's right. <</type>><</replace>><</timed>>
 
-<<timed 41s>><<replace "#mount">><<type 50ms>>I can time travel. Yes, it's cool. Yes, you get a bit seasick don't make a big thing of it. <</type>><</replace>><</timed>>
+<<timed 41s>><<replace "#mount">><<type 50ms>>I can time travel. Yes, it's cool. Yes, you get a bit seasick. Don't make a big thing of it. <</type>><</replace>><</timed>>
 
-<<timed 51s>><<replace "#mount">><<type 50ms>>Problem is... Felix implementing dragon time across the city has meant that... well I've of kind of... I sort of lost track of all the animals I was meant to be taken care of. <</type>><</replace>><</timed>>
+<<timed 51s>><<replace "#mount">><<type 50ms>>Problem is... Felix implementing dragon time across the city has meant that... well I've of kind of... I sort of lost track of all the animals I was meant to be taking care of. <</type>><</replace>><</timed>>
   
 <<timed 65s>><<replace "#mount">><<type 50ms>>I promise this doesn't usually happen. 
 Well, there was that one time in the 1300s involving a very angry cow and a pair of shears. That's not important right now. <</type>><</replace>><</timed>>
@@ -723,6 +780,8 @@ Now, as we get to Bank Station, we’re going to want to turn right, down Lombar
 
 :: AC-08map {"position":"1200,400","size":"100,100"}
 <<set $passage to "AC-08map">><<set $nextpassage to "AC-09">><<set $myMap2 = setup.generateDirectionsMap(51.513088146077585, -0.09147406818251155,51.512841061514635, -0.08726689897223132)>><<audio ":all" stop>><main>
+As we get to Bank Station, we’re going to want to turn right, down Lombard Street.
+
  $myMap2
 
 <<button "We're on Lombard Street">><<set $prevpass to $passage>><<goto "AC-09">><</button>>
@@ -817,7 +876,7 @@ $myMap2
 
 :: AC-11 {"position":"800,900","size":"100,100"}
 <<set $passage to "AC-11">><<set $nextpassage to "AC-12">><<audio ":all" stop>><<audio "AC_11" play>>
-<main>
+<main> <div id="mount2"></div>
  <div id="mount"></div>
 <<timed 0s>><<replace "#mount">><<type 50ms>>Alright, hang on for a moment. <</type>><</replace>><</timed>>  
 <<timed 3s>><<replace "#mount">><<type 50ms>>Everyone's still here? We haven't lost anyone to the pigs? <</type>><</replace>><</timed>>  
@@ -845,10 +904,13 @@ Ended up sparking a city wide man hunt - they found her in the end though, alway
 You can even add a "RATS!" in there if you feel like it. 
 
 <<button "Here we go">><<set $prevpass to $passage>>
+<<replace "#mount2">>//Continue walking and stop at the end of Birchin Lane//<</replace>>
 <<addclass "#mount" "countdown">>
 
 <<set $seconds to 10>>
-<<replace "#mount">> $seconds <</replace>>
+
+<<replace "#mount">> 
+$seconds <</replace>>
 <<silently>>
 	<<repeat 1s>>
 		<<set $seconds to $seconds - 1>>
@@ -926,6 +988,8 @@ And don't forget to keep looking out for the dragon pigeons.
 :: AC-13map {"position":"1200,900","size":"100,100"}
 <<set $passage to "AC-13map">><<set $nextpassage to "AC-14">><<set $myMap4 = setup.generateDirectionsMap(51.51339312294427, -0.08446243841105257,51.51277576075713, -0.08356723454418663)>><<audio ":all" stop>>
 <main>
+Let's head on to Gracechurch Street. Let me know when you're outside Leadenhall Market.
+
 $myMap4
 
 <<button "We're at the market">><<set $prevpass to $passage>><<goto "AC-14">><</button>>
@@ -984,7 +1048,7 @@ $myMap5
 <<include "footer">>
 
 :: AC-15 {"position":"600,1300","size":"100,100"}
-<<set $passage to "AC-15">><<set $nextpassage to "AC-15map">><<set $myMap6 = setup.generateDirectionsMap(51.51245067483352, -0.08239192748522527,51.51171922301195, -0.08377990914014402)>><<audio ":all" stop>><<audio "AC_15" play>>
+<<set $passage to "AC-15">><<set $nextpassage to "AC-15map">><<audio ":all" stop>><<audio "AC_15" play>>
 <main>
  <div id="mount"></div>
 <<timed 0.1s>><<replace "#mount">><<type 60ms>>This looks right. Turn right and head down to the very bottom of Lime Street.<</type>><</replace>><</timed>>  
@@ -1001,18 +1065,17 @@ Don't get too close to him. He'll think your fingers are delicious carrots and g
 
 Stay there, Tom. I'll come and get you in a minute.
 
-<<button "We're the very bottom of Lime Street">><<set $prevpass to $passage>><<goto "AC-16">><</button>><</type>><</replace>><</timed>>  
+<<button "Show map">><<set $prevpass to $passage>><<goto "AC-15map">><</button>><</type>><</replace>><</timed>>  
 
 </main>
 <<include "footer">>
 
 :: AC-15map {"position":"600,1300","size":"100,100"}
-<<set $passage to "AC-15map">><<set $nextpassage to "AC-15">><<audio ":all" stop>>
-<main>
- <div id="mount"></div>
+<<set $passage to "AC-15map">><<set $nextpassage to "AC-16">><<audio ":all" stop>><<set $myMap6 = setup.generateDirectionsMap(51.51245067483352, -0.08239192748522527,51.51171922301195, -0.08377990914014402)>>
+<main> <div id="mount"></div>
 $myMap6
 
-<<button "We're the very bottom of Lime Street">><<set $prevpass to $passage>><<goto "AC-16">><</button>>
+<<button "We're at the very bottom of Lime Street">><<set $prevpass to $passage>><<goto "AC-16">><</button>>
 
 </main>
 <<include "footer">>
@@ -1114,7 +1177,7 @@ Oh she must be down Rood Lane! Come on, quick!
 <<include "footer">>
 
 :: AC-18map {"position":"1200,1300","size":"100,100"}
-<<set $passage to "AC-18map">><<set $nextpassage to "AC-19">><<set $myMap8 = setup.generateDirectionsMap(51.51171922301195, -0.08377990914014402,51.511196750230205, -0.08307472491210487)>><<audio ":all" stop>>
+<<set $passage to "AC-18map">><<set $nextpassage to "AC-19">><<set $myMap8 = setup.generateDirectionsMap(51.51158843597993, -0.08345034077645208,51.511196750230205, -0.08307472491210487)>><<audio ":all" stop>>
 <main>
  $myMap8 
 
@@ -1220,7 +1283,7 @@ And look where we are now - St Dunstan in the East. Isn't it beautiful? <</type>
 Tell you what, I'm going to do something I don't normally do!<</type>><</replace>><</timed>>  
 <<timed 22s>><<replace "#mount">><<type 50ms>>I now pronounce each of you Junior City Animal Wranglers. That's right. That is an official title. 
 
-You should be very honored, you know. Not everyone has a knack for this job. But you lot have shown the kind of moxie, a junior wrangler needs. Congratulations. <</type>><</replace>><</timed>>  
+You should be very honoured, you know. Not everyone has a knack for this job. But you lot have shown the kind of moxie a junior wrangler needs. Congratulations. <</type>><</replace>><</timed>>  
 <<timed 47s>><<replace "#mount">><<type 50ms>>You know, I'll let you in on a secret - this is my favorite place in the city. 
 
 Somewhere where nature meets man. It's stood here since 1100. <</type>><</replace>><</timed>>  
@@ -1246,13 +1309,16 @@ You lot stay as long as you need to. Thank you for your help my friends.
 
 :: end {"position":"100,700","size":"100,100"}
 <<set $passage to "end">><<set $endMap = setup.generateDirectionsMap(51.51212395274584, -0.09093602891508051,51.50975664484968, -0.0824600995012289)>>
-<main>End location
+<main class="end"><h2>End location</h2>
+St Dunstan in The East
+St Dunstan's Hill
+EC3R 5DD
 
 $endMap
 
   <<button "Next">><<set $prevpass to $passage>><<goto "AC-24">><</button>>
 </main>
-<<include "footerend">>
+<<include "footerkey">>
 
 
 
@@ -1275,8 +1341,6 @@ To get through the door into the garden, and discover the surprise waiting insid
 <<set $passage to "AC-25">><<set $nextpassage to "EI_23A">>
 <<audio ":all" stop>>
 <main>
-
-
 <div class="key-wrapper glowing"><img src="./assets/StDunstanintheEast.png"></div>
 <h2 class="endpoint">ST DUNSTAN IN THE EAST</h2>
 </main>
