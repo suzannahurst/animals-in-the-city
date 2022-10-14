@@ -1358,7 +1358,7 @@ To get through the door into the garden, and discover the surprise waiting insid
 <<include "footerkey">>
 
 :: AC_26A {"position":"520,2113","size":"100,100"}
-<<set $passage to "AC_26A">><<set $map = setup.generateDirectionsMap([51.50975237659481, -0.0824661751178505], [51.51353171516323, -0.08798024662694627])>><main>
+<<set $passage to "AC_26A">><<set $map = setup.generateDirectionsMap(51.50975237659481, -0.0824661751178505, 51.51353171516323, -0.08798024662694627)>><main>
 <h2>The Artful Dodges Again </h2>
 $map
 
@@ -1366,7 +1366,7 @@ $map
 <<include "footerkey">>
 
 :: AC_26B {"position":"520,2113","size":"100,100"}
-<<set $passage to "AC_26B">><<set $map = setup.generateDirectionsMap([51.50975237659481, -0.0824661751178505], [51.512212162422955, -0.09831646441796416])>><main>
+<<set $passage to "AC_26B">><<set $map = setup.generateDirectionsMap(51.50975237659481, -0.0824661751178505, 51.512212162422955, -0.09831646441796416)>><main>
 <h2>The Future Gondolier</h2>
 $map
 
