@@ -508,31 +508,31 @@ return iFrame
 
 
 :: StoryInit {"position":"100,100","size":"100,100"}
-<<cacheaudio "AC_01" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_01.mp3">>
-<<cacheaudio "AC_04" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_04.mp3">>
-<<cacheaudio "AC_05" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_05.mp3">>
-<<cacheaudio "AC_06" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_06.mp3">>
-<<cacheaudio "AC_07" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_07.mp3">>
-<<cacheaudio "AC_08" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_08.mp3">>
-<<cacheaudio "AC_09" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_09.mp3">>
-<<cacheaudio "AC_10" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_10.mp3">>
-<<cacheaudio "AC_11" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_11.mp3">>
-<<cacheaudio "AC_12" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_12.mp3">>
-<<cacheaudio "AC_13" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_13.mp3">>
-<<cacheaudio "AC_14" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_14.mp3">>
-<<cacheaudio "AC_15" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_15.mp3">>
-<<cacheaudio "AC_16" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_16.mp3">>
-<<cacheaudio "AC_17" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_17.mp3">>
-<<cacheaudio "AC_18" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_18.mp3">>
-<<cacheaudio "AC_19" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_19.mp3">>
-<<cacheaudio "AC_20" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_20.mp3">>
-<<cacheaudio "AC_21" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_21.mp3">>
-<<cacheaudio "AC_22" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_22.mp3">>
-<<cacheaudio "AC_23" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_23.mp3">>
-<<cacheaudio "AC_24" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/AC/AC_24.mp3">>
-<<cacheaudio "refergroup" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_02_refergroup.mp3">>
-<<cacheaudio "perfectgroup" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_02_perfectgroup.mp3">>
-<<cacheaudio "03" "https://magic.fra1.cdn.digitaloceanspaces.com/tgksnd/MC/XX_03.mp3">>
+<<cacheaudio "AC_01" "https://www.youhavefoundconey.net/tgksnd/AC/AC_01.mp3">>
+<<cacheaudio "AC_04" "https://www.youhavefoundconey.net/tgksnd/AC/AC_04.mp3">>
+<<cacheaudio "AC_05" "https://www.youhavefoundconey.net/tgksnd/AC/AC_05.mp3">>
+<<cacheaudio "AC_06" "https://www.youhavefoundconey.net/tgksnd/AC/AC_06.mp3">>
+<<cacheaudio "AC_07" "https://www.youhavefoundconey.net/tgksnd/AC/AC_07.mp3">>
+<<cacheaudio "AC_08" "https://www.youhavefoundconey.net/tgksnd/AC/AC_08.mp3">>
+<<cacheaudio "AC_09" "https://www.youhavefoundconey.net/tgksnd/AC/AC_09.mp3">>
+<<cacheaudio "AC_10" "https://www.youhavefoundconey.net/tgksnd/AC/AC_10.mp3">>
+<<cacheaudio "AC_11" "https://www.youhavefoundconey.net/tgksnd/AC/AC_11.mp3">>
+<<cacheaudio "AC_12" "https://www.youhavefoundconey.net/tgksnd/AC/AC_12.mp3">>
+<<cacheaudio "AC_13" "https://www.youhavefoundconey.net/tgksnd/AC/AC_13.mp3">>
+<<cacheaudio "AC_14" "https://www.youhavefoundconey.net/tgksnd/AC/AC_14.mp3">>
+<<cacheaudio "AC_15" "https://www.youhavefoundconey.net/tgksnd/AC/AC_15.mp3">>
+<<cacheaudio "AC_16" "https://www.youhavefoundconey.net/tgksnd/AC/AC_16.mp3">>
+<<cacheaudio "AC_17" "https://www.youhavefoundconey.net/tgksnd/AC/AC_17.mp3">>
+<<cacheaudio "AC_18" "https://www.youhavefoundconey.net/tgksnd/AC/AC_18.mp3">>
+<<cacheaudio "AC_19" "https://www.youhavefoundconey.net/tgksnd/AC/AC_19.mp3">>
+<<cacheaudio "AC_20" "https://www.youhavefoundconey.net/tgksnd/AC/AC_20.mp3">>
+<<cacheaudio "AC_21" "https://www.youhavefoundconey.net/tgksnd/AC/AC_21.mp3">>
+<<cacheaudio "AC_22" "https://www.youhavefoundconey.net/tgksnd/AC/AC_22.mp3">>
+<<cacheaudio "AC_23" "https://www.youhavefoundconey.net/tgksnd/AC/AC_23.mp3">>
+<<cacheaudio "AC_24" "https://www.youhavefoundconey.net/tgksnd/AC/AC_24.mp3">>
+<<cacheaudio "refergroup" "https://www.youhavefoundconey.net/tgksnd/MC/XX_02_refergroup.mp3">>
+<<cacheaudio "perfectgroup" "https://www.youhavefoundconey.net/tgksnd/MC/XX_02_perfectgroup.mp3">>
+<<cacheaudio "03" "https://www.youhavefoundconey.net/tgksnd/MC/XX_03.mp3">>
 
 <<waitforaudio>>
 
